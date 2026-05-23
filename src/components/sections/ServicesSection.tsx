@@ -23,7 +23,7 @@ export default function Services() {
           </Reveal>
           <Reveal delay={0.2}>
             <Link
-              href="#"
+              href="/services"
               className="inline-flex items-center gap-2 bg-[#5A2A5D] text-white text-xs font-medium uppercase tracking-[0.1em] px-6 py-3 rounded-full hover:bg-[#4A1F4D] transition-all duration-300 w-fit"
             >
               <img src="/logo-cream.svg" alt="" className="h-5 w-auto" /> View all
@@ -57,7 +57,7 @@ export default function Services() {
                 <div className="w-full md:w-1/2 flex flex-col md:flex-row md:items-center justify-between gap-5 md:gap-4 mt-2 md:mt-0">
                   <p className="text-[13px] md:text-sm text-[#6B6570] leading-relaxed max-w-sm md:max-w-xs">{s.description}</p>
                   <Link
-                    href="#"
+                    href={`/services?category=${s.id}`}
                     className="self-start md:self-auto flex-shrink-0 border border-[#E4DFE8] text-[#2E2E2E] text-xs font-medium uppercase tracking-[0.1em] px-6 py-2.5 rounded-full hover:bg-[#5A2A5D] hover:text-white hover:border-[#5A2A5D] transition-all duration-300"
                   >
                     View Detail

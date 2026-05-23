@@ -21,16 +21,18 @@ export default function SmoothScrolling({ children }: SmoothScrollingProps) {
       touchMultiplier: 2,
     });
 
+    let rafId: number;
     // Main animation loop for Lenis
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     // Clean up on unmount
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
   }, []);

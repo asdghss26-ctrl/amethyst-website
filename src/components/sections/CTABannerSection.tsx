@@ -38,11 +38,11 @@ export default function CTABanner() {
                     <img src="/logo.svg" alt="" className="h-5 w-auto" /> Book an Appointment
                   </Link>
                   <Link
-                    href="#services"
+                    href="/services"
                     className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium hover:bg-white/30 transition-all duration-300"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/logo-cream.svg" alt="" className="h-5 w-auto" /> Our Service
+                    <img src="/logo-cream.svg" alt="" className="h-5 w-auto" /> Our Services
                   </Link>
                 </div>
               </Reveal>

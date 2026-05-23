@@ -5,42 +5,49 @@ import { treatments } from "@/lib/data/treatments";
 import { Reveal } from "../ui/RevealAnimation";
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
   const wheelRef = useRef<HTMLDivElement>(null);
-  const angleRef = useRef(0);
-  const lastScrollY = useRef(0);
-  const rafRef = useRef<number | null>(null);
-  const autoSpinRef = useRef(true);
 
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize(); // Initialize
+    handleResize();
     window.addEventListener("resize", handleResize);
 
-    // Auto-spin loop
-    const spinLoop = () => {
-      if (autoSpinRef.current && wheelRef.current) {
-        angleRef.current += 0.12; // degrees per frame (slow crawl)
-        wheelRef.current.style.transform = `rotate(${angleRef.current}deg)`;
-      }
-      rafRef.current = requestAnimationFrame(spinLoop);
-    };
-    rafRef.current = requestAnimationFrame(spinLoop);
+    const wheel = wheelRef.current;
+    if (!wheel) return () => window.removeEventListener("resize", handleResize);
+
+    // Pause CSS animation when off-screen to reduce lag
+    let paused = false;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && paused) {
+          wheel.style.animationPlayState = "running";
+          paused = false;
+        } else if (!entry.isIntersecting && !paused) {
+          wheel.style.animationPlayState = "paused";
+          paused = true;
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(sectionRef.current!);
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      observer.disconnect();
     };
   }, []);
 
   // Pills span the full 360° evenly
   const pillCount = treatments.length;
-  const pillLength = isMobile ? 120 : 160; // px — length of each capsule
-  const orbitRadius = isMobile ? 200 : 310; // px — distance from center to pill midpoint
+  const orbitRadius = 260; // px — fixed distance from center to pill midpoint
+
+  const wheelAnimation = "wheelSpin 50s linear infinite";
 
   return (
-    <section className="relative bg-[#F5F0E8] overflow-hidden" style={{ minHeight: "100svh" }}>
+    <section ref={sectionRef} className="relative bg-[#F5F0E8] overflow-hidden" style={{ minHeight: "100svh" }}>
       {/* ─── NAV SPACER ─── */}
       <div className="pt-24" />
 
@@ -114,93 +121,70 @@ export default function Hero() {
           className="absolute inset-0 rounded-[48px] mx-4 overflow-hidden"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img 
-            src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=2000&auto=format&fit=crop" 
-            alt="Skin treatment"
-            className="w-full h-full object-cover"
-          />
+            <img 
+              src="/realistic-skin.png" 
+              alt="Skin treatment"
+              className="w-full h-full object-cover"
+            />
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-black/10" />
         </div>
 
         {/* ─── THE SPINNING WHEEL ─── */}
-        {/* 
-          The wheel is a div centered in the section.
-          transform-origin is its own center.
-          Each pill is positioned absolutely using polar coords,
-          then counter-rotated so the TEXT stays upright (partially — original keeps pills tilted).
-        */}
         <div
-          className="absolute"
+          className="absolute left-1/2 z-10"
           style={{
-            // Place wheel center at bottom-center of the image section
-            left: "50%",
-            bottom: 0,
-            width: 0,
-            height: 0,
-            transformOrigin: "center center",
+            width: `${orbitRadius * 2}px`,
+            height: `${orbitRadius * 2}px`,
+            bottom: `-${orbitRadius}px`,
+            transform: "translateX(-50%)",
           }}
         >
-          {/* Outer rotating ring */}
           <div
             ref={wheelRef}
+            className="w-full h-full rounded-full"
             style={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-              width: 0,
-              height: 0,
-              willChange: "transform",
+              animation: wheelAnimation,
+              transformOrigin: "center center",
             }}
           >
             {treatments.map((t, i) => {
-              // Angle for each pill (distribute evenly around the wheel)
-              // Start from 180° (pointing straight down) so pills "come up" from the bottom
               const angleStep = 360 / pillCount;
-              const pillAngle = i * angleStep; // degrees
-
-              // Convert to radians for positioning
+              const pillAngle = i * angleStep;
               const rad = (pillAngle * Math.PI) / 180;
-              const x = Math.sin(rad) * orbitRadius; // horizontal from center
-              const y = -Math.cos(rad) * orbitRadius; // vertical from center (negative = up)
+              const x = Math.sin(rad) * orbitRadius;
+              const y = -Math.cos(rad) * orbitRadius;
 
               return (
                 <div
                   key={i}
                   style={{
                     position: "absolute",
-                    left: x,
-                    top: y,
-                    width: pillLength,
-                    height: 38,
-                    // Center the pill on its orbit point, and rotate so it points outward radially
-                    transform: `translate(-50%, -50%) rotate(${pillAngle + 90}deg)`,
-                    transformOrigin: "center center",
+                      left: `calc(50% + ${x}px)`,
+                      top: `calc(50% + ${y}px)`,
+                      transform: `translate(-50%, -50%) rotate(${pillAngle + 90}deg)`,
                   }}
                 >
-                  {/* The pill capsule */}
                   <div
                     style={{
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: 999,
+                      height: "38px",
+                      borderRadius: "999px",
                       background: "rgba(255,255,255,0.15)",
                       backdropFilter: "blur(12px)",
                       WebkitBackdropFilter: "blur(12px)",
                       border: "1px solid rgba(255,255,255,0.4)",
                       display: "flex",
                       alignItems: "center",
-                      paddingLeft: 4,
-                      paddingRight: 14,
-                      gap: 8,
+                      paddingLeft: "4px",
+                      paddingRight: "14px",
+                      gap: "8px",
                       boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                     }}
                   >
-                    {/* Small circular avatar at outer tip */}
                     <div
                       style={{
-                        width: 28,
-                        height: 28,
+                        width: "28px",
+                        height: "28px",
                         borderRadius: "50%",
                         flexShrink: 0,
                         overflow: "hidden",
@@ -210,16 +194,13 @@ export default function Hero() {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={t.img} alt="" className="w-full h-full object-cover" />
                     </div>
-                    {/* Treatment name */}
                     <span
                       style={{
                         color: "rgba(255,255,255,0.95)",
-                        fontSize: 11,
+                        fontSize: isMobile ? "10px" : "11px",
                         fontWeight: 500,
                         letterSpacing: "0.02em",
                         whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
                       }}
                     >
                       {t.name}
@@ -235,15 +216,15 @@ export default function Hero() {
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-end"
           style={{
-            width: isMobile ? "240px" : "360px",
-            height: isMobile ? "100px" : "140px",
+            width: "360px",
+            height: "140px",
             background: "#F5F0E8",
-            borderTopLeftRadius: isMobile ? "120px 100px" : "180px 140px",
-            borderTopRightRadius: isMobile ? "120px 100px" : "180px 140px",
+            borderTopLeftRadius: "180px 140px",
+            borderTopRightRadius: "180px 140px",
           }}
         >
           <Link
-            href="#services"
+            href="/services"
             className="flex flex-col items-center gap-1 mb-4 md:mb-6 group transition-all duration-500"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
