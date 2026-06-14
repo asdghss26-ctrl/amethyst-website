@@ -1,7 +1,13 @@
 "use client";
 
 import { ReactNode, useEffect } from "react";
-import Lenis from "lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+}
 
 interface SmoothScrollingProps {
   children: ReactNode;
@@ -9,20 +15,14 @@ interface SmoothScrollingProps {
 
 export default function SmoothScrolling({ children }: SmoothScrollingProps) {
   useEffect(() => {
-    // Initialize Lenis
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
+    let smoother = ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.2,
+      effects: true,
     });
 
-    (window as any).lenis = lenis;
-
-    // Scroll-snap: snap to nearest section after scrolling stops
+    // Scroll-snap logic using GSAP ScrollTrigger
     const snapIds = ["home", "about", "services", "testimonials", "blog", "faq", "contact"];
     let snapTimeout: ReturnType<typeof setTimeout>;
 
@@ -43,28 +43,26 @@ export default function SmoothScrolling({ children }: SmoothScrollingProps) {
           }
         });
         const target = document.getElementById(closestId);
-        if (target) lenis.scrollTo(target, { duration: 0.8 });
+        if (target) {
+          smoother.scrollTo(target, true, "top top");
+        }
       }, 120);
     };
 
-    lenis.on("scroll", onScroll);
-
-    let rafId: number;
-    function raf(time: number) {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
-
-    rafId = requestAnimationFrame(raf);
+    ScrollTrigger.addEventListener("scrollEnd", onScroll);
 
     return () => {
-      cancelAnimationFrame(rafId);
       clearTimeout(snapTimeout);
-      lenis.off("scroll", onScroll);
-      lenis.destroy();
-      delete (window as any).lenis;
+      ScrollTrigger.removeEventListener("scrollEnd", onScroll);
+      smoother.kill();
     };
   }, []);
 
-  return <>{children}</>;
+  return (
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        {children}
+      </div>
+    </div>
+  );
 }

@@ -34,12 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${dmSerif.variable}`}>
       <body className="antialiased bg-[#F8F3EF] text-[#42291B]">
+        <Navbar />
         <SmoothScrolling>
-          <Navbar />
           {children}
           <Footer />
-          <ScrollNav />
         </SmoothScrolling>
+        <ScrollNav />
       </body>
     </html>
   );
