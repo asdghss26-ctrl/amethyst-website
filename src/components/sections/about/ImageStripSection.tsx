@@ -1,6 +1,6 @@
 import { Reveal } from "../../ui/RevealAnimation";
 
-const stripImages = [
+const images = [
   { src: '/images/clinic/strip-1.jpg', alt: 'Amethyst Skin Clinic treatment' },
   { src: '/images/clinic/strip-2.jpg', alt: 'Amethyst Skin Clinic procedure' },
   { src: '/images/clinic/strip-3.jpg', alt: 'Amethyst Skin Clinic interior' },
@@ -9,15 +9,39 @@ const stripImages = [
 
 export default function ImageStripSection() {
   return (
-    <section className="py-16 overflow-hidden" style={{ background: '#F7F3EF' }}>
-      <div className="flex gap-5 px-6">
-        {stripImages.map((img, i) => (
-          <Reveal key={i} delay={i * 0.1}>
-          <div className="card-hover group relative flex-shrink-0 rounded-2xl overflow-hidden" style={{ width: '320px', height: '400px' }}>
-            <img src={img.src} alt={img.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+    <section className="py-20 md:py-28 overflow-hidden" style={{ background: '#F7F3EF' }}>
+      <div className="max-w-5xl mx-auto px-6">
+        {/* Top row: single large image */}
+        <Reveal delay={0.1}>
+          <div
+            className="group relative overflow-hidden rounded-[16px] mb-2"
+            style={{ height: 300, boxShadow: "0 8px 24px rgba(91,31,106,0.12)" }}
+          >
+            <img
+              src={images[0].src}
+              alt={images[0].alt}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
           </div>
-          </Reveal>
-        ))}
+        </Reveal>
+
+        {/* Bottom row: three equal images */}
+        <div className="grid grid-cols-3 gap-2">
+          {images.slice(1).map((img, i) => (
+            <Reveal key={i} delay={0.2 + i * 0.1}>
+              <div
+                className="group relative overflow-hidden rounded-[12px]"
+                style={{ height: 180, boxShadow: "0 8px 24px rgba(91,31,106,0.12)" }}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   )

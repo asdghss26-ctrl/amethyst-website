@@ -67,26 +67,34 @@ export default function Hero() {
               alt="Skin treatment"
               className="w-full h-full object-cover"
             />
-          {/* Overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-black/30" />
+          {/* Top gradient overlay for text readability */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: "linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 50%)",
+              pointerEvents: "none",
+            }}
+          />
         </div>
 
         {/* ─── LOGO OVERLAY ON BACKGROUND IMAGE ─── */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-12 md:pt-20 pointer-events-none">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-cream.svg" alt="" className="h-16 w-auto mb-1 animate-icon-drop" />
-          <h1
-            className="text-[clamp(3.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
-            style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
-          >
-            AMETHYST
-          </h1>
-          <p className="text-lg md:text-xl tracking-[0.25em] font-medium text-white/90 mt-0 animate-slide-up-fade">
-            SKIN CLINIC
-          </p>
-          <p className="text-xs md:text-sm tracking-[0.15em] uppercase text-white/70 mt-0.5 font-medium animate-letter-expand">
-            MEDICAL & AESTHETIC DERMATOLOGY
-          </p>
+          <div className="flex flex-col items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-cream.svg" alt="" className="h-16 w-auto mb-1 animate-icon-drop" />
+            <h1
+              className="text-[clamp(3.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
+              style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
+            >
+              AMETHYST
+            </h1>
+            <p className="text-lg md:text-xl tracking-[0.25em] font-medium text-white/90 mt-0 animate-slide-up-fade">
+              SKIN CLINIC
+            </p>
+            <p className="text-xs md:text-sm tracking-[0.15em] uppercase text-white/70 mt-0.5 font-medium animate-letter-expand">
+              MEDICAL & AESTHETIC DERMATOLOGY
+            </p>
+          </div>
         </div>
 
         {/* ─── THE SPINNING WHEEL ─── */}

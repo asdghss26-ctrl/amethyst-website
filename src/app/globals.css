@@ -31,7 +31,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
 }
 
 body {
@@ -39,11 +38,6 @@ body {
   color: var(--foreground);
   font-family: "Inter", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
-}
-
-/* Scroll snap sections */
-section, footer {
-  scroll-snap-align: start;
 }
 
 /* Floating badge animations */

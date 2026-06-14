@@ -1,100 +1,157 @@
-'use client'
+"use client";
 
-import { useEffect, useRef } from 'react'
-import Image from 'next/image'
-import { doctorData, credentials } from '@/lib/data/about'
-import { Credential } from '@/types'
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+
+const achievements = [
+  { icon: "🎓", text: "MD in Dermatology — Madras Medical College" },
+  { icon: "🌍", text: "MRCP SCE in Dermatology (UK)" },
+  { icon: "📝", text: "3 Published Research Articles" },
+];
 
 export default function DoctorBioSection() {
-  const leftRef = useRef<HTMLDivElement>(null)
-  const rightRef = useRef<HTMLDivElement>(null)
+  const photoRef = useRef<HTMLDivElement>(null);
+  const nameRef = useRef<HTMLHeadingElement>(null);
+  const titleRef = useRef<HTMLParagraphElement>(null);
+  const pillRef = useRef<HTMLDivElement>(null);
+  const achievementRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const el = entry.target as HTMLElement
-            el.style.opacity = '1'
-            el.style.transform = 'translateX(0)'
-            observer.unobserve(el)
+            const el = entry.target as HTMLElement;
+            const delay = el.dataset.delay || "0";
+            el.style.transition = `opacity 0.7s ease ${delay}, transform 0.7s ease ${delay}`;
+            el.style.opacity = "1";
+            el.style.transform = "translateX(0) translateY(0) scale(1)";
+            observer.unobserve(el);
           }
-        })
+        });
       },
-      { threshold: 0.2 }
-    )
+      { threshold: 0.15 }
+    );
 
-    if (leftRef.current) {
-      const el = leftRef.current as HTMLElement
-      el.style.opacity = '0'
-      el.style.transform = 'translateX(-40px)'
-      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease'
-      observer.observe(leftRef.current)
+    const els: HTMLElement[] = [];
+
+    if (photoRef.current) {
+      photoRef.current.style.opacity = "0";
+      photoRef.current.style.transform = "translateX(-40px)";
+      observer.observe(photoRef.current);
+      els.push(photoRef.current);
     }
 
-    if (rightRef.current) {
-      const el = rightRef.current as HTMLElement
-      el.style.opacity = '0'
-      el.style.transform = 'translateX(40px)'
-      el.style.transition = 'opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s'
-      observer.observe(rightRef.current)
+    if (nameRef.current) {
+      nameRef.current.style.opacity = "0";
+      nameRef.current.style.transform = "translateY(-20px)";
+      nameRef.current.dataset.delay = "0.5s";
+      observer.observe(nameRef.current);
+      els.push(nameRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    if (titleRef.current) {
+      titleRef.current.style.opacity = "0";
+      titleRef.current.style.transform = "translateY(-10px)";
+      titleRef.current.dataset.delay = "0.7s";
+      observer.observe(titleRef.current);
+      els.push(titleRef.current);
+    }
+
+    if (pillRef.current) {
+      pillRef.current.style.opacity = "0";
+      pillRef.current.style.transform = "scale(0.8)";
+      pillRef.current.dataset.delay = "0.4s";
+      observer.observe(pillRef.current);
+      els.push(pillRef.current);
+    }
+
+    achievementRefs.current.forEach((ref, i) => {
+      if (ref) {
+        ref.style.opacity = "0";
+        ref.style.transform = "translateX(30px)";
+        ref.dataset.delay = `${0.9 + i * 0.2}s`;
+        observer.observe(ref);
+        els.push(ref);
+      }
+    });
+
+    return () => els.forEach((el) => observer.unobserve(el));
+  }, []);
 
   return (
-    <section className="py-24 md:py-32" style={{ background: '#FBF8F5' }}>
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-
-          <div ref={leftRef} className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-xl" style={{ height: '580px' }}>
-              <Image src={doctorData.image} alt={doctorData.name} fill className="object-cover" />
-              <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 px-6 py-4 flex items-center justify-between" style={{ background: 'rgba(255,255,255,0.25)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
-                <span className="text-sm font-medium" style={{ color: '#2E2E2E' }}>{doctorData.role}</span>
-                <span className="text-xl">✦</span>
-              </div>
-            </div>
+    <section className="py-24 md:py-32 bg-[#F5F0EB]">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left: Photo */}
+          <div
+            ref={photoRef}
+            className="relative overflow-hidden"
+            style={{
+              borderRadius: "16px",
+              height: "580px",
+              boxShadow: "0 12px 40px rgba(91,31,106,0.18)",
+            }}
+          >
+            <Image
+              src="/images/doctor/dr-shruthi.jpg"
+              alt="Dr. Shruthi Pavana Janardhanan"
+              fill
+              className="object-cover"
+            />
           </div>
 
-          <div ref={rightRef} className="flex flex-col gap-6">
-            <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-normal mb-2" style={{ color: '#2E2E2E' }}>
-                {doctorData.name}
-              </h2>
-              <p className="font-serif text-lg" style={{ color: '#6B6570' }}>
-                {doctorData.title}
-              </p>
+          {/* Right: Details */}
+          <div className="flex flex-col gap-5">
+            <h2
+              ref={nameRef}
+              className="text-3xl md:text-4xl lg:text-5xl text-[#5B1F6A]"
+              style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
+            >
+              Dr. Shruthi Pavana Janardhanan
+            </h2>
+
+            <p
+              ref={titleRef}
+              className="text-base md:text-lg italic text-[#6B6570]"
+            >
+              Lead Dermatologist &amp; Aesthetic Specialist
+            </p>
+
+            <div
+              ref={pillRef}
+              className="self-start text-xs md:text-sm font-medium"
+              style={{
+                background: "#f3eaf8",
+                color: "#5B1F6A",
+                borderRadius: "20px",
+                padding: "6px 16px",
+              }}
+            >
+              MBBS · MD.DVL · DNB.DVL · MNAMS · MRCP SCE DERM(UK)
             </div>
 
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium w-fit" style={{ background: '#F2EAF3', color: '#5A2A5D' }}>
-              {doctorData.qualifications}
-            </div>
-
-            <div className="flex flex-col gap-4">
-              {doctorData.bio.map((paragraph, i) => (
-                <p key={i} className="text-base leading-relaxed" style={{ color: '#6B6570' }}>
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-
-            <div className="flex flex-col gap-4 pt-4 border-t" style={{ borderColor: '#E4DFE8' }}>
-              {credentials.map((credential: Credential, i) => (
-                <div key={i} className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#F2EAF3', border: '1px solid #E4DFE8' }}>
-                    <span style={{ color: '#5A2A5D' }}>✦</span>
-                  </div>
-                  <span className="text-sm font-medium" style={{ color: '#2E2E2E' }}>{credential.label}</span>
+            <div className="flex flex-col gap-4 mt-2">
+              {achievements.map((a, i) => (
+                <div
+                  key={i}
+                  ref={(el) => { achievementRefs.current[i] = el; }}
+                  className="flex items-center gap-4"
+                >
+                  <span className="text-xl flex-shrink-0">{a.icon}</span>
+                  <span className="text-sm md:text-base text-[#2E2E2E] font-medium">
+                    {a.text}
+                  </span>
                 </div>
               ))}
             </div>
-          </div>
 
+            <p className="text-xs md:text-sm text-[#8F8F8F] mt-2">
+              Active member of IADVL · IASTD · NAMS
+            </p>
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
