@@ -126,6 +126,7 @@ export default function Hero() {
                 >
                   <div
                     style={{
+                      width: "220px",
                       height: "48px",
                       borderRadius: "999px",
                       background: "rgba(255,255,255,0.15)",
@@ -160,6 +161,8 @@ export default function Hero() {
                         fontWeight: 500,
                         letterSpacing: "0.02em",
                         whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
                       }}
                     >
                       {t.name}
