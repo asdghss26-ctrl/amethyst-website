@@ -1,58 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { Reveal } from "../ui/RevealAnimation";
 import CountUp from "../ui/CountUp";
-
-const WHATSAPP_URL = "https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment.";
-
-const achievements = [
-  { icon: "🏥", text: "MD from Madras Medical College" },
-  { icon: "🌍", text: "MRCP SCE Dermatology UK" },
-  { icon: "📄", text: "3 Published Research Articles" },
-];
-
-const values = [
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5B1F6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M9 11l3 3L22 4" />
-        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-      </svg>
-    ),
-    title: "Personalized Treatment Plans",
-    description: "Every treatment begins with a thorough consultation and a custom plan tailored to your unique skin type, concerns, and goals.",
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5B1F6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <line x1="12" y1="8" x2="12" y2="12" />
-        <line x1="12" y1="16" x2="12.01" y2="16" />
-      </svg>
-    ),
-    title: "Transparent Recommendations",
-    description: "No upselling — only honest, ethical advice about what will truly benefit your skin.",
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5B1F6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    title: "Medical-Grade Safety",
-    description: "All treatments are performed using FDA-approved equipment and medical-grade products under strict clinical protocols.",
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5B1F6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
-      </svg>
-    ),
-    title: "Comforting Environment",
-    description: "From the moment you walk in, our warm, spa-like atmosphere and caring team make every visit a relaxing experience.",
-  },
-];
 
 export default function About() {
   return (
@@ -134,43 +83,61 @@ export default function About() {
               </Reveal>
 
               <Reveal delay={0.2}>
-                <div className="p-8 md:p-12 lg:p-14 flex flex-col justify-center">
-                  <div className="inline-flex items-center gap-2 bg-[#5B1F6A]/10 rounded-full px-4 py-1.5 mb-5 self-start">
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#5B1F6A]">
-                      MBBS, MD.DVL, DNB.DVL, MNAMS, MRCP SCE DERM(UK)
-                    </span>
-                  </div>
-
-                  <h3
-                    className="text-3xl md:text-4xl lg:text-5xl text-[#5B1F6A] mb-2"
-                    style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
-                  >
+                <div style={{ background: "#f3eaf8", borderRadius: "20px", padding: "32px 24px" }}>
+                  {/* Doctor Name &amp; Title */}
+                  <h2 style={{ color: "#5B1F6A", fontSize: "22px", fontWeight: 700, margin: "0 0 6px", fontFamily: "serif" }}>
                     Dr. Shruthi Pavana Janardhanan
-                  </h3>
-                  <p className="text-sm md:text-base text-[#6B6570] font-medium mb-8">
+                  </h2>
+                  <p style={{ color: "#7a4a8a", fontSize: "14px", fontStyle: "italic", margin: "0 0 16px" }}>
                     Lead Dermatologist &amp; Aesthetic Specialist
                   </p>
 
-                  <div className="space-y-4 mb-10">
-                    {achievements.map((a, i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <span className="text-lg flex-shrink-0">{a.icon}</span>
-                        <span className="text-sm md:text-base text-[#2E2E2E]">{a.text}</span>
-                      </div>
-                    ))}
+                  {/* Credentials Pill */}
+                  <div
+                    style={{
+                      display: "inline-block",
+                      background: "white",
+                      border: "1px solid #d4a8e8",
+                      borderRadius: "20px",
+                      padding: "6px 16px",
+                      marginBottom: "24px",
+                    }}
+                  >
+                    <span style={{ color: "#5B1F6A", fontSize: "12px", fontWeight: 600, letterSpacing: "0.5px" }}>
+                      MBBS &nbsp;·&nbsp; MD.DVL &nbsp;·&nbsp; DNB.DVL &nbsp;·&nbsp; MNAMS &nbsp;·&nbsp; MRCP SCE DERM(UK)
+                    </span>
                   </div>
 
-                  <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-[#5B1F6A] text-white px-8 py-4 rounded-full text-sm font-medium hover:bg-[#4A184F] transition-all duration-300 hover:-translate-y-0.5 shadow-md self-start"
-                  >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                    </svg>
-                    Book a Consultation
-                  </a>
+                  {/* Divider */}
+                  <div style={{ width: "100%", height: "1px", background: "#d4a8e8", marginBottom: "20px" }} />
+
+                  {/* Achievements */}
+                  {[
+                    { label: "Qualification", value: "MD in Dermatology — Madras Medical College" },
+                    { label: "International", value: "MRCP SCE in Dermatology (UK)" },
+                    { label: "Research", value: "3 Published Research Articles" },
+                  ].map((item, i) => (
+                    <div key={i} style={{ display: "flex", gap: "12px", marginBottom: "14px", alignItems: "flex-start" }}>
+                      <div style={{ width: "4px", minWidth: "4px", height: "40px", background: "#5B1F6A", borderRadius: "2px" }} />
+                      <div>
+                        <span style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>
+                          {item.label}
+                        </span>
+                        <p style={{ color: "#444", fontSize: "13px", margin: "2px 0 0", lineHeight: "1.5" }}>{item.value}</p>
+                      </div>
+                    </div>
+                  ))}
+
+                  {/* Divider */}
+                  <div style={{ width: "100%", height: "1px", background: "#d4a8e8", margin: "20px 0" }} />
+
+                  {/* Memberships */}
+                  <p style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", margin: "0 0 6px" }}>
+                    Professional Memberships
+                  </p>
+                  <p style={{ color: "#666", fontSize: "13px", margin: 0, lineHeight: "1.7" }}>
+                    Indian Association of Dermatologists, Venereologists &amp; Leprologists (IADVL) &nbsp;·&nbsp; Indian Association for the Study of Sexually Transmitted Diseases (IASTD) &nbsp;·&nbsp; National Academy of Medical Sciences (NAMS)
+                  </p>
                 </div>
               </Reveal>
             </div>
@@ -205,64 +172,122 @@ export default function About() {
       </section>
 
       {/* ─── SECTION 4: VALUES CARDS ─── */}
-      <section className="py-28 md:py-36 bg-[#F5F0EB]">
-        <div className="max-w-6xl mx-auto px-6">
-          {/* Purple divider */}
-          <div className="w-16 h-1 bg-[#5B1F6A] rounded-full mx-auto mb-10" />
-
+      <section className="py-28 md:py-36 bg-[#F5F0EB] overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Doctor intro */}
           <Reveal delay={0.1}>
             <div className="text-center mb-14 md:mb-16">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5B1F6A] mb-4">
+                • MEET OUR DOCTOR
+              </p>
               <h2
-                className="text-4xl md:text-5xl text-[#5B1F6A] mb-4"
-                style={{ fontFamily: "var(--font-dm-serif), serif" }}
+                className="text-4xl md:text-5xl text-[#5B1F6A] mb-3"
+                style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
               >
-                Why Choose Amethyst?
+                Dr. Shruthi Pavana Janardhanan
               </h2>
-              <p className="text-base md:text-lg text-[#6B6570] max-w-xl mx-auto">
-                Every visit is designed around you — your skin, your goals, your comfort.
+              <p className="text-sm md:text-base text-[#6B6570] max-w-2xl mx-auto">
+                Lead Dermatologist &amp; Aesthetic Specialist — MBBS · MD.DVL · DNB.DVL · MNAMS · MRCP SCE DERM(UK)
               </p>
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
-            {values.map((v, i) => (
+          <div className="w-16 h-1 bg-[#5B1F6A] rounded-full mx-auto mb-14" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              {
+                icon: (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B1F6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" />
+                    <rect x="9" y="3" width="6" height="4" rx="1" />
+                    <path d="M9 14l2 2 4-4" />
+                  </svg>
+                ),
+                title: "Personalized Treatment Plans",
+                description: "Every patient receives a customized treatment plan tailored to their unique skin type, concerns, and goals.",
+              },
+              {
+                icon: (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B1F6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                  </svg>
+                ),
+                title: "Transparent Recommendations",
+                description: "We believe in honest, evidence-based recommendations with no unnecessary procedures.",
+              },
+              {
+                icon: (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B1F6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                ),
+                title: "Medical-Grade Safety",
+                description: "All procedures follow strict clinical protocols with medical-grade equipment and certified techniques.",
+              },
+              {
+                icon: (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B1F6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M11 20A7 7 0 019.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.78 10-10 10z" />
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C8 14 10 14 11 15" />
+                  </svg>
+                ),
+                title: "Comforting Environment",
+                description: "Our clinic is designed to make you feel calm, welcome, and at ease from the moment you arrive.",
+              },
+            ].map((v, i) => (
               <Reveal key={i} delay={i * 0.15}>
                 <div
-                  className="bg-white rounded-[16px] p-7 h-full"
+                  className="bg-white rounded-[16px] p-6 h-auto w-full break-words overflow-hidden"
                   style={{
-                    borderLeft: "4px solid #5B1F6A",
-                    boxShadow: "0 4px 20px rgba(91,31,106,0.10)",
+                    borderTop: "3px solid #5B1F6A",
+                    borderLeft: "1px solid #e8d5f0",
+                    borderRight: "1px solid #e8d5f0",
+                    borderBottom: "1px solid #e8d5f0",
+                    minHeight: "200px",
+                    boxShadow: "0 4px 16px rgba(91,31,106,0.08)",
                     transition: "all 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translateY(-6px)";
-                    e.currentTarget.style.boxShadow = "0 12px 32px rgba(91,31,106,0.18)";
-                    e.currentTarget.style.borderLeftColor = "#7B3F8A";
+                    e.currentTarget.style.boxShadow = "0 12px 28px rgba(91,31,106,0.16)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "0 4px 20px rgba(91,31,106,0.10)";
-                    e.currentTarget.style.borderLeftColor = "#5B1F6A";
+                    e.currentTarget.style.boxShadow = "0 4px 16px rgba(91,31,106,0.08)";
                   }}
                 >
                   <div
-                    className="w-14 h-14 flex items-center justify-center mb-4"
+                    className="flex items-center justify-center"
                     style={{
+                      width: "44px",
+                      height: "44px",
                       background: "#f3eaf8",
                       borderRadius: "50%",
+                      marginBottom: "14px",
                     }}
                   >
                     {v.icon}
                   </div>
                   <h3
-                    className="font-semibold mb-2"
-                    style={{ color: "#5B1F6A", fontSize: "18px" }}
+                    className="mb-2"
+                    style={{
+                      fontSize: "15px",
+                      fontWeight: 700,
+                      color: "#5B1F6A",
+                      overflowWrap: "break-word",
+                    }}
                   >
                     {v.title}
                   </h3>
                   <p
                     className="leading-relaxed"
-                    style={{ color: "#666", fontSize: "14px", lineHeight: "1.6" }}
+                    style={{
+                      fontSize: "13px",
+                      color: "#888",
+                      lineHeight: "1.7",
+                      overflowWrap: "break-word",
+                    }}
                   >
                     {v.description}
                   </p>

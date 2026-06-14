@@ -2,7 +2,7 @@ import HeroAboutSection from '@/components/sections/about/HeroAboutSection'
 import ImageStripSection from '@/components/sections/about/ImageStripSection'
 import DoctorBioSection from '@/components/sections/about/DoctorBioSection'
 import StatsSection from '@/components/sections/about/StatsSection'
-import HowWeCareSection from '@/components/sections/about/HowWeCareSection'
+import ValuesSection from '@/components/sections/about/ValuesSection'
 import GalleryGridSection from '@/components/sections/about/GalleryGridSection'
 import AboutCTASection from '@/components/sections/about/AboutCTASection'
 
@@ -18,7 +18,7 @@ export default function AboutPage() {
       <ImageStripSection />
       <DoctorBioSection />
       <StatsSection />
-      <HowWeCareSection />
+      <ValuesSection />
       <GalleryGridSection />
       <AboutCTASection />
     </main>

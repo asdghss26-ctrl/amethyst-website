@@ -46,29 +46,6 @@ export const stats = [
   },
 ]
 
-export const careFeatures = [
-  {
-    icon: 'personalized',
-    title: 'Personalized Treatment Plans',
-    description: 'Every patient receives a customized treatment plan tailored to their unique skin type, concerns, and goals.',
-  },
-  {
-    icon: 'transparent',
-    title: 'Transparent Recommendations',
-    description: 'We believe in honest, evidence-based recommendations with no unnecessary procedures.',
-  },
-  {
-    icon: 'safety',
-    title: 'Medical-Grade Safety',
-    description: 'All procedures follow strict clinical protocols with medical-grade equipment and certified techniques.',
-  },
-  {
-    icon: 'comfort',
-    title: 'Comforting Environment',
-    description: 'Our clinic is designed to make you feel calm, welcome, and at ease from the moment you arrive.',
-  },
-]
-
 export const heroAbout = {
   badge: 'ABOUT OUR CLINIC',
   heading: 'A modern approach to beautiful, healthy skin',

@@ -119,8 +119,8 @@ export default function Hero() {
               const angleStep = 360 / pillCount;
               const pillAngle = i * angleStep;
               const rad = (pillAngle * Math.PI) / 180;
-              const x = Math.sin(rad) * orbitRadius;
-              const y = -Math.cos(rad) * orbitRadius;
+              const x = Math.round(Math.sin(rad) * orbitRadius * 1000) / 1000;
+              const y = Math.round(-Math.cos(rad) * orbitRadius * 1000) / 1000;
 
               return (
                 <div
@@ -129,7 +129,7 @@ export default function Hero() {
                     position: "absolute",
                       left: `calc(50% + ${x}px)`,
                       top: `calc(50% + ${y}px)`,
-                      transform: `translate(-50%, -50%) rotate(${pillAngle + 90}deg)`,
+                      transform: `translate(-50%, -50%) rotate(${Math.round(pillAngle + 90)}deg)`,
                   }}
                 >
                   <div
