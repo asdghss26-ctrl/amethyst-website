@@ -35,7 +35,7 @@ export default function Services() {
           {services.map((s, i) => (
             <Reveal key={i} delay={0.1 + i * 0.1}>
               <div
-                className="group bg-white border border-[#E4DFE8] rounded-[32px] md:rounded-[40px] px-6 py-6 md:px-8 md:py-7 flex flex-col md:flex-row md:items-center gap-4 md:gap-6 hover:border-[#8E5C8F] hover:shadow-lg transition-all duration-500"
+                className="group card-hover bg-white border border-[#E4DFE8] rounded-[32px] md:rounded-[40px] px-6 py-6 md:px-8 md:py-7 flex flex-col md:flex-row md:items-center gap-4 md:gap-6 hover:border-[#8E5C8F] hover:shadow-lg transition-all duration-500"
               >
                 <div className="flex items-center justify-between w-full md:w-1/2">
                   <div className="flex items-center gap-4 md:gap-5">

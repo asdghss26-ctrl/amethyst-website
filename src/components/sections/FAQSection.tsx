@@ -56,7 +56,7 @@ export default function FAQ() {
             {faqItems.map((faq, i) => (
               <Reveal key={i} delay={0.2 + i * 0.1}>
                 <div
-                  className={`rounded-[24px] md:rounded-[28px] border overflow-hidden transition-all duration-300 ${open === i ? "bg-white border-[#8E5C8F]" : "bg-white/70 border-[#E4DFE8]"}`}
+                  className={`card-hover rounded-[24px] md:rounded-[28px] border overflow-hidden transition-all duration-300 ${open === i ? "bg-white border-[#8E5C8F]" : "bg-white/70 border-[#E4DFE8]"}`}
                 >
                   <button
                     className="w-full flex items-center justify-between px-5 md:px-7 py-4 md:py-5 text-left"

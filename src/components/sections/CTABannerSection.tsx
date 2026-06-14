@@ -30,13 +30,15 @@ export default function CTABanner() {
               </Reveal>
               <Reveal delay={0.4}>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="#appointment"
+                  <a
+                    href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-white text-[#5A2A5D] px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#F8F6F9] transition-all duration-300 hover:-translate-y-0.5"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/logo.svg" alt="" className="h-5 w-auto" /> Book an Appointment
-                  </Link>
+                  </a>
                   <Link
                     href="/services"
                     className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium hover:bg-white/30 transition-all duration-300"

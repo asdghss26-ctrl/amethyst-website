@@ -31,6 +31,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -38,6 +39,11 @@ body {
   color: var(--foreground);
   font-family: "Inter", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll snap sections */
+section, footer {
+  scroll-snap-align: start;
 }
 
 /* Floating badge animations */
@@ -91,6 +97,43 @@ body {
   border: 1px solid rgba(90, 42, 93, 0.2);
 }
 
+/* Hero logo entrance animations */
+@keyframes iconDrop {
+  0% { opacity: 0; transform: translateY(-24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes textReveal {
+  0% { clip-path: inset(0 100% 0 0); opacity: 0; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+
+@keyframes slideUpFade {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes letterExpand {
+  0% { opacity: 0; letter-spacing: -0.02em; }
+  100% { opacity: 1; letter-spacing: 0.15em; }
+}
+
+.animate-icon-drop {
+  animation: iconDrop 0.6s ease-out forwards;
+}
+
+.animate-text-reveal {
+  animation: textReveal 1s ease-out 0.6s forwards;
+}
+
+.animate-slide-up-fade {
+  animation: slideUpFade 0.8s ease-out 1.6s forwards;
+}
+
+.animate-letter-expand {
+  animation: letterExpand 1s ease-out 2.4s forwards;
+}
+
 /* Image hover zoom */
 .img-zoom {
   overflow: hidden;
@@ -104,7 +147,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Card hover lift */
+/* Card hover effects */
 .card-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -112,6 +155,23 @@ body {
 .card-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-hover:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Card entrance reveal */
+.card-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-reveal.card-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Subtle shimmer */

@@ -137,7 +137,7 @@ export default function About() {
             { end: 100, suffix: "%", label: "Personalized treatment plans" },
           ].map((stat, i) => (
             <Reveal key={i} delay={0.1 + i * 0.1}>
-              <div className="bg-white border border-[#E4DFE8] rounded-[24px] md:rounded-3xl p-4 md:p-6 text-center h-full flex flex-col justify-center shadow-sm">
+              <div className="card-hover bg-white border border-[#E4DFE8] rounded-[24px] md:rounded-3xl p-4 md:p-6 text-center h-full flex flex-col justify-center shadow-sm">
                 <p
                   className="text-3xl md:text-4xl text-[#5A2A5D] mb-1"
                   style={{ fontFamily: "var(--font-dm-serif), serif" }}

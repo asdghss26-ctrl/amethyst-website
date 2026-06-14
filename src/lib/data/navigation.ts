@@ -3,10 +3,13 @@ export interface NavItem {
   href: string
 }
 
+export const WHATSAPP_URL = "https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "#contact" },
 ]
 
@@ -17,7 +20,7 @@ export const quickLinks: NavItem[] = [
   { label: "Service Static", href: "#" },
   { label: "Blog", href: "#" },
   { label: "Contact", href: "#contact" },
-  { label: "Appointment", href: "#appointment" },
+  { label: "Appointment", href: WHATSAPP_URL },
 ]
 
 export const utilityLinks: NavItem[] = [

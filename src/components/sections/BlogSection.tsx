@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { blogPosts } from "@/lib/data/blog";
+import { Reveal } from "../ui/RevealAnimation";
 
 const featured = blogPosts[0];
 const others = blogPosts.slice(1);
@@ -43,9 +44,10 @@ export default function Blog() {
 
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Featured Article Card */}
+          <Reveal delay={0.1}>
           <div 
             onClick={() => setActiveArticle(0)}
-            className="bg-white border border-[#E4DFE8] rounded-[40px] overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
+            className="card-hover bg-white border border-[#E4DFE8] rounded-[40px] overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
           >
             <div className="w-full h-52 overflow-hidden">
               <img src="/images/blog/featured.svg" alt="" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -68,14 +70,15 @@ export default function Blog() {
               </button>
             </div>
           </div>
+          </Reveal>
 
           {/* Sidebar Articles Column */}
           <div className="flex flex-col gap-4">
             {others.map((post, i) => (
+              <Reveal key={i} delay={0.15 + i * 0.1}>
               <div
-                key={i}
                 onClick={() => setActiveArticle(i + 1)}
-                className="group bg-white border border-[#E4DFE8] rounded-[32px] p-6 hover:border-[#8E5C8F] hover:shadow-md transition-all duration-300 flex items-center gap-4 cursor-pointer"
+                className="card-hover group bg-white border border-[#E4DFE8] rounded-[32px] p-6 hover:border-[#8E5C8F] hover:shadow-md transition-all duration-300 flex items-center gap-4 cursor-pointer"
                 role="button"
                 tabIndex={0}
               >
@@ -95,10 +98,11 @@ export default function Blog() {
                   >
                     {post.title}
                   </h3>
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
-          </div>
+            </div>
         </div>
       </div>
 

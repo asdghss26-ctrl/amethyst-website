@@ -28,7 +28,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <Link href="/" className="flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
+        <Link href="/" onClick={(e) => { if (window.location.pathname === '/') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }} className="flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
           <img src="/logo.svg" alt="AMETHYST logo" style={{ height: "42px", width: "auto" }} />
           <span
             className="text-xl tracking-wide"
@@ -39,13 +39,15 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden md:block ml-auto">
-          <Link
-            href="#appointment"
+          <a
+            href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#5A2A5D] border border-[#5A2A5D] text-white text-xs font-medium uppercase tracking-[0.1em] px-5 py-2.5 rounded-full hover:bg-[#4A1F4D] hover:border-[#4A1F4D] transition-all duration-300"
           >
             <img src="/logo-cream.svg" alt="" className="h-5 w-auto" />
             Book Appointment
-          </Link>
+          </a>
         </div>
 
         <button
@@ -72,10 +74,10 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          <Link href="#appointment" className="bg-[#5A2A5D] text-white text-xs font-medium uppercase tracking-[0.1em] px-5 py-3 rounded-full text-center hover:bg-[#4A1F4D] transition-all duration-300 flex items-center justify-center gap-2" onClick={() => setMenuOpen(false)}>
+          <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" className="bg-[#5A2A5D] text-white text-xs font-medium uppercase tracking-[0.1em] px-5 py-3 rounded-full text-center hover:bg-[#4A1F4D] transition-all duration-300 flex items-center justify-center gap-2" onClick={() => setMenuOpen(false)}>
             <img src="/logo-cream.svg" alt="" className="h-5 w-auto" />
             Book Appointment
-          </Link>
+          </a>
         </div>
       )}
     </nav>

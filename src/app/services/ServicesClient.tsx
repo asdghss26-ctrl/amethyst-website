@@ -254,9 +254,9 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
               a: "Aesthetic concerns like scarring and pigmentation usually require a series of 3 to 6 sessions spaced 4 weeks apart to achieve long-term remodeling. Quick procedures like skin tags and milia extraction are resolved instantly in a single session."
             }
           ].map((faq, idx) => (
+            <Reveal key={idx} delay={0.1 + idx * 0.1}>
             <details
-              key={idx}
-              className="group bg-white rounded-2xl border border-[#E4DFE8] p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:border-[#8E5C8F] transition-all"
+              className="card-hover group bg-white rounded-2xl border border-[#E4DFE8] p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:border-[#8E5C8F] transition-all"
             >
               <summary className="flex items-center justify-between gap-4 font-semibold text-sm md:text-base text-[#2E2E2E] select-none list-none">
                 <span>{faq.q}</span>
@@ -268,6 +268,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
                 {faq.a}
               </p>
             </details>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -290,12 +291,14 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
             <p className="text-[#F3DADF] text-xs sm:text-sm leading-relaxed mb-8 max-w-md mx-auto">
               Schedule an in-depth consultation with Dr. Shruthi Pavana Janardhanan to map out a dedicated, result-oriented clinical protocol.
             </p>
-            <Link
-              href="/#appointment"
+            <a
+              href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-[#5A2A5D] px-8 py-3.5 rounded-full text-xs sm:text-sm font-semibold hover:bg-[#F8F6F9] transition-all duration-300 hover:-translate-y-0.5"
             >
               <img src="/logo.svg" alt="" className="h-5 w-auto" /> Book Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -450,13 +453,15 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
 
               {/* Footer CTA */}
               <div className="p-6 border-t border-[#E4DFE8] bg-[#FBF8F5] flex gap-3">
-                <Link
-                  href="/#appointment"
+                <a
+                  href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setSelectedTreatment(null)}
                   className="w-full inline-flex items-center justify-center gap-2 bg-[#5A2A5D] text-white text-xs font-semibold uppercase tracking-[0.1em] py-4 rounded-xl hover:bg-[#4A1F4D] transition-colors"
                 >
                   <img src="/logo-cream.svg" alt="" className="h-5 w-auto" /> Book Treatment Session
-                </Link>
+                </a>
               </div>
             </motion.div>
           </>

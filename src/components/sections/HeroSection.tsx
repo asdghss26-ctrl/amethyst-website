@@ -47,66 +47,12 @@ export default function Hero() {
   const wheelAnimation = "wheelSpin 50s linear infinite";
 
   return (
-    <section ref={sectionRef} className="relative bg-[#F5F0EB] overflow-hidden" style={{ minHeight: "100svh" }}>
+    <section id="home" ref={sectionRef} className="relative bg-[#F5F0EB] overflow-hidden" style={{ minHeight: "100svh" }}>
       {/* ─── NAV SPACER ─── */}
       <div className="pt-24" />
 
       {/* ─── CENTERED HEADLINE ─── */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
-        {/* Floating badge: Board Certified */}
-        <Reveal delay={0.1}>
-          <div className="relative md:absolute md:-left-16 md:top-0 mb-6 md:mb-0 bg-white/80 backdrop-blur-sm rounded-2xl p-3 flex items-center gap-3 border border-[#E8DCCC] shadow-sm animate-float z-20">
-            <div className="w-9 h-9 rounded-full bg-[#F5F0EB] flex items-center justify-center text-base">🏆</div>
-            <div className="text-left">
-              <p className="text-[11px] font-semibold text-[#4A2E2A]">Board Certified</p>
-              <p className="text-[10px] text-[#8B7355]">Dermatologist team</p>
-            </div>
-          </div>
-        </Reveal>
-
-        <Reveal delay={0.2}>
-          <div className="flex flex-col items-center">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.svg" alt="" className="h-16 w-auto mb-6" />
-            <h1
-              className="text-[clamp(3.5rem,12vw,7rem)] leading-[1.05] text-[#5B1F6A]"
-              style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
-            >
-              AMETHYST
-            </h1>
-            <p className="text-lg md:text-xl tracking-[0.25em] font-medium text-[#5B1F6A] mt-2">
-              SKIN CLINIC
-            </p>
-            <p className="text-xs md:text-sm tracking-[0.15em] uppercase text-[#8B5F9A] mt-3 font-medium">
-              MEDICAL & AESTHETIC DERMATOLOGY
-            </p>
-          </div>
-        </Reveal>
-
-        {/* Floating badge: review */}
-        <Reveal delay={0.4}>
-          <div className="relative md:absolute md:-right-12 md:top-0 bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-[#E8DCCC] shadow-sm max-w-[260px] md:max-w-[190px] animate-float-delay z-20 mx-auto mb-10 md:mb-0">
-            <div className="flex gap-0.5 mb-2 md:mb-1.5">
-              {[1,2,3,4,5].map(i=>(
-                <svg key={i} className="w-3 h-3 text-[#C4924A] fill-current" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
-              ))}
-            </div>
-            <p className="text-[12px] md:text-[11px] text-[#4A2E2A] leading-relaxed italic text-left">&ldquo;My acne finally cleared after years of trying everything. The treatment plan was simple, clear, and effective.&rdquo;</p>
-            
-            <div className="flex justify-between items-end mt-3 md:mt-1.5">
-              <div className="text-left">
-                <p className="text-[11px] md:text-[10px] text-[#8B5E3C] font-semibold">Sofia Hale</p>
-                <p className="text-[10px] text-[#8B7355]">Actress</p>
-              </div>
-              <div className="w-8 h-8 rounded-full overflow-hidden border border-[#D4C4B0]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop" alt="Sofia Hale" className="w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-        </Reveal>
       </div>
 
       {/* ─── SPINNING WHEEL SECTION ─── */}
@@ -122,7 +68,25 @@ export default function Hero() {
               className="w-full h-full object-cover"
             />
           {/* Overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-black/10" />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+
+        {/* ─── LOGO OVERLAY ON BACKGROUND IMAGE ─── */}
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-12 md:pt-20 pointer-events-none">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-cream.svg" alt="" className="h-16 w-auto mb-1 animate-icon-drop" />
+          <h1
+            className="text-[clamp(3.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
+            style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
+          >
+            AMETHYST
+          </h1>
+          <p className="text-lg md:text-xl tracking-[0.25em] font-medium text-white/90 mt-0 animate-slide-up-fade">
+            SKIN CLINIC
+          </p>
+          <p className="text-xs md:text-sm tracking-[0.15em] uppercase text-white/70 mt-0.5 font-medium animate-letter-expand">
+            MEDICAL & AESTHETIC DERMATOLOGY
+          </p>
         </div>
 
         {/* ─── THE SPINNING WHEEL ─── */}
