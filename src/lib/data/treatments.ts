@@ -18,7 +18,7 @@ export const treatments: Treatment[] = [
   {
     id: "prp-hair",
     name: "PRP Hair Therapy",
-    img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1608248597481-496100c80836?q=80&w=300&auto=format&fit=crop",
     category: "hair-loss",
     description: "Platelet-Rich Plasma (PRP) therapy uses your own blood platelets to stimulate dormant hair follicles, accelerate cellular regeneration, and reverse hair thinning.",
     benefits: [
@@ -45,7 +45,7 @@ export const treatments: Treatment[] = [
   {
     id: "gfc-hair",
     name: "GFC Hair Therapy",
-    img: "https://images.unsplash.com/photo-1622434641406-a158123450f9?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1626014903708-bb65715de23a?q=80&w=300&auto=format&fit=crop",
     category: "hair-loss",
     description: "Growth Factor Concentrate (GFC) is an advanced, highly purified therapy derived from your platelets. It delivers specific activated growth factors directly to the root for superior, consistent hair restoration.",
     benefits: [
@@ -70,7 +70,7 @@ export const treatments: Treatment[] = [
   {
     id: "iprf-scalp",
     name: "iPRF Scalp Care",
-    img: "https://images.unsplash.com/photo-1579684389782-64d84b5e901a?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=300&auto=format&fit=crop",
     category: "hair-loss",
     description: "injectable Platelet-Rich Fibrin (iPRF) is a secondary generation platelet concentrate. Formulated without anticoagulants, it forms a fibrin matrix that slowly releases growth factors over an extended period.",
     benefits: [
@@ -95,7 +95,7 @@ export const treatments: Treatment[] = [
   {
     id: "hair-threads",
     name: "Hair Threads",
-    img: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=300&auto=format&fit=crop",
     category: "hair-loss",
     description: "Polydioxanone (PDO) threads are ultra-fine, absorbable sutures placed into the scalp. They trigger a localized healing response, encouraging collagen synthesis and long-term hair follicle rejuvenation.",
     benefits: [
@@ -122,7 +122,7 @@ export const treatments: Treatment[] = [
   {
     id: "subcision",
     name: "Acne Subcision",
-    img: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=300&auto=format&fit=crop",
     category: "acne-scar",
     description: "A specialized surgical procedure that releases tethered fibrotic bands binding deep acne scars to underlying tissue. This lifts depressed scars and promotes natural collagen remodeling.",
     benefits: [
@@ -148,7 +148,7 @@ export const treatments: Treatment[] = [
   {
     id: "mnrf",
     name: "MNRF Microneedling",
-    img: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=300&auto=format&fit=crop",
     category: "acne-scar",
     description: "Microneedling Fractional Radiofrequency (MNRF) delivers controlled RF energy deep into the dermis through insulated micro-needles. This stimulates intense collagen and elastin production while sparing the epidermis.",
     benefits: [
@@ -201,8 +201,8 @@ export const treatments: Treatment[] = [
   // --- PIGMENTATION ---
   {
     id: "picolaser",
-    name: "Picolaser Toning",
-    img: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?q=80&w=300&auto=format&fit=crop",
+    name: "Picofacial Toning",
+    img: "https://images.unsplash.com/photo-1527891751199-7225231a68dd?q=80&w=300&auto=format&fit=crop",
     category: "pigmentation",
     description: "Using ultra-short picosecond pulses of laser energy, this system shatters stubborn pigments into microscopic particles. Your immune system then clears these particles, resulting in a bright, even skin tone.",
     benefits: [
@@ -228,7 +228,7 @@ export const treatments: Treatment[] = [
   {
     id: "picofusion",
     name: "Picofusion Treatment",
-    img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c9?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=300&auto=format&fit=crop",
     category: "pigmentation",
     description: "An advanced combination protocol linking picosecond laser toning with the transdermal delivery of potent brightening antioxidants like Glutathione and Vitamin C, targeting multiple pigment pathways.",
     benefits: [
@@ -379,7 +379,7 @@ export const treatments: Treatment[] = [
   {
     id: "biopsy",
     name: "Diagnostic Skin Biopsy",
-    img: "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=300&auto=format&fit=crop",
     category: "quick-procedures",
     description: "A small, precise diagnostic sample of skin tissue is taken (punch or shave biopsy) under local anesthesia and sent for dermatopathological evaluation to determine the exact diagnosis of skin conditions.",
     benefits: [

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "../ui/RevealAnimation";
+import CountUp from "../ui/CountUp";
 
 export default function About() {
   return (
@@ -130,10 +131,10 @@ export default function About() {
         {/* Stats row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-8 md:mt-12">
           {[
-            { value: "10+", label: "Years of medical excellence" },
-            { value: "86+", label: "5-star patient reviews" },
-            { value: "4", label: "Core treatment specialties" },
-            { value: "100%", label: "Personalized treatment plans" },
+            { end: 10, suffix: "+", label: "Years of medical excellence" },
+            { end: 86, suffix: "+", label: "5-star patient reviews" },
+            { end: 4, suffix: "", label: "Core treatment specialties" },
+            { end: 100, suffix: "%", label: "Personalized treatment plans" },
           ].map((stat, i) => (
             <Reveal key={i} delay={0.1 + i * 0.1}>
               <div className="bg-white border border-[#E4DFE8] rounded-[24px] md:rounded-3xl p-4 md:p-6 text-center h-full flex flex-col justify-center shadow-sm">
@@ -141,7 +142,7 @@ export default function About() {
                   className="text-3xl md:text-4xl text-[#5A2A5D] mb-1"
                   style={{ fontFamily: "var(--font-dm-serif), serif" }}
                 >
-                  {stat.value}
+                  <CountUp end={stat.end} suffix={stat.suffix} duration={2000} />
                 </p>
                 <p className="text-[10px] md:text-xs text-[#6B6570] leading-snug">{stat.label}</p>
               </div>

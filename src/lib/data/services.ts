@@ -22,7 +22,7 @@ export const services: Service[] = [
     id: "pigmentation",
     icon: "☀",
     title: "Pigmentation Correction",
-    description: "Clinical precision laser toning and medical peeling systems for flawless skin tone (Picolaser, Picofusion, Cosmelan).",
+    description: "Clinical precision laser toning and medical peeling systems for flawless skin tone (Picofacial, Picofusion, Cosmelan).",
   },
   {
     id: "vitiligo",

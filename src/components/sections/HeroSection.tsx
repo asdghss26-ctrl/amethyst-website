@@ -47,7 +47,7 @@ export default function Hero() {
   const wheelAnimation = "wheelSpin 50s linear infinite";
 
   return (
-    <section ref={sectionRef} className="relative bg-[#F5F0E8] overflow-hidden" style={{ minHeight: "100svh" }}>
+    <section ref={sectionRef} className="relative bg-[#F5F0EB] overflow-hidden" style={{ minHeight: "100svh" }}>
       {/* ─── NAV SPACER ─── */}
       <div className="pt-24" />
 
@@ -56,7 +56,7 @@ export default function Hero() {
         {/* Floating badge: Board Certified */}
         <Reveal delay={0.1}>
           <div className="relative md:absolute md:-left-16 md:top-0 mb-6 md:mb-0 bg-white/80 backdrop-blur-sm rounded-2xl p-3 flex items-center gap-3 border border-[#E8DCCC] shadow-sm animate-float z-20">
-            <div className="w-9 h-9 rounded-full bg-[#F5F0E8] flex items-center justify-center text-base">🏆</div>
+            <div className="w-9 h-9 rounded-full bg-[#F5F0EB] flex items-center justify-center text-base">🏆</div>
             <div className="text-left">
               <p className="text-[11px] font-semibold text-[#4A2E2A]">Board Certified</p>
               <p className="text-[10px] text-[#8B7355]">Dermatologist team</p>
@@ -65,27 +65,22 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <h1
-            className="text-[clamp(3.2rem,10vw,6.5rem)] leading-[1.05] mb-6 md:mb-8"
-            style={{
-              fontFamily: "var(--font-dm-serif), serif",
-              background: "linear-gradient(90deg, #5A2A5D, #CFA1A8)",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              color: "transparent",
-            }}
-          >
-            Healthy,<br />
-            <em>confident skin</em><br />
-            starts here
-          </h1>
-        </Reveal>
-
-        <Reveal delay={0.3}>
-          <p className="text-[#6B6570] text-sm md:text-lg max-w-lg mx-auto mb-8 md:mb-10 leading-relaxed px-4 md:px-0">
-            Advanced dermatology and modern aesthetic treatments are designed to improve your skin health and confidence.
-          </p>
+          <div className="flex flex-col items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.svg" alt="" className="h-16 w-auto mb-6" />
+            <h1
+              className="text-[clamp(3.5rem,12vw,7rem)] leading-[1.05] text-[#5B1F6A]"
+              style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
+            >
+              AMETHYST
+            </h1>
+            <p className="text-lg md:text-xl tracking-[0.25em] font-medium text-[#5B1F6A] mt-2">
+              SKIN CLINIC
+            </p>
+            <p className="text-xs md:text-sm tracking-[0.15em] uppercase text-[#8B5F9A] mt-3 font-medium">
+              MEDICAL & AESTHETIC DERMATOLOGY
+            </p>
+          </div>
         </Reveal>
 
         {/* Floating badge: review */}
@@ -122,7 +117,7 @@ export default function Hero() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src="/realistic-skin.png" 
+              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1400&q=80" 
               alt="Skin treatment"
               className="w-full h-full object-cover"
             />
@@ -167,7 +162,7 @@ export default function Hero() {
                 >
                   <div
                     style={{
-                      height: "38px",
+                      height: "48px",
                       borderRadius: "999px",
                       background: "rgba(255,255,255,0.15)",
                       backdropFilter: "blur(12px)",
@@ -176,19 +171,19 @@ export default function Hero() {
                       display: "flex",
                       alignItems: "center",
                       paddingLeft: "4px",
-                      paddingRight: "14px",
-                      gap: "8px",
+                      paddingRight: "16px",
+                      gap: "10px",
                       boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                     }}
                   >
                     <div
                       style={{
-                        width: "28px",
-                        height: "28px",
+                        width: "40px",
+                        height: "40px",
                         borderRadius: "50%",
                         flexShrink: 0,
                         overflow: "hidden",
-                        border: "1px solid rgba(255,255,255,0.8)",
+                        border: "2px solid rgba(255,255,255,0.8)",
                       }}
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -218,7 +213,7 @@ export default function Hero() {
           style={{
             width: "360px",
             height: "140px",
-            background: "#F5F0E8",
+            background: "#F5F0EB",
             borderTopLeftRadius: "180px 140px",
             borderTopRightRadius: "180px 140px",
           }}
