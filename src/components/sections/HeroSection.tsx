@@ -186,23 +186,28 @@ export default function Hero() {
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-end"
           style={{
-            width: "360px",
-            height: "140px",
+            width: "460px",
+            height: "200px",
             background: "#F5F0EB",
-            borderTopLeftRadius: "180px 140px",
-            borderTopRightRadius: "180px 140px",
+            borderTopLeftRadius: "230px 200px",
+            borderTopRightRadius: "230px 200px",
           }}
         >
           <Link
             href="/services"
-            className="flex flex-col items-center gap-1 mb-4 md:mb-6 group transition-all duration-500"
+            className="flex flex-col items-center gap-2 mb-4 group transition-all duration-500"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.svg" alt="" className="h-6 w-auto group-hover:scale-110 transition-transform" />
-            <span className="text-[10px] md:text-xs font-semibold text-[#2E2E2E] text-center max-w-[120px] md:max-w-none">
+            <img src="/logo.svg" alt="Amethyst Logo" className="h-10 md:h-12 w-auto group-hover:scale-110 transition-transform" />
+            <span className="text-sm md:text-base font-semibold text-[#2E2E2E] text-center">
               Explore our treatments
             </span>
           </Link>
+          
+          {/* SPACE FOR THE UPCOMING BOOK APPOINTMENT BUTTON */}
+          <div className="mb-4 md:mb-6 flex justify-center w-full min-h-[44px]">
+             {/* You will drop the Book Appointment button component right here */}
+          </div>
         </div>
       </div>
     </section>
