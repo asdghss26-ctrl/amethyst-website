@@ -38,7 +38,6 @@ export interface ContactInfo {
 }
 
 export const contactInfo: ContactInfo[] = [
-  { icon: "📍", text: "123 Medical Plaza, Suite 200, New York, NY 10001", href: "#" },
   { icon: "📞", text: "+91 8870445185", href: "tel:+918870445185" },
-  { icon: "✉️", text: "example@domain.com", href: "mailto:example@domain.com" },
+  { icon: "✉️", text: "hello@amethystskinclinic.com", href: "mailto:hello@amethystskinclinic.com" },
 ]
