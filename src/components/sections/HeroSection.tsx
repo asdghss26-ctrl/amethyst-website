@@ -53,7 +53,7 @@ export default function Hero() {
   const wheelAnimation = "wheelSpin 50s linear infinite";
 
   return (
-    <section id="home" ref={sectionRef} className="relative bg-[#F5F0EB] overflow-hidden" style={{ minHeight: "100svh" }}>
+    <section id="home" ref={sectionRef} className="relative bg-[#F5F0EB] overflow-hidden">
       {/* ─── NAV SPACER ─── */}
       <div className="pt-20 md:pt-24" />
 
@@ -210,18 +210,22 @@ export default function Hero() {
                 Explore our treatments
               </h3>
             </Link>
-            <a
-              href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-1.5 md:mt-2 inline-flex items-center gap-2 bg-[#5A2A5D] border border-[#5A2A5D] text-white text-[10px] md:text-xs font-medium uppercase tracking-[0.1em] px-4 md:px-5 py-2 md:py-2.5 rounded-full hover:bg-[#4A1F4D] hover:border-[#4A1F4D] transition-all duration-300"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo-cream.svg" alt="" className="h-4 md:h-5 w-auto" />
-              Book Appointment
-            </a>
           </div>
         </div>
+      </div>
+
+      {/* ─── BOOK APPOINTMENT BUTTON (fills the gap between hero & services) ─── */}
+      <div className="flex justify-center py-4 md:py-6 bg-[#F5F0EB]">
+        <a
+          href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-[#5A2A5D] border border-[#5A2A5D] text-white text-[10px] md:text-xs font-medium uppercase tracking-[0.1em] px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:bg-[#4A1F4D] hover:border-[#4A1F4D] transition-all duration-300"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-cream.svg" alt="" className="h-4 md:h-5 w-auto" />
+          Book Appointment
+        </a>
       </div>
     </section>
   );
