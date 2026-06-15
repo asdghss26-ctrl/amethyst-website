@@ -184,7 +184,7 @@ export default function Hero() {
 
         {/* ─── CENTER BADGE: "Explore our treatments" Dome Cutout ─── */}
         <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-end"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 overflow-hidden"
           style={{
             width: "460px",
             height: "200px",
@@ -193,20 +193,22 @@ export default function Hero() {
             borderTopRightRadius: "230px 200px",
           }}
         >
-          <Link
-            href="/services"
-            className="flex flex-col items-center gap-2 mb-4 group transition-all duration-500"
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.svg" alt="Amethyst Logo" className="h-10 md:h-12 w-auto group-hover:scale-110 transition-transform" />
-            <span className="text-sm md:text-base font-semibold text-[#2E2E2E] text-center">
-              Explore our treatments
-            </span>
-          </Link>
-          
-          {/* SPACE FOR THE UPCOMING BOOK APPOINTMENT BUTTON */}
-          <div className="mb-4 md:mb-6 flex justify-center w-full min-h-[44px]">
-             {/* You will drop the Book Appointment button component right here */}
+          <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 md:pb-14 lg:pb-16">
+            <Link
+              href="/services"
+              className="flex flex-col items-center gap-3 group transition-all duration-500"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.svg" alt="Amethyst Logo" className="w-16 md:w-20 lg:w-24 h-auto group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center text-[#2E2E2E] tracking-tight">
+                Explore our treatments
+              </h3>
+            </Link>
+
+            {/* SPACE FOR THE UPCOMING BOOK APPOINTMENT BUTTON */}
+            <div className="flex justify-center w-full min-h-[44px]">
+               {/* You will drop the Book Appointment button component right here */}
+            </div>
           </div>
         </div>
       </div>
