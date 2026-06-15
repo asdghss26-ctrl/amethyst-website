@@ -41,26 +41,32 @@ export default function Hero() {
     };
   }, []);
 
-  // Pills span the full 360° evenly
+  // ─── RESPONSIVE VALUES ───
   const pillCount = treatments.length;
-  const orbitRadius = 260; // px — fixed distance from center to pill midpoint
+  const orbitRadius = isMobile ? 170 : 260;
+  const pillWidth = isMobile ? 160 : 220;
+  const pillHeight = isMobile ? 38 : 48;
+  const thumbSize = isMobile ? 30 : 40;
+  const sectionHeight = isMobile ? 500 : 680;
+  const domeWidth = isMobile ? 280 : 460;
+  const domeHeight = isMobile ? 140 : 200;
 
   const wheelAnimation = "wheelSpin 50s linear infinite";
 
   return (
-    <section id="home" ref={sectionRef} className="relative bg-[#F5F0EB] overflow-hidden" style={{ minHeight: "100svh" }}>
+    <section id="home" ref={sectionRef} className="relative bg-[#F5F0EB] overflow-hidden">
       {/* ─── NAV SPACER ─── */}
-      <div className="pt-24" />
+      <div className="pt-20 md:pt-24" />
 
       {/* ─── CENTERED HEADLINE ─── */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
       </div>
 
       {/* ─── SPINNING WHEEL SECTION ─── */}
-      <div className="relative w-full overflow-hidden mt-10" style={{ height: 680 }}>
+      <div className="relative w-full overflow-hidden mt-6 md:mt-10" style={{ height: sectionHeight }}>
         {/* Full-bleed skin-toned background image */}
         <div
-          className="absolute inset-0 rounded-[48px] mx-4 overflow-hidden"
+          className="absolute inset-0 rounded-[28px] md:rounded-[48px] mx-3 md:mx-4 overflow-hidden"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
@@ -79,9 +85,10 @@ export default function Hero() {
         </div>
 
         {/* ─── LOGO OVERLAY ON BACKGROUND IMAGE ─── */}
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-12 md:pt-20 pointer-events-none">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-8 md:pt-20 pointer-events-none">
           <div className="flex flex-col items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
+<<<<<<< HEAD
             <img src="/logo-cream.svg" alt="" className="h-16 w-auto mb-1 animate-icon-drop" style={{ filter: "brightness(0) invert(1)", textShadow: "0 2px 8px rgba(0,0,0,0.3)" }} />
             <h1
               className="text-[clamp(3.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
@@ -93,6 +100,19 @@ export default function Hero() {
               SKIN CLINIC
             </p>
             <p className="text-xs md:text-sm tracking-[0.15em] uppercase text-white mt-0.5 font-medium animate-letter-expand" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
+=======
+            <img src="/logo-cream.svg" alt="" className="h-10 md:h-16 w-auto mb-1 animate-icon-drop" />
+            <h1
+              className="text-[clamp(2.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
+              style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
+            >
+              AMETHYST
+            </h1>
+            <p className="text-sm md:text-xl tracking-[0.25em] font-medium text-white/90 mt-0 animate-slide-up-fade">
+              SKIN CLINIC
+            </p>
+            <p className="text-[10px] md:text-sm tracking-[0.15em] uppercase text-white/70 mt-0.5 font-medium animate-letter-expand">
+>>>>>>> f033265955626dda4f32e32bdac570a8010c15b8
               MEDICAL & AESTHETIC DERMATOLOGY
             </p>
           </div>
@@ -135,8 +155,8 @@ export default function Hero() {
                 >
                   <div
                     style={{
-                      width: "220px",
-                      height: "48px",
+                      width: `${pillWidth}px`,
+                      height: `${pillHeight}px`,
                       borderRadius: "999px",
                       background: "rgba(255,255,255,0.15)",
                       backdropFilter: "blur(12px)",
@@ -145,15 +165,15 @@ export default function Hero() {
                       display: "flex",
                       alignItems: "center",
                       paddingLeft: "4px",
-                      paddingRight: "16px",
-                      gap: "10px",
+                      paddingRight: isMobile ? "10px" : "16px",
+                      gap: isMobile ? "6px" : "10px",
                       boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                     }}
                   >
                     <div
                       style={{
-                        width: "40px",
-                        height: "40px",
+                        width: `${thumbSize}px`,
+                        height: `${thumbSize}px`,
                         borderRadius: "50%",
                         flexShrink: 0,
                         overflow: "hidden",
@@ -166,7 +186,7 @@ export default function Hero() {
                     <span
                       style={{
                         color: "rgba(255,255,255,0.95)",
-                        fontSize: isMobile ? "10px" : "11px",
+                        fontSize: isMobile ? "9px" : "11px",
                         fontWeight: 500,
                         letterSpacing: "0.02em",
                         whiteSpace: "nowrap",
@@ -185,28 +205,31 @@ export default function Hero() {
 
         {/* ─── CENTER BADGE: "Explore our treatments" Dome Cutout ─── */}
         <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-end"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 overflow-hidden"
           style={{
-            width: "360px",
-            height: "140px",
+            width: `${domeWidth}px`,
+            height: `${domeHeight}px`,
             background: "#F5F0EB",
-            borderTopLeftRadius: "180px 140px",
-            borderTopRightRadius: "180px 140px",
+            borderTopLeftRadius: `${domeWidth / 2}px ${domeHeight}px`,
+            borderTopRightRadius: `${domeWidth / 2}px ${domeHeight}px`,
           }}
         >
-          <Link
-            href="/services"
-            className="flex flex-col items-center gap-1 mb-4 md:mb-6 group transition-all duration-500"
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.svg" alt="" className="h-6 w-auto group-hover:scale-110 transition-transform" />
-            <span className="text-[10px] md:text-xs font-semibold text-[#2E2E2E] text-center max-w-[120px] md:max-w-none">
-              Explore our treatments
-            </span>
-          </Link>
+          <div className="absolute inset-0 flex flex-col items-center justify-end pb-2 md:pb-3">
+            <Link
+              href="/services"
+              className="flex flex-col items-center gap-1 md:gap-1.5 group transition-all duration-500"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.svg" alt="Amethyst Logo" className="w-8 md:w-12 lg:w-16 h-auto group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-sm md:text-lg lg:text-xl font-semibold text-center text-[#2E2E2E] tracking-tight">
+                Explore our treatments
+              </h3>
+            </Link>
+          </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* ─── STATS BAR ─── */}
       <div className="bg-[#5B1F6A] select-none">
         <div className="max-w-[480px] mx-auto px-6 py-6">
@@ -229,7 +252,22 @@ export default function Hero() {
             ))}
           </div>
         </div>
+=======
+      {/* ─── BOOK APPOINTMENT BUTTON (fills the gap between hero & services) ─── */}
+      <div className="flex justify-center py-4 md:py-6 bg-[#F5F0EB]">
+        <a
+          href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-[#5A2A5D] border border-[#5A2A5D] text-white text-[10px] md:text-xs font-medium uppercase tracking-[0.1em] px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:bg-[#4A1F4D] hover:border-[#4A1F4D] transition-all duration-300"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-cream.svg" alt="" className="h-4 md:h-5 w-auto" />
+          Book Appointment
+        </a>
+>>>>>>> f033265955626dda4f32e32bdac570a8010c15b8
       </div>
     </section>
   );
 }
+
