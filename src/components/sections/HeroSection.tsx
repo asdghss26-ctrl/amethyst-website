@@ -88,31 +88,17 @@ export default function Hero() {
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-8 md:pt-20 pointer-events-none">
           <div className="flex flex-col items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-<<<<<<< HEAD
-            <img src="/logo-cream.svg" alt="" className="h-16 w-auto mb-1 animate-icon-drop" style={{ filter: "brightness(0) invert(1)", textShadow: "0 2px 8px rgba(0,0,0,0.3)" }} />
+            <img src="/logo-cream.svg" alt="" className="h-10 md:h-16 w-auto mb-1 animate-icon-drop" style={{ filter: "brightness(0) invert(1)" }} />
             <h1
-              className="text-[clamp(3.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
+              className="text-[clamp(2.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
               style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600, textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
             >
               AMETHYST
             </h1>
-            <p className="text-lg md:text-xl tracking-[0.25em] font-medium text-white mt-0 animate-slide-up-fade" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
+            <p className="text-sm md:text-xl tracking-[0.25em] font-medium text-white mt-0 animate-slide-up-fade" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
               SKIN CLINIC
             </p>
-            <p className="text-xs md:text-sm tracking-[0.15em] uppercase text-white mt-0.5 font-medium animate-letter-expand" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
-=======
-            <img src="/logo-cream.svg" alt="" className="h-10 md:h-16 w-auto mb-1 animate-icon-drop" />
-            <h1
-              className="text-[clamp(2.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
-              style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
-            >
-              AMETHYST
-            </h1>
-            <p className="text-sm md:text-xl tracking-[0.25em] font-medium text-white/90 mt-0 animate-slide-up-fade">
-              SKIN CLINIC
-            </p>
-            <p className="text-[10px] md:text-sm tracking-[0.15em] uppercase text-white/70 mt-0.5 font-medium animate-letter-expand">
->>>>>>> f033265955626dda4f32e32bdac570a8010c15b8
+            <p className="text-[10px] md:text-sm tracking-[0.15em] uppercase text-white mt-0.5 font-medium animate-letter-expand" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
               MEDICAL & AESTHETIC DERMATOLOGY
             </p>
           </div>
@@ -229,7 +215,6 @@ export default function Hero() {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* ─── STATS BAR ─── */}
       <div className="bg-[#5B1F6A] select-none">
         <div className="max-w-[480px] mx-auto px-6 py-6">
@@ -252,20 +237,6 @@ export default function Hero() {
             ))}
           </div>
         </div>
-=======
-      {/* ─── BOOK APPOINTMENT BUTTON (fills the gap between hero & services) ─── */}
-      <div className="flex justify-center py-4 md:py-6 bg-[#F5F0EB]">
-        <a
-          href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#5A2A5D] border border-[#5A2A5D] text-white text-[10px] md:text-xs font-medium uppercase tracking-[0.1em] px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:bg-[#4A1F4D] hover:border-[#4A1F4D] transition-all duration-300"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-cream.svg" alt="" className="h-4 md:h-5 w-auto" />
-          Book Appointment
-        </a>
->>>>>>> f033265955626dda4f32e32bdac570a8010c15b8
       </div>
     </section>
   );
