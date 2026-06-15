@@ -40,26 +40,32 @@ export default function Hero() {
     };
   }, []);
 
-  // Pills span the full 360° evenly
+  // ─── RESPONSIVE VALUES ───
   const pillCount = treatments.length;
-  const orbitRadius = 260; // px — fixed distance from center to pill midpoint
+  const orbitRadius = isMobile ? 170 : 260;
+  const pillWidth = isMobile ? 160 : 220;
+  const pillHeight = isMobile ? 38 : 48;
+  const thumbSize = isMobile ? 30 : 40;
+  const sectionHeight = isMobile ? 500 : 680;
+  const domeWidth = isMobile ? 280 : 460;
+  const domeHeight = isMobile ? 140 : 200;
 
   const wheelAnimation = "wheelSpin 50s linear infinite";
 
   return (
     <section id="home" ref={sectionRef} className="relative bg-[#F5F0EB] overflow-hidden" style={{ minHeight: "100svh" }}>
       {/* ─── NAV SPACER ─── */}
-      <div className="pt-24" />
+      <div className="pt-20 md:pt-24" />
 
       {/* ─── CENTERED HEADLINE ─── */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
       </div>
 
       {/* ─── SPINNING WHEEL SECTION ─── */}
-      <div className="relative w-full overflow-hidden mt-10" style={{ height: 680 }}>
+      <div className="relative w-full overflow-hidden mt-6 md:mt-10" style={{ height: sectionHeight }}>
         {/* Full-bleed skin-toned background image */}
         <div
-          className="absolute inset-0 rounded-[48px] mx-4 overflow-hidden"
+          className="absolute inset-0 rounded-[28px] md:rounded-[48px] mx-3 md:mx-4 overflow-hidden"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
@@ -78,20 +84,20 @@ export default function Hero() {
         </div>
 
         {/* ─── LOGO OVERLAY ON BACKGROUND IMAGE ─── */}
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-12 md:pt-20 pointer-events-none">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-8 md:pt-20 pointer-events-none">
           <div className="flex flex-col items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-cream.svg" alt="" className="h-16 w-auto mb-1 animate-icon-drop" />
+            <img src="/logo-cream.svg" alt="" className="h-10 md:h-16 w-auto mb-1 animate-icon-drop" />
             <h1
-              className="text-[clamp(3.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
+              className="text-[clamp(2.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
               style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
             >
               AMETHYST
             </h1>
-            <p className="text-lg md:text-xl tracking-[0.25em] font-medium text-white/90 mt-0 animate-slide-up-fade">
+            <p className="text-sm md:text-xl tracking-[0.25em] font-medium text-white/90 mt-0 animate-slide-up-fade">
               SKIN CLINIC
             </p>
-            <p className="text-xs md:text-sm tracking-[0.15em] uppercase text-white/70 mt-0.5 font-medium animate-letter-expand">
+            <p className="text-[10px] md:text-sm tracking-[0.15em] uppercase text-white/70 mt-0.5 font-medium animate-letter-expand">
               MEDICAL & AESTHETIC DERMATOLOGY
             </p>
           </div>
@@ -134,8 +140,8 @@ export default function Hero() {
                 >
                   <div
                     style={{
-                      width: "220px",
-                      height: "48px",
+                      width: `${pillWidth}px`,
+                      height: `${pillHeight}px`,
                       borderRadius: "999px",
                       background: "rgba(255,255,255,0.15)",
                       backdropFilter: "blur(12px)",
@@ -144,15 +150,15 @@ export default function Hero() {
                       display: "flex",
                       alignItems: "center",
                       paddingLeft: "4px",
-                      paddingRight: "16px",
-                      gap: "10px",
+                      paddingRight: isMobile ? "10px" : "16px",
+                      gap: isMobile ? "6px" : "10px",
                       boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                     }}
                   >
                     <div
                       style={{
-                        width: "40px",
-                        height: "40px",
+                        width: `${thumbSize}px`,
+                        height: `${thumbSize}px`,
                         borderRadius: "50%",
                         flexShrink: 0,
                         overflow: "hidden",
@@ -165,7 +171,7 @@ export default function Hero() {
                     <span
                       style={{
                         color: "rgba(255,255,255,0.95)",
-                        fontSize: isMobile ? "10px" : "11px",
+                        fontSize: isMobile ? "9px" : "11px",
                         fontWeight: 500,
                         letterSpacing: "0.02em",
                         whiteSpace: "nowrap",
@@ -186,21 +192,21 @@ export default function Hero() {
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 overflow-hidden"
           style={{
-            width: "460px",
-            height: "200px",
+            width: `${domeWidth}px`,
+            height: `${domeHeight}px`,
             background: "#F5F0EB",
-            borderTopLeftRadius: "230px 200px",
-            borderTopRightRadius: "230px 200px",
+            borderTopLeftRadius: `${domeWidth / 2}px ${domeHeight}px`,
+            borderTopRightRadius: `${domeWidth / 2}px ${domeHeight}px`,
           }}
         >
           <div className="absolute inset-0 flex flex-col items-center justify-end pb-3 md:pb-4">
             <Link
               href="/services"
-              className="flex flex-col items-center gap-2 group transition-all duration-500"
+              className="flex flex-col items-center gap-1.5 md:gap-2 group transition-all duration-500"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="Amethyst Logo" className="w-14 md:w-20 lg:w-24 h-auto group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-center text-[#2E2E2E] tracking-tight">
+              <img src="/logo.svg" alt="Amethyst Logo" className="w-10 md:w-14 lg:w-20 h-auto group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-center text-[#2E2E2E] tracking-tight">
                 Explore our treatments
               </h3>
             </Link>
@@ -210,3 +216,4 @@ export default function Hero() {
     </section>
   );
 }
+
