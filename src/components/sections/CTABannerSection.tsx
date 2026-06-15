@@ -3,8 +3,8 @@ import { Reveal } from "../ui/RevealAnimation";
 
 export default function CTABanner() {
   return (
-    <section className="py-28 bg-[#F7F3EF]">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="py-9 md:py-10 bg-[#F7F3EF]">
+      <div className="max-w-[480px] mx-auto px-6">
         {/* Full-bleed rounded container with brand gradient bg */}
         <Reveal delay={0.1}>
           <div
@@ -17,7 +17,7 @@ export default function CTABanner() {
             <div className="relative z-10 p-6 sm:p-10 md:p-14 max-w-xl">
               <Reveal delay={0.2}>
                 <h2
-                  className="text-3xl sm:text-4xl md:text-5xl text-white mb-4 md:mb-5 leading-[1.1]"
+                  className="text-2xl sm:text-3xl md:text-4xl text-white mb-4 md:mb-5 leading-[1.1]"
                   style={{ fontFamily: "var(--font-dm-serif), serif" }}
                 >
                   Transform your<br />skin with us
@@ -31,7 +31,7 @@ export default function CTABanner() {
               <Reveal delay={0.4}>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                    href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-white text-[#5A2A5D] px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#F8F6F9] transition-all duration-300 hover:-translate-y-0.5"
@@ -41,7 +41,7 @@ export default function CTABanner() {
                   </a>
                   <Link
                     href="/services"
-                    className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium hover:bg-white/30 transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-7 py-3 rounded-full text-xs sm:text-sm font-medium hover:bg-white/20 transition-all duration-300"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/logo-cream.svg" alt="" className="h-5 w-auto" /> Our Services

@@ -292,7 +292,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
               Schedule an in-depth consultation with Dr. Shruthi Pavana Janardhanan to map out a dedicated, result-oriented clinical protocol.
             </p>
             <a
-              href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+              href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-[#5A2A5D] px-8 py-3.5 rounded-full text-xs sm:text-sm font-semibold hover:bg-[#F8F6F9] transition-all duration-300 hover:-translate-y-0.5"
@@ -454,7 +454,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
               {/* Footer CTA */}
               <div className="p-6 border-t border-[#E4DFE8] bg-[#FBF8F5] flex gap-3">
                 <a
-                  href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                  href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setSelectedTreatment(null)}

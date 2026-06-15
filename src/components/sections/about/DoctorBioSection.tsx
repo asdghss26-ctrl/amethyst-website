@@ -3,80 +3,28 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 
-const achievements = [
-  { icon: "🎓", text: "MD in Dermatology — Madras Medical College" },
-  { icon: "🌍", text: "MRCP SCE in Dermatology (UK)" },
-  { icon: "📝", text: "3 Published Research Articles" },
-];
-
 export default function DoctorBioSection() {
   const photoRef = useRef<HTMLDivElement>(null);
-  const nameRef = useRef<HTMLHeadingElement>(null);
-  const titleRef = useRef<HTMLParagraphElement>(null);
-  const pillRef = useRef<HTMLDivElement>(null);
-  const achievementRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    const el = photoRef.current;
+    if (!el) return;
+    el.style.opacity = "0";
+    el.style.transform = "translateX(-40px)";
+
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const el = entry.target as HTMLElement;
-            const delay = el.dataset.delay || "0";
-            el.style.transition = `opacity 0.7s ease ${delay}, transform 0.7s ease ${delay}`;
-            el.style.opacity = "1";
-            el.style.transform = "translateX(0) translateY(0) scale(1)";
-            observer.unobserve(el);
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.style.transition = "opacity 0.7s ease, transform 0.7s ease";
+          el.style.opacity = "1";
+          el.style.transform = "translateX(0)";
+          observer.unobserve(el);
+        }
       },
       { threshold: 0.15 }
     );
-
-    const els: HTMLElement[] = [];
-
-    if (photoRef.current) {
-      photoRef.current.style.opacity = "0";
-      photoRef.current.style.transform = "translateX(-40px)";
-      observer.observe(photoRef.current);
-      els.push(photoRef.current);
-    }
-
-    if (nameRef.current) {
-      nameRef.current.style.opacity = "0";
-      nameRef.current.style.transform = "translateY(-20px)";
-      nameRef.current.dataset.delay = "0.5s";
-      observer.observe(nameRef.current);
-      els.push(nameRef.current);
-    }
-
-    if (titleRef.current) {
-      titleRef.current.style.opacity = "0";
-      titleRef.current.style.transform = "translateY(-10px)";
-      titleRef.current.dataset.delay = "0.7s";
-      observer.observe(titleRef.current);
-      els.push(titleRef.current);
-    }
-
-    if (pillRef.current) {
-      pillRef.current.style.opacity = "0";
-      pillRef.current.style.transform = "scale(0.8)";
-      pillRef.current.dataset.delay = "0.4s";
-      observer.observe(pillRef.current);
-      els.push(pillRef.current);
-    }
-
-    achievementRefs.current.forEach((ref, i) => {
-      if (ref) {
-        ref.style.opacity = "0";
-        ref.style.transform = "translateX(30px)";
-        ref.dataset.delay = `${0.9 + i * 0.2}s`;
-        observer.observe(ref);
-        els.push(ref);
-      }
-    });
-
-    return () => els.forEach((el) => observer.unobserve(el));
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -102,52 +50,60 @@ export default function DoctorBioSection() {
           </div>
 
           {/* Right: Details */}
-          <div className="flex flex-col gap-5">
-            <h2
-              ref={nameRef}
-              className="text-3xl md:text-4xl lg:text-5xl text-[#5B1F6A]"
-              style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
-            >
+          <div style={{ background: "#f3eaf8", borderRadius: "20px", padding: "32px 24px" }}>
+            {/* Doctor Name &amp; Title */}
+            <h2 style={{ color: "#5B1F6A", fontSize: "22px", fontWeight: 700, margin: "0 0 6px", fontFamily: "serif" }}>
               Dr. Shruthi Pavana Janardhanan
             </h2>
-
-            <p
-              ref={titleRef}
-              className="text-base md:text-lg italic text-[#6B6570]"
-            >
+            <p style={{ color: "#7a4a8a", fontSize: "14px", fontStyle: "italic", margin: "0 0 16px" }}>
               Lead Dermatologist &amp; Aesthetic Specialist
             </p>
 
+            {/* Credentials Pill */}
             <div
-              ref={pillRef}
-              className="self-start text-xs md:text-sm font-medium"
               style={{
-                background: "#f3eaf8",
-                color: "#5B1F6A",
+                display: "inline-block",
+                background: "white",
+                border: "1px solid #d4a8e8",
                 borderRadius: "20px",
                 padding: "6px 16px",
+                marginBottom: "24px",
               }}
             >
-              MBBS · MD.DVL · DNB.DVL · MNAMS · MRCP SCE DERM(UK)
+              <span style={{ color: "#5B1F6A", fontSize: "12px", fontWeight: 600, letterSpacing: "0.5px" }}>
+                MBBS &nbsp;·&nbsp; MD.DVL &nbsp;·&nbsp; DNB.DVL &nbsp;·&nbsp; MNAMS &nbsp;·&nbsp; MRCP SCE DERM(UK)
+              </span>
             </div>
 
-            <div className="flex flex-col gap-4 mt-2">
-              {achievements.map((a, i) => (
-                <div
-                  key={i}
-                  ref={(el) => { achievementRefs.current[i] = el; }}
-                  className="flex items-center gap-4"
-                >
-                  <span className="text-xl flex-shrink-0">{a.icon}</span>
-                  <span className="text-sm md:text-base text-[#2E2E2E] font-medium">
-                    {a.text}
+            {/* Divider */}
+            <div style={{ width: "100%", height: "1px", background: "#d4a8e8", marginBottom: "20px" }} />
+
+            {/* Achievements */}
+            {[
+              { label: "Qualification", value: "MD in Dermatology — Madras Medical College" },
+              { label: "International", value: "MRCP SCE in Dermatology (UK)" },
+              { label: "Research", value: "3 Published Research Articles" },
+            ].map((item, i) => (
+              <div key={i} style={{ display: "flex", gap: "12px", marginBottom: "14px", alignItems: "flex-start" }}>
+                <div style={{ width: "4px", minWidth: "4px", height: "40px", background: "#5B1F6A", borderRadius: "2px" }} />
+                <div>
+                  <span style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>
+                    {item.label}
                   </span>
+                  <p style={{ color: "#444", fontSize: "13px", margin: "2px 0 0", lineHeight: "1.5" }}>{item.value}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
 
-            <p className="text-xs md:text-sm text-[#8F8F8F] mt-2">
-              Active member of IADVL · IASTD · NAMS
+            {/* Divider */}
+            <div style={{ width: "100%", height: "1px", background: "#d4a8e8", margin: "20px 0" }} />
+
+            {/* Memberships */}
+            <p style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", margin: "0 0 6px" }}>
+              Professional Memberships
+            </p>
+            <p style={{ color: "#666", fontSize: "13px", margin: 0, lineHeight: "1.7" }}>
+              Indian Association of Dermatologists, Venereologists &amp; Leprologists (IADVL) &nbsp;·&nbsp; Indian Association for the Study of Sexually Transmitted Diseases (IASTD) &nbsp;·&nbsp; National Academy of Medical Sciences (NAMS)
             </p>
           </div>
         </div>

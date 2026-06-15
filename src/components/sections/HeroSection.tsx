@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { treatments } from "@/lib/data/treatments";
 import { Reveal } from "../ui/RevealAnimation";
+import CountUp from "../ui/CountUp";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -81,17 +82,17 @@ export default function Hero() {
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-12 md:pt-20 pointer-events-none">
           <div className="flex flex-col items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-cream.svg" alt="" className="h-16 w-auto mb-1 animate-icon-drop" />
+            <img src="/logo-cream.svg" alt="" className="h-16 w-auto mb-1 animate-icon-drop" style={{ filter: "brightness(0) invert(1)", textShadow: "0 2px 8px rgba(0,0,0,0.3)" }} />
             <h1
               className="text-[clamp(3.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
-              style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600 }}
+              style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600, textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
             >
               AMETHYST
             </h1>
-            <p className="text-lg md:text-xl tracking-[0.25em] font-medium text-white/90 mt-0 animate-slide-up-fade">
+            <p className="text-lg md:text-xl tracking-[0.25em] font-medium text-white mt-0 animate-slide-up-fade" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
               SKIN CLINIC
             </p>
-            <p className="text-xs md:text-sm tracking-[0.15em] uppercase text-white/70 mt-0.5 font-medium animate-letter-expand">
+            <p className="text-xs md:text-sm tracking-[0.15em] uppercase text-white mt-0.5 font-medium animate-letter-expand" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
               MEDICAL & AESTHETIC DERMATOLOGY
             </p>
           </div>
@@ -203,6 +204,30 @@ export default function Hero() {
               Explore our treatments
             </span>
           </Link>
+        </div>
+      </div>
+
+      {/* ─── STATS BAR ─── */}
+      <div className="bg-[#5B1F6A] select-none">
+        <div className="max-w-[480px] mx-auto px-6 py-6">
+          <div className="grid grid-cols-4 gap-4">
+            {[
+              { end: 10, suffix: "+", label: "Years" },
+              { end: 86, suffix: "+", label: "Reviews" },
+              { end: 4, suffix: "", label: "Specialties" },
+              { end: 100, suffix: "%", label: "Personalized" },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <p
+                  className="text-white mb-1"
+                  style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 700, fontSize: "22px" }}
+                >
+                  <CountUp end={stat.end} suffix={stat.suffix} duration={2000} className="text-white" />
+                </p>
+                <p className="text-white/80 font-medium" style={{ fontSize: "11px" }}>{stat.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

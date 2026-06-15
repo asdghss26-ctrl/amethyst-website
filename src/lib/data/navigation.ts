@@ -3,7 +3,7 @@ export interface NavItem {
   href: string
 }
 
-export const WHATSAPP_URL = "https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+export const WHATSAPP_URL = "https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
 
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
@@ -39,6 +39,6 @@ export interface ContactInfo {
 
 export const contactInfo: ContactInfo[] = [
   { icon: "📍", text: "123 Medical Plaza, Suite 200, New York, NY 10001", href: "#" },
-  { icon: "📞", text: "+1 (555) 123-4567", href: "tel:+15551234567" },
+  { icon: "📞", text: "+91 8870445185", href: "tel:+918870445185" },
   { icon: "✉️", text: "example@domain.com", href: "mailto:example@domain.com" },
 ]

@@ -60,6 +60,6 @@ export const aboutCTA = {
   subheading: 'Book a consultation with Dr. Shruthi and take the first step towards your best skin.',
   primaryButton: 'Book an Appointment',
   secondaryButton: 'View Our Services',
-  primaryHref: 'https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment.',
+  primaryHref: 'https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment.',
   secondaryHref: '/services',
 }

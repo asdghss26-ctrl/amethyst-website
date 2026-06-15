@@ -1,5 +1,5 @@
 export type { Service } from "../lib/data/services"
-export type { Testimonial } from "../lib/data/testimonials"
+export type { Review } from "../lib/data/testimonials"
 export type { BlogPost } from "../lib/data/blog"
 export type { FAQItem } from "../lib/data/faq"
 export type { Treatment } from "../lib/data/treatments"

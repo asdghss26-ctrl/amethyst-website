@@ -2,9 +2,10 @@
 import { useState, useEffect } from "react";
 import { blogPosts } from "@/lib/data/blog";
 import { Reveal } from "../ui/RevealAnimation";
+import Link from "next/link";
 
 const featured = blogPosts[0];
-const others = blogPosts.slice(1);
+const others = blogPosts.slice(1, 2);
 
 export default function Blog() {
   const [activeArticle, setActiveArticle] = useState<number | null>(null);
@@ -27,15 +28,15 @@ export default function Blog() {
   }, [activeArticle]);
 
   return (
-    <section className="py-28 bg-[#F7F3EF]">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="mb-14">
+    <section className="py-9 md:py-10 bg-[#F7F3EF]">
+      <div className="max-w-[480px] mx-auto px-6">
+        <div className="mb-10">
           <div className="inline-flex items-center gap-2 border border-[#E4DFE8] rounded-full px-4 py-1.5 mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#8E5C8F]"></span>
             <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8E5C8F]">Skin Insights</span>
           </div>
           <h2
-            className="text-4xl lg:text-5xl text-[#2E2E2E]"
+            className="text-3xl lg:text-4xl text-[#2E2E2E]"
             style={{ fontFamily: "var(--font-dm-serif), serif" }}
           >
             Helpful tips and expert advice
@@ -50,7 +51,7 @@ export default function Blog() {
             className="card-hover bg-white border border-[#E4DFE8] rounded-[40px] overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
           >
             <div className="w-full h-52 overflow-hidden">
-              <img src="/images/blog/featured.svg" alt="" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <img src={featured.image} alt="" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
             <div className="p-8">
               <div className="flex items-center gap-3 mb-4">
@@ -83,7 +84,7 @@ export default function Blog() {
                 tabIndex={0}
               >
                 <div className="w-16 h-16 rounded-2xl flex-shrink-0 overflow-hidden">
-                  <img src={`/images/blog/blog-${i + 1}.svg`} alt="" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <img src={post.image} alt="" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1.5">
@@ -104,6 +105,17 @@ export default function Blog() {
             ))}
             </div>
         </div>
+
+        <Reveal delay={0.5}>
+          <div className="flex justify-center mt-8">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 bg-[#5B1F6A] text-white text-xs font-medium uppercase tracking-[0.1em] px-6 py-3 rounded-full hover:bg-[#4A1F4D] transition-all duration-300"
+            >
+              Read All Articles →
+            </Link>
+          </div>
+        </Reveal>
       </div>
 
       {/* Immersive Popup Article Reader Modal */}
@@ -126,11 +138,11 @@ export default function Blog() {
             </button>
 
             {/* Hero Image */}
-            <div className="w-full h-56 md:h-72 overflow-hidden relative">
+            <div className="w-full h-56 md:h-72 overflow-hidden relative group">
               <img 
-                src={blogPosts[activeArticle].featured ? "/images/blog/featured.svg" : `/images/blog/blog-${activeArticle}.svg`} 
+                src={blogPosts[activeArticle].image} 
                 alt={blogPosts[activeArticle].title} 
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#FBF8F5] via-transparent to-transparent" />
             </div>
