@@ -199,33 +199,29 @@ export default function Hero() {
             borderTopRightRadius: `${domeWidth / 2}px ${domeHeight}px`,
           }}
         >
-          <div className="absolute inset-0 flex flex-col items-center justify-end pb-3 md:pb-4">
+          <div className="absolute inset-0 flex flex-col items-center justify-end pb-2 md:pb-3">
             <Link
               href="/services"
-              className="flex flex-col items-center gap-1.5 md:gap-2 group transition-all duration-500"
+              className="flex flex-col items-center gap-1 md:gap-1.5 group transition-all duration-500"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="Amethyst Logo" className="w-10 md:w-14 lg:w-20 h-auto group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-center text-[#2E2E2E] tracking-tight">
+              <img src="/logo.svg" alt="Amethyst Logo" className="w-8 md:w-12 lg:w-16 h-auto group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-sm md:text-lg lg:text-xl font-semibold text-center text-[#2E2E2E] tracking-tight">
                 Explore our treatments
               </h3>
             </Link>
+            <a
+              href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1.5 md:mt-2 inline-flex items-center gap-2 bg-[#5A2A5D] border border-[#5A2A5D] text-white text-[10px] md:text-xs font-medium uppercase tracking-[0.1em] px-4 md:px-5 py-2 md:py-2.5 rounded-full hover:bg-[#4A1F4D] hover:border-[#4A1F4D] transition-all duration-300"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-cream.svg" alt="" className="h-4 md:h-5 w-auto" />
+              Book Appointment
+            </a>
           </div>
         </div>
-      </div>
-
-      {/* ─── BOOK APPOINTMENT BUTTON (flush under the dome) ─── */}
-      <div className="flex justify-center -mt-1">
-        <a
-          href="https://wa.me/91XXXXXXXXXX?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#5A2A5D] border border-[#5A2A5D] text-white text-xs font-medium uppercase tracking-[0.1em] px-5 py-2.5 rounded-full hover:bg-[#4A1F4D] hover:border-[#4A1F4D] transition-all duration-300"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-cream.svg" alt="" className="h-5 w-auto" />
-          Book Appointment
-        </a>
       </div>
     </section>
   );
