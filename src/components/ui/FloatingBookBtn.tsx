@@ -20,12 +20,7 @@ export default function FloatingBookBtn() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Book Appointment"
-      className="glass-book-btn"
-      style={{
-        opacity: visible ? 1 : 0,
-        pointerEvents: visible ? "auto" : "none",
-        transform: visible ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(10px)",
-      }}
+      className={`glass-book-btn ${visible ? "visible" : "hidden"}`}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/logo-cream.svg" alt="" className="glass-book-btn-logo" />
