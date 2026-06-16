@@ -47,8 +47,8 @@ export default function Hero() {
   const pillHeight = isMobile ? 38 : 48;
   const thumbSize = isMobile ? 30 : 40;
   const sectionHeight = isMobile ? 500 : 680;
-  const domeWidth = isMobile ? 280 : 460;
-  const domeHeight = isMobile ? 140 : 200;
+  const domeWidth = isMobile ? 240 : 380;
+  const domeHeight = isMobile ? 120 : 170;
 
   const wheelAnimation = "wheelSpin 50s linear infinite";
 
@@ -205,8 +205,8 @@ export default function Hero() {
               className="flex flex-col items-center gap-1 md:gap-1.5 group transition-all duration-500"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="Amethyst Logo" className="w-8 md:w-12 lg:w-16 h-auto group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-sm md:text-lg lg:text-xl font-semibold text-center text-[#2E2E2E] tracking-tight">
+              <img src="/logo.svg" alt="Amethyst Logo" className="w-6 md:w-10 lg:w-12 h-auto group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-xs md:text-base lg:text-lg font-semibold text-center text-[#2E2E2E] tracking-tight">
                 Explore our treatments
               </h3>
             </Link>
