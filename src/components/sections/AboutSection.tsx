@@ -2,6 +2,7 @@
 
 import { Reveal } from "../ui/RevealAnimation";
 import CountUp from "../ui/CountUp";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -65,71 +66,79 @@ export default function About() {
 
           <div className="bg-white rounded-[32px] md:rounded-[40px] overflow-hidden shadow-lg">
             <div className="grid md:grid-cols-2 gap-0">
-              <Reveal delay={0.1}>
-                <div className="h-[400px] md:h-full min-h-[500px] relative">
-                  <img
-                    src="/images/doctor/dr-shruthi.jpg"
-                    alt="Dr. Shruthi Pavana Janardhanan"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6 }}
+                className="h-[400px] md:h-full min-h-[500px] relative"
+              >
+                <img
+                  src="/images/doctor/dr-shruthi.jpg"
+                  alt="Dr. Shruthi Pavana Janardhanan"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                style={{ background: "#f3eaf8", borderRadius: "20px", padding: "24px 20px" }}
+              >
+                <h2 style={{ color: "#5B1F6A", fontSize: "20px", fontWeight: 700, margin: "0 0 4px", fontFamily: "serif" }}>
+                  Dr. Shruthi Pavana Janardhanan
+                </h2>
+                <p style={{ color: "#7a4a8a", fontSize: "13px", fontStyle: "italic", margin: "0 0 12px" }}>
+                  Lead Dermatologist &amp; Aesthetic Specialist
+                </p>
+
+                <div
+                  style={{
+                    display: "inline-block",
+                    background: "white",
+                    border: "1px solid #d4a8e8",
+                    borderRadius: "20px",
+                    padding: "6px 16px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <span style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 600, letterSpacing: "0.5px" }}>
+                    MBBS &nbsp;·&nbsp; MD.DVL &nbsp;·&nbsp; DNB.DVL &nbsp;·&nbsp; MNAMS &nbsp;·&nbsp; MRCP SCE DERM(UK)
+                  </span>
                 </div>
-              </Reveal>
 
-              <Reveal delay={0.2}>
-                <div style={{ background: "#f3eaf8", borderRadius: "20px", padding: "24px 20px" }}>
-                  <h2 style={{ color: "#5B1F6A", fontSize: "20px", fontWeight: 700, margin: "0 0 4px", fontFamily: "serif" }}>
-                    Dr. Shruthi Pavana Janardhanan
-                  </h2>
-                  <p style={{ color: "#7a4a8a", fontSize: "13px", fontStyle: "italic", margin: "0 0 12px" }}>
-                    Lead Dermatologist &amp; Aesthetic Specialist
-                  </p>
+                <div style={{ width: "100%", height: "1px", background: "#d4a8e8", marginBottom: "16px" }} />
 
-                  <div
-                    style={{
-                      display: "inline-block",
-                      background: "white",
-                      border: "1px solid #d4a8e8",
-                      borderRadius: "20px",
-                      padding: "6px 16px",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    <span style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 600, letterSpacing: "0.5px" }}>
-                      MBBS &nbsp;·&nbsp; MD.DVL &nbsp;·&nbsp; DNB.DVL &nbsp;·&nbsp; MNAMS &nbsp;·&nbsp; MRCP SCE DERM(UK)
-                    </span>
-                  </div>
-
-                  <div style={{ width: "100%", height: "1px", background: "#d4a8e8", marginBottom: "16px" }} />
-
-                  <div style={{ background: "#f3eaf8", borderRadius: "12px", padding: "16px" }}>
-                    {[
-                      { label: "Qualification", value: "MD in Dermatology — Madras Medical College" },
-                      { label: "International", value: "MRCP SCE in Dermatology (UK)" },
-                      { label: "Research", value: "3 Published Research Articles" },
-                    ].map((item, i) => (
-                      <div key={i} style={{ display: "flex", gap: "12px", marginBottom: i < 2 ? "12px" : "0", alignItems: "flex-start" }}>
-                        <div style={{ width: "4px", minWidth: "4px", height: "40px", background: "#5B1F6A", borderRadius: "2px" }} />
-                        <div>
-                          <span style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>
-                            {item.label}
-                          </span>
-                          <p style={{ color: "#444", fontSize: "13px", margin: "2px 0 0", lineHeight: "1.5" }}>{item.value}</p>
-                        </div>
+                <div style={{ background: "#f3eaf8", borderRadius: "12px", padding: "16px" }}>
+                  {[
+                    { label: "Qualification", value: "MD in Dermatology — Madras Medical College" },
+                    { label: "International", value: "MRCP SCE in Dermatology (UK)" },
+                    { label: "Research", value: "3 Published Research Articles" },
+                  ].map((item, i) => (
+                    <div key={i} style={{ display: "flex", gap: "12px", marginBottom: i < 2 ? "12px" : "0", alignItems: "flex-start" }}>
+                      <div style={{ width: "4px", minWidth: "4px", height: "40px", background: "#5B1F6A", borderRadius: "2px" }} />
+                      <div>
+                        <span style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>
+                          {item.label}
+                        </span>
+                        <p style={{ color: "#444", fontSize: "13px", margin: "2px 0 0", lineHeight: "1.5" }}>{item.value}</p>
                       </div>
-                    ))}
-                  </div>
-
-                  <div style={{ width: "100%", height: "1px", background: "#d4a8e8", margin: "20px 0" }} />
-
-                  <p style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", margin: "0 0 6px" }}>
-                    Professional Memberships
-                  </p>
-                  <p style={{ color: "#666", fontSize: "13px", margin: 0, lineHeight: "1.7" }}>
-                    Indian Association of Dermatologists, Venereologists &amp; Leprologists (IADVL) &nbsp;·&nbsp; Indian Association for the Study of Sexually Transmitted Diseases (IASTD) &nbsp;·&nbsp; National Academy of Medical Sciences (NAMS)
-                  </p>
+                    </div>
+                  ))}
                 </div>
-              </Reveal>
+
+                <div style={{ width: "100%", height: "1px", background: "#d4a8e8", margin: "20px 0" }} />
+
+                <p style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", margin: "0 0 6px" }}>
+                  Professional Memberships
+                </p>
+                <p style={{ color: "#666", fontSize: "13px", margin: 0, lineHeight: "1.7" }}>
+                  Indian Association of Dermatologists, Venereologists &amp; Leprologists (IADVL) &nbsp;·&nbsp; Indian Association for the Study of Sexually Transmitted Diseases (IASTD) &nbsp;·&nbsp; National Academy of Medical Sciences (NAMS)
+                </p>
+              </motion.div>
             </div>
           </div>
         </div>
