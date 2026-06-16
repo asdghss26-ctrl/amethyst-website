@@ -46,7 +46,7 @@ export default function RootLayout({
           href="tel:+918870445185"
           className="fixed z-[999] flex items-center justify-center rounded-full text-white no-underline cursor-pointer transition-transform duration-300 hover:scale-110"
           style={{
-            bottom: '80px',
+            bottom: '140px',
             right: '20px',
             width: '52px',
             height: '52px',
@@ -70,7 +70,7 @@ export default function RootLayout({
           rel="noopener noreferrer"
           className="fixed z-[999] flex items-center justify-center rounded-full text-white no-underline cursor-pointer transition-transform duration-300 hover:scale-110"
           style={{
-            bottom: '20px',
+            bottom: '80px',
             right: '20px',
             width: '52px',
             height: '52px',

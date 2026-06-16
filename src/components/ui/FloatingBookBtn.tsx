@@ -6,9 +6,8 @@ export default function FloatingBookBtn() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Show button after scrolling past the hero section
     const onScroll = () => {
-      setVisible(window.scrollY > 400);
+      setVisible(window.scrollY > 100);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
@@ -25,7 +24,7 @@ export default function FloatingBookBtn() {
       style={{
         opacity: visible ? 1 : 0,
         pointerEvents: visible ? "auto" : "none",
-        transform: visible ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(20px)",
+        transform: visible ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(10px)",
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
