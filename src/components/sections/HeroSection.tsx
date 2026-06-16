@@ -60,6 +60,11 @@ export default function Hero() {
   const domeWidth = isMobile ? 200 : 380;
   const domeHeight = isMobile ? 100 : 170;
 
+  // Mask gradient to seamlessly fade out tablets before they hit the bottom cutoff
+  const fadeStart = isMobile ? "30%" : "25%";
+  const fadeEnd = isMobile ? "50%" : "50%";
+  const maskStyle = `linear-gradient(to bottom, black 0%, black ${fadeStart}, transparent ${fadeEnd})`;
+
   const wheelAnimation = "wheelSpin 50s linear infinite";
 
   return (
@@ -121,6 +126,8 @@ export default function Hero() {
             height: `${orbitRadius * 2}px`,
             bottom: `-${orbitRadius}px`,
             transform: "translateX(-50%)",
+            maskImage: maskStyle,
+            WebkitMaskImage: maskStyle,
           }}
         >
           <div
