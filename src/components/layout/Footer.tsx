@@ -97,7 +97,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://instagram.com/amethystskinclinic"
+                  href="https://www.instagram.com/amethystskinclinicchennai?igsh=MWNkbjVna2hvaW5uYw=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center rounded-full transition-all duration-300 hover:bg-[#5B1F6A]"
