@@ -10,9 +10,9 @@ export default function About() {
       <section id="about" className="pt-4 pb-9 md:pb-10 bg-[#F5F0EB]">
         <div className="max-w-[480px] mx-auto px-6">
           <Reveal delay={0.1}>
-            <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#5B1F6A]" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5B1F6A]">
+            <div className="inline-flex items-center gap-2 border border-[#E4DFE8] rounded-full px-4 py-1.5 mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#8E5C8F]" />
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8E5C8F]">
                 About Our Clinic
               </span>
             </div>

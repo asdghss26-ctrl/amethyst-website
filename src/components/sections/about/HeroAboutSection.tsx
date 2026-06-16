@@ -29,9 +29,11 @@ export default function HeroAboutSection() {
       <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full opacity-20" style={{ background: 'radial-gradient(circle, #5A2A5D 0%, transparent 70%)' }} />
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 relative z-10">
 
-        <div ref={badgeRef} className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-8" style={{ background: '#F3DADF', color: '#4A2E2A' }}>
-          <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: '#5A2A5D' }} />
-          {heroAbout.badge}
+        <div ref={badgeRef} className="inline-flex items-center gap-2 border border-[#E4DFE8] rounded-full px-4 py-1.5 mb-6">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#8E5C8F]" />
+          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8E5C8F]">
+            {heroAbout.badge}
+          </span>
         </div>
 
         <h1 ref={headingRef} className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal leading-tight max-w-4xl mb-8" style={{ color: '#2E2E2E' }}>

@@ -18,7 +18,6 @@ export default function AboutPage() {
       <StatsSection />
       <ValuesSection />
       <GalleryGridSection />
-      <AboutCTASection />
     </main>
   )
 }

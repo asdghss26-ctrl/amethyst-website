@@ -41,9 +41,11 @@ export default function GalleryGridSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
 
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-8" style={{ background: '#F3DADF', color: '#4A2E2A' }}>
-            <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: '#5A2A5D' }} />
-            {galleryBadge}
+          <div className="inline-flex items-center gap-2 border border-[#E4DFE8] rounded-full px-4 py-1.5 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#8E5C8F]" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8E5C8F]">
+              {galleryBadge}
+            </span>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl font-normal max-w-2xl mx-auto" style={{ color: '#2E2E2E' }}>
             {galleryHeading}
