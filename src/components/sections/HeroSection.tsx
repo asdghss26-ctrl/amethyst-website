@@ -40,8 +40,18 @@ export default function Hero() {
     };
   }, []);
 
+  // Only display the original treatments in the hero wheel so it doesn't get overcrowded
+  const ORIGINAL_TREATMENT_IDS = [
+    "prp-hair", "gfc-hair", "iprf-scalp", "hair-threads",
+    "subcision", "mnrf", "tca-cross",
+    "picolaser", "picofusion", "cosmelan",
+    "excimer",
+    "skin-tag", "milia", "earlobe", "biopsy"
+  ];
+  const displayTreatments = treatments.filter(t => ORIGINAL_TREATMENT_IDS.includes(t.id));
+
   // ─── RESPONSIVE VALUES ───
-  const pillCount = treatments.length;
+  const pillCount = displayTreatments.length;
   const orbitRadius = isMobile ? 170 : 260;
   const pillWidth = isMobile ? 160 : 220;
   const pillHeight = isMobile ? 38 : 48;
@@ -121,7 +131,7 @@ export default function Hero() {
               transformOrigin: "center center",
             }}
           >
-            {treatments.map((t, i) => {
+            {displayTreatments.map((t, i) => {
               const angleStep = 360 / pillCount;
               const pillAngle = i * angleStep;
               const rad = (pillAngle * Math.PI) / 180;
