@@ -86,8 +86,8 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="flex flex-col justify-center h-full"
-                style={{ background: "#f3eaf8", borderRadius: "20px", padding: "24px 20px md:px-8" }}
+                className="flex flex-col justify-center h-full p-6 md:p-10 lg:p-12"
+                style={{ background: "#f3eaf8" }}
               >
                 <h2 style={{ color: "#5B1F6A", fontSize: "20px", fontWeight: 700, margin: "0 0 4px", fontFamily: "serif" }}>
                   Dr. Shruthi Pavana Janardhanan
