@@ -36,7 +36,16 @@ export const services: Service[] = [
   },
   {
     id: "vitiligo",
-    icon: "⬡",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+        <circle cx="12" cy="6" r="4" />
+        <path d="M19 22v-3a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v3" />
+        <path d="M6 16q1.5-1 2 0q0 1.5-2 1z" />
+        <path d="M13.5 14q2-1 2.5 0q-1 2-2.5 1z" />
+        <path d="M8 19q2-1 2.5 0.5q-1.5 1.5-2.5 0.5z" />
+        <circle cx="15.5" cy="19.5" r="1" />
+      </svg>
+    ),
     title: "Vitiligo Treatments",
     description: "Excimer Laser, Mini Punch Grafting & 5FU",
   },
