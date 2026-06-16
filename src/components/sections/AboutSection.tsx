@@ -36,8 +36,8 @@ export default function About() {
                   "Expert Certified Team",
                   "Personalized Care Plans",
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <div className="w-7 h-7 rounded-full bg-[#5B1F6A] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div key={i} className="flex items-center gap-4">
+                    <div className="w-7 h-7 rounded-full bg-[#5B1F6A] flex items-center justify-center flex-shrink-0">
                       <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                       </svg>
