@@ -235,7 +235,7 @@ export default function Footer() {
               &copy; 2025 Amethyst Skin Clinic
             </p>
             <p style={{ fontSize: '11px', color: '#666666' }}>
-              Made with &#160;💜&#160; in Chennai
+              Designed by VN Creation
             </p>
           </div>
         </div>
