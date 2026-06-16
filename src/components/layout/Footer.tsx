@@ -21,15 +21,14 @@ export default function Footer() {
           padding: '32px 24px',
         }}
       >
-        <svg
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo-cream.svg"
+          alt="Amethyst Logo"
           width="32"
           height="32"
-          viewBox="0 0 24 24"
-          fill="white"
-          style={{ marginBottom: '12px' }}
-        >
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-        </svg>
+          style={{ marginBottom: '12px', display: 'inline-block' }}
+        />
         <h2
           className="text-white font-bold leading-tight"
           style={{ fontFamily: "var(--font-dm-serif), serif", fontSize: '22px' }}
