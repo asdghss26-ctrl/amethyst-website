@@ -32,19 +32,20 @@ export default function Services() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -6 }}
-              className="relative group bg-white/50 backdrop-blur-xl border border-white/70 rounded-[20px] p-5 flex flex-col justify-start h-[190px] shadow-[0_8px_32px_rgba(91,31,106,0.06)] hover:shadow-[0_16px_48px_rgba(91,31,106,0.12)] hover:bg-white/70 transition-all duration-500 overflow-hidden"
+              whileTap={{ scale: 0.96 }}
+              className="relative group bg-white/50 backdrop-blur-xl border border-white/70 rounded-[20px] p-5 flex flex-col justify-start h-[190px] shadow-[0_8px_32px_rgba(91,31,106,0.06)] hover:shadow-[0_16px_48px_rgba(91,31,106,0.12)] hover:bg-white/70 active:bg-white/90 active:shadow-[0_0_30px_rgba(255,255,255,0.8)] transition-all duration-500 overflow-hidden cursor-pointer"
               style={{
                 boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.8), 0 8px 32px rgba(91,31,106,0.06)',
               }}
             >
-              {/* Liquid Shimmer Effect */}
-              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none transition-opacity duration-300" />
+              {/* Liquid Shimmer Effect - triggers on hover and touch */}
+              <div className="absolute top-0 left-[-100%] w-[50%] h-full bg-gradient-to-r from-transparent via-white/80 to-transparent group-hover:animate-[shimmerSlide_1.5s_infinite] group-active:animate-[shimmerSlide_0.8s_ease-out_1] pointer-events-none z-0" />
               
-              <div className="w-9 h-9 rounded-full bg-[#f3eaf8]/80 backdrop-blur-sm border border-white flex items-center justify-center text-[#5B1F6A] text-base mb-3 flex-shrink-0 z-10 relative">
+              <div className="w-9 h-9 rounded-full bg-[#f3eaf8]/80 backdrop-blur-sm border border-white flex items-center justify-center text-[#5B1F6A] text-base mb-3 flex-shrink-0 z-10 relative transition-transform duration-300 group-active:scale-110">
                 {s.icon}
               </div>
               <div className="z-10 relative">
-                <h3 className="text-[#5B1F6A] font-bold text-[14px] mb-1 leading-tight">
+                <h3 className="text-[#5B1F6A] font-bold text-[14px] mb-1 leading-tight group-active:text-[#3B0F4A]">
                   {s.title}
                 </h3>
                 <p className="text-[#6B6570] text-[12px] leading-[1.5] line-clamp-3">{s.description}</p>
