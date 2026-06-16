@@ -1,6 +1,7 @@
 "use client";
 
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
@@ -14,8 +15,11 @@ interface SmoothScrollingProps {
 }
 
 export default function SmoothScrolling({ children }: SmoothScrollingProps) {
+  const pathname = usePathname();
+  const smootherRef = useRef<ScrollSmoother | null>(null);
+
   useEffect(() => {
-    let smoother = ScrollSmoother.create({
+    smootherRef.current = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
       smooth: 1.5,
@@ -23,9 +27,20 @@ export default function SmoothScrolling({ children }: SmoothScrollingProps) {
     });
 
     return () => {
-      smoother.kill();
+      if (smootherRef.current) {
+        smootherRef.current.kill();
+      }
     };
   }, []);
+
+  // Reset scroll position to top when navigating to a new page
+  useEffect(() => {
+    if (smootherRef.current) {
+      smootherRef.current.scrollTop(0);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
 
   return (
     <div id="smooth-wrapper">
