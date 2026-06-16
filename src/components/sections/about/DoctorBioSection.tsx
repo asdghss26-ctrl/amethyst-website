@@ -49,62 +49,39 @@ export default function DoctorBioSection() {
             />
           </div>
 
-          {/* Right: Details */}
-          <div style={{ background: "#f3eaf8", borderRadius: "20px", padding: "32px 24px" }}>
-            {/* Doctor Name &amp; Title */}
-            <h2 style={{ color: "#5B1F6A", fontSize: "22px", fontWeight: 700, margin: "0 0 6px", fontFamily: "serif" }}>
-              Dr. Shruthi Pavana Janardhanan
-            </h2>
-            <p style={{ color: "#7a4a8a", fontSize: "14px", fontStyle: "italic", margin: "0 0 16px" }}>
-              Lead Dermatologist &amp; Aesthetic Specialist
-            </p>
-
-            {/* Credentials Pill */}
-            <div
-              style={{
-                display: "inline-block",
-                background: "white",
-                border: "1px solid #d4a8e8",
-                borderRadius: "20px",
-                padding: "6px 16px",
-                marginBottom: "24px",
-              }}
-            >
-              <span style={{ color: "#5B1F6A", fontSize: "12px", fontWeight: 600, letterSpacing: "0.5px" }}>
-                MBBS &nbsp;·&nbsp; MD.DVL &nbsp;·&nbsp; DNB.DVL &nbsp;·&nbsp; MNAMS &nbsp;·&nbsp; MRCP SCE DERM(UK)
-              </span>
+          {/* Right: Bio Details */}
+          <div className="flex flex-col justify-center">
+            <div className="mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#5B1F6A] font-serif mb-2">
+                Dr. Shruthi Pavana Janardhanan
+              </h2>
+              <p className="text-[#8E5C8F] text-sm md:text-base font-medium tracking-wide uppercase">
+                Lead Dermatologist & Aesthetic Specialist
+              </p>
             </div>
 
-            {/* Divider */}
-            <div style={{ width: "100%", height: "1px", background: "#d4a8e8", marginBottom: "20px" }} />
+            <div className="flex flex-wrap gap-2 mb-8">
+              {['MBBS', 'MD.DVL', 'DNB.DVL', 'MNAMS', 'MRCP SCE DERM(UK)'].map((cred, i) => (
+                <span key={i} className="px-3 py-1.5 bg-white text-[#5B1F6A] text-xs font-bold rounded-full border border-[#e8d5f0] shadow-sm">
+                  {cred}
+                </span>
+              ))}
+            </div>
 
-            {/* Achievements */}
-            {[
-              { label: "Qualification", value: "MD in Dermatology — Madras Medical College" },
-              { label: "International", value: "MRCP SCE in Dermatology (UK)" },
-              { label: "Research", value: "3 Published Research Articles" },
-            ].map((item, i) => (
-              <div key={i} style={{ display: "flex", gap: "12px", marginBottom: "14px", alignItems: "flex-start" }}>
-                <div style={{ width: "4px", minWidth: "4px", height: "40px", background: "#5B1F6A", borderRadius: "2px" }} />
-                <div>
-                  <span style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>
-                    {item.label}
-                  </span>
-                  <p style={{ color: "#444", fontSize: "13px", margin: "2px 0 0", lineHeight: "1.5" }}>{item.value}</p>
-                </div>
-              </div>
-            ))}
+            <div className="space-y-5 text-[#6B6570] text-[15px] leading-[1.8] border-l-2 border-[#d4a8e8] pl-6 relative">
+              {/* Decorative accent */}
+              <div className="absolute left-[-2px] top-0 w-[2px] h-12 bg-[#5B1F6A]" />
 
-            {/* Divider */}
-            <div style={{ width: "100%", height: "1px", background: "#d4a8e8", margin: "20px 0" }} />
-
-            {/* Memberships */}
-            <p style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", margin: "0 0 6px" }}>
-              Professional Memberships
-            </p>
-            <p style={{ color: "#666", fontSize: "13px", margin: 0, lineHeight: "1.7" }}>
-              Indian Association of Dermatologists, Venereologists &amp; Leprologists (IADVL) &nbsp;·&nbsp; Indian Association for the Study of Sexually Transmitted Diseases (IASTD) &nbsp;·&nbsp; National Academy of Medical Sciences (NAMS)
-            </p>
+              <p>
+                <strong className="text-[#5B1F6A] font-semibold">Dr. Shruthi Pavana Janardhanan</strong> is a board-certified dermatologist with a strong academic background and versatile clinical experience. She completed her MD in Dermatology from the prestigious Madras Medical College, followed by a DNB from the National Board of Examinations and the MRCP SCE in Dermatology (UK).
+              </p>
+              <p>
+                She has extensive experience in both clinical and aesthetic dermatology, with advanced training in injectables and energy-based devices. Her professional journey includes work at leading dermatology centers in Chennai and Mumbai.
+              </p>
+              <p>
+                Dr. Shruthi has authored three published research articles and is an active member of the Indian Association of Dermatologists, Venereologists and Leprologists (IADVL), the Indian Association for the Study of Sexually Transmitted Diseases (IASTD), and the National Academy of Medical Sciences (NAMS).
+              </p>
+            </div>
           </div>
         </div>
       </div>
