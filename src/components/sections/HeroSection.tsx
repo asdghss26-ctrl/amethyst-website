@@ -212,7 +212,8 @@ export default function Hero() {
             width: `${domeWidth}px`,
             height: `${domeHeight}px`,
             background: "#F5F0EB",
-            borderRadius: `${domeWidth / 2}px ${domeWidth / 2}px 0 0 / ${domeHeight}px ${domeHeight}px 0 0`,
+            borderTopLeftRadius: `${domeWidth / 2}px ${domeHeight}px`,
+            borderTopRightRadius: `${domeWidth / 2}px ${domeHeight}px`,
           }}
         >
           <div className="absolute inset-0 flex flex-col items-center justify-end pb-2 md:pb-3">
