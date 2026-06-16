@@ -126,8 +126,6 @@ export default function Hero() {
             height: `${orbitRadius * 2}px`,
             bottom: `-${orbitRadius}px`,
             transform: "translateX(-50%)",
-            maskImage: maskStyle,
-            WebkitMaskImage: maskStyle,
           }}
         >
           <div
@@ -204,6 +202,15 @@ export default function Hero() {
             })}
           </div>
         </div>
+
+        {/* ─── BOTTOM FADE OVERLAY TO HIDE TABLETS GRACEFULLY ─── */}
+        <div 
+          className="absolute bottom-0 left-0 right-0 z-[15] pointer-events-none"
+          style={{
+            height: isMobile ? "140px" : "220px",
+            background: "linear-gradient(to top, #F5F0EB 0%, rgba(245, 240, 235, 0.9) 25%, transparent 100%)"
+          }}
+        />
 
         {/* ─── CENTER BADGE: "Explore our treatments" Dome Cutout ─── */}
         <div
