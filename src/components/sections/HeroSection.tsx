@@ -52,15 +52,16 @@ export default function Hero() {
 
   // ─── RESPONSIVE VALUES ───
   const pillCount = displayTreatments.length;
-  const orbitRadius = isMobile ? 170 : 400;
-  const pillWidth = isMobile ? 160 : 280;
-  const pillHeight = isMobile ? 38 : 52;
-  const thumbSize = isMobile ? 30 : 44;
-  const sectionHeight = isMobile ? 500 : 700;
-  // Beautiful semi-circle dome
-  const domeWidth = isMobile ? 200 : 480; 
-  const domeHeight = isMobile ? 100 : 240;
-  const wheelOffset = isMobile ? 0 : 50;
+  const orbitRadius = isMobile ? 170 : 260;
+  const pillWidth = isMobile ? 160 : 220;
+  const pillHeight = isMobile ? 38 : 48;
+  const thumbSize = isMobile ? 30 : 40;
+  const sectionHeight = isMobile ? 500 : 680;
+  const domeWidth = isMobile ? 200 : 380;
+  const domeHeight = isMobile ? 100 : 170;
+  
+  // Lowers the spinning wheel further down behind the dome on desktop
+  const wheelOffset = isMobile ? 0 : 40;
 
   const wheelAnimation = "wheelSpin 50s linear infinite";
 
