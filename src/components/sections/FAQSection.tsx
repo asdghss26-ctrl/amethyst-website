@@ -7,78 +7,117 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-9 md:py-10 bg-[#EFE7DF]">
-      <div className="max-w-[480px] mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+    <section
+      style={{
+        background: "linear-gradient(135deg, #f3eaf8 0%, #F5F0EB 100%)",
+        padding: "48px 20px",
+      }}
+    >
+      <div className="max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+          {/* Left — heading block */}
           <Reveal delay={0.1}>
-            <div className="lg:sticky lg:top-28">
-              <div className="inline-flex items-center gap-2 border border-[#E4DFE8] rounded-full px-4 py-1.5 mb-4 md:mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#8E5C8F]"></span>
-                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8E5C8F]">FAQ</span>
-              </div>
+            <div className="md:sticky md:top-28">
+              <p className="text-[#5B1F6A] text-xs font-semibold tracking-[0.15em] mb-3">
+                ● FAQ
+              </p>
               <h2
-                className="text-3xl md:text-4xl text-[#2E2E2E] mb-4 md:mb-6 leading-[1.1]"
-                style={{ fontFamily: "var(--font-dm-serif), serif" }}
+                className="text-[#5B1F6A] font-bold leading-tight"
+                style={{ fontFamily: "var(--font-dm-serif), serif", fontSize: "24px" }}
               >
-                Still have<br />questions?
+                Still have questions?
               </h2>
-              <p className="text-sm text-[#6B6570] leading-relaxed mb-6 md:mb-8">
+              <p className="text-[13px] text-[#6B6570] mt-3 leading-relaxed max-w-sm">
                 Our team is here to help. Get in touch for personalized answers.
               </p>
-              <div className="space-y-4 mb-6 md:mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-white border border-[#E4DFE8] flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-[#8E5C8F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              <div
+                style={{
+                  width: "40px",
+                  height: "2px",
+                  background: "#5B1F6A",
+                  marginTop: "16px",
+                  marginBottom: "24px",
+                }}
+              />
+              <div className="space-y-3">
+                <a
+                  href="tel:+918870445185"
+                  className="flex items-center gap-3 group"
+                >
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
+                    style={{ background: "#f3eaf8" }}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#5B1F6A">
+                      <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                     </svg>
                   </div>
-                  <a href="https://wa.me/918870445185" target="_blank" rel="noopener noreferrer" className="text-sm text-[#2E2E2E] hover:text-[#5A2A5D] transition-colors">+91 8870445185</a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-white border border-[#E4DFE8] flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-[#8E5C8F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <span className="text-sm text-[#2E2E2E] group-hover:text-[#5B1F6A] transition-colors duration-300">
+                    +91 88704 45185
+                  </span>
+                </a>
+                <a
+                  href="mailto:hello@amethystskinclinic.com"
+                  className="flex items-center gap-3 group"
+                >
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
+                    style={{ background: "#f3eaf8" }}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#5B1F6A">
+                      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                   </div>
-                  <a href="mailto:hello@amethystskinclinic.com" className="text-sm text-[#2E2E2E] hover:text-[#5A2A5D] transition-colors">hello@amethystskinclinic.com</a>
-                </div>
+                  <span className="text-sm text-[#2E2E2E] group-hover:text-[#5B1F6A] transition-colors duration-300">
+                    hello@amethystskinclinic.com
+                  </span>
+                </a>
               </div>
               <a
                 href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20have%20a%20question."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#5B1F6A] text-white text-xs font-medium uppercase tracking-[0.1em] px-6 py-3 rounded-full hover:bg-[#4A1F4D] transition-all duration-300"
+                className="inline-flex items-center gap-2 text-white text-xs font-semibold uppercase tracking-[0.1em] mt-6 hover:opacity-90 transition-all duration-300"
+                style={{
+                  background: "#5B1F6A",
+                  borderRadius: "24px",
+                  padding: "12px 28px",
+                }}
               >
-                Contact us
+                Contact Us
               </a>
             </div>
           </Reveal>
 
-          <div className="space-y-3">
+          {/* Right — FAQ accordion */}
+          <div className="space-y-[10px]">
             {faqItems.map((faq, i) => (
               <Reveal key={i} delay={0.2 + i * 0.1}>
                 <div
-                  className={`card-hover rounded-[24px] md:rounded-[28px] border overflow-hidden transition-all duration-300 ${open === i ? "bg-white border-[#8E5C8F]" : "bg-white/70 border-[#E4DFE8]"}`}
+                  className="bg-white overflow-hidden cursor-pointer hover:shadow-md transition-shadow duration-300"
+                  style={{
+                    borderRadius: "12px",
+                    borderLeft: "3px solid #5B1F6A",
+                    boxShadow: "0 2px 12px rgba(91,31,106,0.08)",
+                  }}
                 >
                   <button
-                    className="w-full flex items-center justify-between px-5 md:px-7 py-4 md:py-5 text-left"
+                    className="w-full flex items-center justify-between px-5 py-4 text-left"
                     onClick={() => setOpen(open === i ? null : i)}
                   >
-                    <span className="text-sm font-medium text-[#2E2E2E] pr-4">{faq.q}</span>
-                    <span className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center border transition-all duration-300 ${open === i ? "bg-[#5A2A5D] border-[#5A2A5D]" : "bg-white border-[#E4DFE8]"}`}>
-                      <svg
-                        className={`w-3.5 h-3.5 transition-all duration-300 ${open === i ? "rotate-45 text-white" : "text-[#2E2E2E]"}`}
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                      </svg>
+                    <span className="text-sm font-bold text-[#5B1F6A] pr-4">{faq.q}</span>
+                    <span className="text-lg font-bold text-[#5B1F6A] flex-shrink-0 leading-none">
+                      {open === i ? "−" : "+"}
                     </span>
                   </button>
-                  {open === i && (
-                    <div className="px-5 md:px-7 pb-5 md:pb-6">
-                      <p className="text-sm text-[#6B6570] leading-relaxed">{faq.a}</p>
-                    </div>
-                  )}
+                  <div
+                    className="transition-all duration-300 ease-in-out"
+                    style={{ maxHeight: open === i ? "200px" : "0", overflow: "hidden" }}
+                  >
+                    <p className="px-5 pb-4 text-[13px] text-[#666666]" style={{ lineHeight: 1.7 }}>
+                      {faq.a}
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             ))}

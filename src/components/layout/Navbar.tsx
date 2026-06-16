@@ -1,11 +1,14 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { navItems } from "@/lib/data/navigation";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isContact = pathname === "/contact";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -13,15 +16,21 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const showAlt = isContact && !scrolled;
+
   return (
-    <nav className={`w-full fixed top-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
+    <nav className={`w-full fixed top-0 z-[100] transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
       <div className={`max-w-6xl mx-auto px-6 flex items-center justify-between transition-all duration-500 ${scrolled ? "bg-[#F7F3EF]/90 backdrop-blur-xl rounded-full shadow-sm px-8 py-3" : ""}`}>
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="text-xs font-medium uppercase tracking-[0.12em] text-[#2E2E2E] hover:text-[#5A2A5D] transition-colors duration-300"
+              className={`text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300 ${
+                showAlt
+                  ? "text-white hover:text-white/70"
+                  : "text-[#2E2E2E] hover:text-[#5A2A5D]"
+              }`}
             >
               {item.label}
             </Link>
@@ -29,10 +38,22 @@ export default function Navbar() {
         </div>
 
         <Link href="/" onClick={(e) => { if (window.location.pathname === '/') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }} className="flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
-          <img src="/logo.svg" alt="AMETHYST logo" style={{ height: "42px", width: "auto" }} />
+          <img
+            src="/logo.svg"
+            alt="AMETHYST logo"
+            style={{
+              height: "42px",
+              width: "auto",
+              ...(showAlt ? { filter: "brightness(0) invert(1)", WebkitFilter: "brightness(0) invert(1)" } : {}),
+            }}
+          />
           <span
             className="text-xl tracking-wide"
-            style={{ fontFamily: "var(--font-dm-serif), serif", color: "#5A2A5D", fontWeight: 600 }}
+            style={{
+              fontFamily: "var(--font-dm-serif), serif",
+              fontWeight: 600,
+              color: showAlt ? "white" : "#5A2A5D",
+            }}
           >
             AMETHYST
           </span>
@@ -43,7 +64,11 @@ export default function Navbar() {
             href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#5A2A5D] border border-[#5A2A5D] text-white text-xs font-medium uppercase tracking-[0.1em] px-5 py-2.5 rounded-full hover:bg-[#4A1F4D] hover:border-[#4A1F4D] transition-all duration-300"
+            className={`inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.1em] px-5 py-2.5 rounded-full transition-all duration-300 ${
+              showAlt
+                ? "bg-white text-[#5B1F6A] border border-white hover:bg-white/90"
+                : "bg-[#5A2A5D] border border-[#5A2A5D] text-white hover:bg-[#4A1F4D] hover:border-[#4A1F4D]"
+            }`}
           >
             <img src="/logo-cream.svg" alt="" className="h-5 w-auto" />
             Book Appointment
@@ -51,7 +76,9 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden ml-auto w-10 h-10 rounded-full bg-[#5A2A5D] text-white flex items-center justify-center transition-transform hover:scale-105"
+          className={`md:hidden ml-auto w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-105 ${
+            showAlt ? "bg-white/20 text-white" : "bg-[#5A2A5D] text-white"
+          }`}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

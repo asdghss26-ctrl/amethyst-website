@@ -1,5 +1,4 @@
 import HeroAboutSection from '@/components/sections/about/HeroAboutSection'
-import ImageStripSection from '@/components/sections/about/ImageStripSection'
 import DoctorBioSection from '@/components/sections/about/DoctorBioSection'
 import StatsSection from '@/components/sections/about/StatsSection'
 import ValuesSection from '@/components/sections/about/ValuesSection'
@@ -15,7 +14,6 @@ export default function AboutPage() {
   return (
     <main>
       <HeroAboutSection />
-      <ImageStripSection />
       <DoctorBioSection />
       <StatsSection />
       <ValuesSection />

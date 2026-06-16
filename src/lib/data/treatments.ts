@@ -18,7 +18,7 @@ export const treatments: Treatment[] = [
   {
     id: "prp-hair",
     name: "PRP Hair Therapy",
-    img: "https://images.unsplash.com/photo-1608248597481-496100c80836?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
     category: "hair-loss",
     description: "Platelet-Rich Plasma (PRP) therapy uses your own blood platelets to stimulate dormant hair follicles, accelerate cellular regeneration, and reverse hair thinning.",
     benefits: [
@@ -45,7 +45,7 @@ export const treatments: Treatment[] = [
   {
     id: "gfc-hair",
     name: "GFC Hair Therapy",
-    img: "https://images.unsplash.com/photo-1626014903708-bb65715de23a?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&q=80",
     category: "hair-loss",
     description: "Growth Factor Concentrate (GFC) is an advanced, highly purified therapy derived from your platelets. It delivers specific activated growth factors directly to the root for superior, consistent hair restoration.",
     benefits: [
@@ -70,7 +70,7 @@ export const treatments: Treatment[] = [
   {
     id: "iprf-scalp",
     name: "iPRF Scalp Care",
-    img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=800&q=80",
     category: "hair-loss",
     description: "injectable Platelet-Rich Fibrin (iPRF) is a secondary generation platelet concentrate. Formulated without anticoagulants, it forms a fibrin matrix that slowly releases growth factors over an extended period.",
     benefits: [
@@ -95,7 +95,7 @@ export const treatments: Treatment[] = [
   {
     id: "hair-threads",
     name: "Hair Threads",
-    img: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80",
     category: "hair-loss",
     description: "Polydioxanone (PDO) threads are ultra-fine, absorbable sutures placed into the scalp. They trigger a localized healing response, encouraging collagen synthesis and long-term hair follicle rejuvenation.",
     benefits: [
@@ -122,7 +122,7 @@ export const treatments: Treatment[] = [
   {
     id: "subcision",
     name: "Acne Subcision",
-    img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
     category: "acne-scar",
     description: "A specialized surgical procedure that releases tethered fibrotic bands binding deep acne scars to underlying tissue. This lifts depressed scars and promotes natural collagen remodeling.",
     benefits: [
@@ -148,7 +148,7 @@ export const treatments: Treatment[] = [
   {
     id: "mnrf",
     name: "MNRF Microneedling",
-    img: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
     category: "acne-scar",
     description: "Microneedling Fractional Radiofrequency (MNRF) delivers controlled RF energy deep into the dermis through insulated micro-needles. This stimulates intense collagen and elastin production while sparing the epidermis.",
     benefits: [
@@ -174,7 +174,7 @@ export const treatments: Treatment[] = [
   {
     id: "tca-cross",
     name: "TCA Cross Scar Care",
-    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80",
     category: "acne-scar",
     description: "Chemical Reconstruction of Skin Scars (CROSS) using high-concentration Trichloroacetic Acid (TCA) applied precisely to individual ice-pick and narrow boxcar scars to trigger localized necrosis and skin rebuilding.",
     benefits: [
@@ -202,7 +202,7 @@ export const treatments: Treatment[] = [
   {
     id: "picolaser",
     name: "Picofacial Toning",
-    img: "https://images.unsplash.com/photo-1527891751199-7225231a68dd?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
     category: "pigmentation",
     description: "Using ultra-short picosecond pulses of laser energy, this system shatters stubborn pigments into microscopic particles. Your immune system then clears these particles, resulting in a bright, even skin tone.",
     benefits: [
@@ -228,7 +228,7 @@ export const treatments: Treatment[] = [
   {
     id: "picofusion",
     name: "Picofusion Treatment",
-    img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
     category: "pigmentation",
     description: "An advanced combination protocol linking picosecond laser toning with the transdermal delivery of potent brightening antioxidants like Glutathione and Vitamin C, targeting multiple pigment pathways.",
     benefits: [
@@ -253,7 +253,7 @@ export const treatments: Treatment[] = [
   {
     id: "cosmelan",
     name: "Cosmelan Peel",
-    img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80",
     category: "pigmentation",
     description: "The gold standard global depigmentation method. A two-stage professional treatment (in-clinic mask followed by a strict home-care routine) that highly regulates melanin synthesis and clears deep-seated pigment.",
     benefits: [
@@ -281,7 +281,7 @@ export const treatments: Treatment[] = [
   {
     id: "excimer",
     name: "Excimer Laser Therapy",
-    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
     category: "vitiligo",
     description: "A highly targeted monochromatic UVB light therapy delivering 308nm wavelength to patch areas. It stimulates dormant melanocytes in hair follicles to migrate and repigment vitiligo patches without affecting healthy skin.",
     benefits: [
@@ -308,7 +308,7 @@ export const treatments: Treatment[] = [
   {
     id: "skin-tag",
     name: "Skin Tag Removal",
-    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&q=80",
     category: "quick-procedures",
     description: "Quick, safe removal of benign skin tags and growths using radiofrequency electrocautery or cryotherapy under local numbing, resulting in clean, flat skin healing.",
     benefits: [
@@ -332,7 +332,7 @@ export const treatments: Treatment[] = [
   {
     id: "milia",
     name: "Milia Extraction",
-    img: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
     category: "quick-procedures",
     description: "Meticulous sterile extraction of deep, keratin-filled cysts (milia) using a fine micro-lance to restore a smooth skin surface.",
     benefits: [
@@ -355,7 +355,7 @@ export const treatments: Treatment[] = [
   {
     id: "earlobe",
     name: "Ear Lobe Repair",
-    img: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
     category: "quick-procedures",
     description: "Surgical closure of split, torn, or stretched earlobes under local anesthesia to restore an aesthetic, unified shape suitable for re-piercing.",
     benefits: [
@@ -379,7 +379,7 @@ export const treatments: Treatment[] = [
   {
     id: "biopsy",
     name: "Diagnostic Skin Biopsy",
-    img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=300&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80",
     category: "quick-procedures",
     description: "A small, precise diagnostic sample of skin tissue is taken (punch or shave biopsy) under local anesthesia and sent for dermatopathological evaluation to determine the exact diagnosis of skin conditions.",
     benefits: [

@@ -1,6 +1,7 @@
 "use client";
 
 import { Reveal } from "../ui/RevealAnimation";
+import CountUp from "../ui/CountUp";
 
 export default function About() {
   return (
@@ -133,6 +134,31 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* ─── STATS BAR ─── */}
+      <div className="bg-[#5B1F6A] select-none">
+        <div className="max-w-[480px] mx-auto px-6 py-6">
+          <div className="grid grid-cols-4 gap-4">
+            {[
+              { end: 10, suffix: "+", label: "Years" },
+              { end: 86, suffix: "+", label: "Reviews" },
+              { end: 4, suffix: "", label: "Specialties" },
+              { end: 100, suffix: "%", label: "Personalized" },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <p
+                  className="text-white mb-1"
+                  style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 700, fontSize: "22px" }}
+                >
+                  <CountUp end={stat.end} suffix={stat.suffix} duration={2000} className="text-white" />
+                </p>
+                <p className="text-white/80 font-medium" style={{ fontSize: "11px" }}>{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </>
   );
 }

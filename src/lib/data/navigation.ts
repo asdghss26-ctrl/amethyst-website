@@ -10,7 +10,7 @@ export const navItems: NavItem[] = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ]
 
 export const quickLinks: NavItem[] = [
@@ -19,7 +19,7 @@ export const quickLinks: NavItem[] = [
   { label: "Services", href: "/services" },
   { label: "Service Static", href: "#" },
   { label: "Blog", href: "#" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
   { label: "Appointment", href: WHATSAPP_URL },
 ]
 

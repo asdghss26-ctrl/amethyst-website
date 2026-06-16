@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { galleryBadge, galleryHeading } from '@/lib/data/about'
 
 const galleryImages = [
-  { src: '/images/clinic/gallery-1.jpg', alt: 'Amethyst Clinic Interior' },
-  { src: '/images/clinic/gallery-2.jpg', alt: 'Treatment Room' },
-  { src: '/images/clinic/gallery-3.jpg', alt: 'Consultation Area' },
-  { src: '/images/clinic/gallery-4.jpg', alt: 'Clinic Entrance' },
-  { src: '/images/clinic/gallery-5.jpg', alt: 'Aesthetic Equipment' },
-  { src: '/images/clinic/gallery-6.jpg', alt: 'Waiting Area' },
+  { src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80', alt: 'Amethyst Clinic Interior' },
+  { src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80', alt: 'Treatment Room' },
+  { src: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80', alt: 'Consultation Area' },
+  { src: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80', alt: 'Clinic Entrance' },
+  { src: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80', alt: 'Aesthetic Equipment' },
+  { src: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80', alt: 'Waiting Area' },
 ]
 
 export default function GalleryGridSection() {

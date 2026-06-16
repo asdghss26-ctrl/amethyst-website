@@ -1,10 +1,10 @@
 import { Reveal } from "../../ui/RevealAnimation";
 
 const images = [
-  { src: '/images/clinic/strip-1.jpg', alt: 'Amethyst Skin Clinic treatment' },
-  { src: '/images/clinic/strip-2.jpg', alt: 'Amethyst Skin Clinic procedure' },
-  { src: '/images/clinic/strip-3.jpg', alt: 'Amethyst Skin Clinic interior' },
-  { src: '/images/clinic/strip-4.jpg', alt: 'Amethyst Skin Clinic doctor' },
+  { src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80', alt: 'Amethyst Skin Clinic treatment' },
+  { src: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80', alt: 'Amethyst Skin Clinic procedure' },
+  { src: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80', alt: 'Amethyst Skin Clinic interior' },
+  { src: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80', alt: 'Amethyst Skin Clinic doctor' },
 ]
 
 export default function ImageStripSection() {

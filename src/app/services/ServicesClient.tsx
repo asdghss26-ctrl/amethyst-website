@@ -116,15 +116,12 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
                 className="group bg-white rounded-[32px] border border-[#E4DFE8] overflow-hidden flex flex-col hover:border-[#8E5C8F] hover:shadow-xl transition-all duration-500"
               >
                 {/* Image */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#FBF8F5]">
+                <div className="relative w-full h-[220px] overflow-hidden bg-[#FBF8F5] rounded-t-xl">
                   <img
                     src={t.img}
                     alt={t.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute left-4 bottom-4 bg-white/90 backdrop-blur-sm border border-[#E4DFE8]/50 rounded-full px-3 py-1 text-[10px] font-semibold text-[#5A2A5D] uppercase tracking-[0.08em]">
-                    ⏱ {t.duration}
-                  </div>
                 </div>
 
                 {/* Details */}
@@ -322,7 +319,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 bottom-0 w-full sm:w-[500px] md:w-[600px] bg-white z-50 shadow-2xl border-l border-[#E4DFE8] flex flex-col h-full"
+              className="fixed right-0 top-0 bottom-0 w-full sm:w-[500px] md:w-[600px] bg-white z-50 shadow-2xl border-l border-[#E4DFE8] flex flex-col overflow-hidden"
             >
               {/* Header */}
               <div className="flex items-center justify-between px-6 py-5 border-b border-[#E4DFE8]">
@@ -449,6 +446,24 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
                     </ul>
                   </div>
                 )}
+
+                {/* CTA block before footer */}
+                <div style={{ padding: '32px 20px', background: '#f3eaf8', borderRadius: '16px', margin: '0 0 24px', textAlign: 'center' }}>
+                  <p style={{ color: '#5B1F6A', fontWeight: 700, fontSize: '18px', margin: '0 0 8px' }}>
+                    Interested in this treatment?
+                  </p>
+                  <p style={{ color: '#666', fontSize: '14px', margin: '0 0 20px' }}>
+                    Book a consultation with Dr. Shruthi Pavana Janardhanan
+                  </p>
+                  <a
+                    href={`https://wa.me/918870445185?text=${encodeURIComponent(`Hi Amethyst Skin Clinic, I would like to book a consultation for ${selectedTreatment.name}.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ background: '#5B1F6A', color: 'white', padding: '14px 32px', borderRadius: '24px', textDecoration: 'none', fontSize: '15px', fontWeight: 600, display: 'inline-block' }}
+                  >
+                    Book on WhatsApp
+                  </a>
+                </div>
               </div>
 
               {/* Footer CTA */}

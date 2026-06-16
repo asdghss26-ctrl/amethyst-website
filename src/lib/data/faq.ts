@@ -10,18 +10,14 @@ export const faqItems: FAQItem[] = [
   },
   {
     q: "How many sessions will I need?",
-    a: "The number of sessions depends on your skin condition and chosen treatment. Most concerns show visible improvement within a few sessions.",
+    a: "The number of sessions varies by treatment and skin condition. Dr. Shruthi will create a personalized plan during your consultation.",
   },
   {
     q: "Are the procedures painful?",
-    a: "Most treatments involve minimal discomfort. We use advanced techniques and numbing options to keep you comfortable throughout the procedure.",
+    a: "Most procedures involve minimal discomfort. We use advanced techniques and topical numbing to ensure your comfort throughout.",
   },
   {
     q: "Do you offer personalized treatment plans?",
-    a: "Yes. Every treatment plan is personalized to your skin type, concerns, and long-term goals.",
-  },
-  {
-    q: "What should I expect during my first visit?",
-    a: "Your first visit includes a detailed skin assessment, expert consultation, and a personalized treatment plan tailored to your needs.",
+    a: "Yes! Every patient receives a completely customized treatment plan tailored to their unique skin type, concerns, and goals.",
   },
 ]

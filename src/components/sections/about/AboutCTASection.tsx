@@ -72,8 +72,23 @@ export default function AboutCTASection() {
             </div>
           </div>
 
-          <div ref={rightRef} className="relative rounded-3xl overflow-hidden" style={{ height: '500px' }}>
-            <img src="/images/clinic/cta-interior.svg" alt="" className="w-full h-full object-cover" />
+          <div ref={rightRef} style={{ background: '#f3eaf8', borderRadius: '16px', padding: '32px 24px', textAlign: 'center' }}>
+            <div className="w-16 h-16 rounded-full bg-[#5B1F6A]/10 flex items-center justify-center mx-auto mb-5">
+              <svg className="w-8 h-8 text-[#5B1F6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <p style={{ color: '#5B1F6A', fontWeight: 700, fontSize: '16px', margin: '0 0 8px' }}>Visit Us</p>
+            <p style={{ color: '#666', fontSize: '14px', margin: '0 0 16px' }}>Amethyst Skin Clinic, Chennai</p>
+            <a
+              href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I'd%20like%20directions%20to%20the%20clinic."
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ background: '#5B1F6A', color: 'white', padding: '10px 24px', borderRadius: '20px', textDecoration: 'none', fontSize: '14px', display: 'inline-block' }}
+            >
+              Get Directions on WhatsApp
+            </a>
           </div>
 
         </div>
