@@ -32,17 +32,22 @@ export default function Services() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -6 }}
-              className="bg-white rounded-[16px] p-[20px] flex flex-col justify-between min-h-[140px] h-full shadow-[0_4px_16px_rgba(91,31,106,0.08)] hover:shadow-[0_8px_24px_rgba(91,31,106,0.15)] transition-all duration-300"
-              style={{ border: '1px solid #e8d5f0', borderTop: '3px solid #5B1F6A' }}
+              className="relative group bg-white/50 backdrop-blur-xl border border-white/70 rounded-[20px] p-5 flex flex-col justify-start h-[190px] shadow-[0_8px_32px_rgba(91,31,106,0.06)] hover:shadow-[0_16px_48px_rgba(91,31,106,0.12)] hover:bg-white/70 transition-all duration-500 overflow-hidden"
+              style={{
+                boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.8), 0 8px 32px rgba(91,31,106,0.06)',
+              }}
             >
-              <div className="w-9 h-9 rounded-full bg-[#f3eaf8] flex items-center justify-center text-[#5B1F6A] text-base mb-3 flex-shrink-0">
+              {/* Liquid Shimmer Effect */}
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none transition-opacity duration-300" />
+              
+              <div className="w-9 h-9 rounded-full bg-[#f3eaf8]/80 backdrop-blur-sm border border-white flex items-center justify-center text-[#5B1F6A] text-base mb-3 flex-shrink-0 z-10 relative">
                 {s.icon}
               </div>
-              <div>
-                <h3 className="text-[#5B1F6A] font-bold text-[14px] mb-1">
+              <div className="z-10 relative">
+                <h3 className="text-[#5B1F6A] font-bold text-[14px] mb-1 leading-tight">
                   {s.title}
                 </h3>
-                <p className="text-[#888] text-[12px] leading-[1.6]">{s.description}</p>
+                <p className="text-[#6B6570] text-[12px] leading-[1.5] line-clamp-3">{s.description}</p>
               </div>
             </motion.div>
           ))}
