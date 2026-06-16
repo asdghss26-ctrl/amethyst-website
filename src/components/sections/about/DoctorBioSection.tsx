@@ -4,22 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function DoctorBioSection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
-  };
-
   return (
     <section className="py-24 md:py-32 bg-[#F5F0EB]">
       <div className="max-w-6xl mx-auto px-6">
@@ -46,14 +30,14 @@ export default function DoctorBioSection() {
           </motion.div>
 
           {/* Right: Bio Details */}
-          <motion.div 
-            className="flex flex-col justify-center"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.15 }}
-          >
-            <motion.div variants={itemVariants} className="mb-6">
+          <div className="flex flex-col justify-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              className="mb-6"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-[#5B1F6A] font-serif mb-2">
                 Dr. Shruthi Pavana Janardhanan
               </h2>
@@ -62,7 +46,13 @@ export default function DoctorBioSection() {
               </p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-2 mb-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              className="flex flex-wrap gap-2 mb-8"
+            >
               {['MBBS', 'MD.DVL', 'DNB.DVL', 'MNAMS', 'MRCP SCE DERM(UK)'].map((cred, i) => (
                 <span key={i} className="px-3 py-1.5 bg-white text-[#5B1F6A] text-xs font-bold rounded-full border border-[#e8d5f0] shadow-sm">
                   {cred}
@@ -70,7 +60,13 @@ export default function DoctorBioSection() {
               ))}
             </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-5 text-[#6B6570] text-[15px] leading-[1.8] border-l-2 border-[#d4a8e8] pl-6 relative">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              className="space-y-5 text-[#6B6570] text-[15px] leading-[1.8] border-l-2 border-[#d4a8e8] pl-6 relative"
+            >
               {/* Decorative accent */}
               <div className="absolute left-[-2px] top-0 w-[2px] h-12 bg-[#5B1F6A]" />
 
@@ -84,7 +80,7 @@ export default function DoctorBioSection() {
                 Dr. Shruthi has authored three published research articles and is an active member of the Indian Association of Dermatologists, Venereologists and Leprologists (IADVL), the Indian Association for the Study of Sexually Transmitted Diseases (IASTD), and the National Academy of Medical Sciences (NAMS).
               </p>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
