@@ -117,6 +117,53 @@ export const treatments: Treatment[] = [
       "Do not perform strenuous head-down exercises for 3 days."
     ]
   },
+  {
+    id: "dutexome-mesotherapy",
+    name: "Dutexome Mesotherapy",
+    img: "https://images.unsplash.com/photo-1584820927498-cafe8c1c9695?w=800&q=80",
+    category: "hair-loss",
+    description: "An advanced mesotherapy technique combining Dutasteride and Exosomes to highly target androgenetic alopecia. Exosomes deliver powerful cellular signals while Dutasteride blocks the DHT hormone responsible for hair thinning.",
+    benefits: [
+      "Targeted DHT blockade at the follicle level",
+      "Massive boost in cellular regeneration via exosomes",
+      "Reduces hair fall rapidly and thickens existing strands",
+      "Less systemic side effects compared to oral DHT blockers"
+    ],
+    downtime: "None (mild scalp tenderness for 12 hours)",
+    duration: "30 - 45 minutes",
+    sessions: "4 - 6 sessions, spaced 3-4 weeks apart",
+    technology: "Micro-injections of Exosome + Dutasteride complex",
+    preCare: [
+      "Wash hair thoroughly before the appointment."
+    ],
+    postCare: [
+      "Do not wash hair for 24 hours.",
+      "Avoid applying strong chemical hair products for 3 days."
+    ]
+  },
+  {
+    id: "hair-mesotherapy",
+    name: "Hair Strengthening Mesotherapy",
+    img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+    category: "hair-loss",
+    description: "A cocktail of essential vitamins, minerals, amino acids, and peptides injected directly into the scalp to nourish hair follicles and improve scalp microcirculation.",
+    benefits: [
+      "Deeply nourishes the scalp and hair roots",
+      "Combats nutritional deficiencies affecting hair growth",
+      "Revitalizes dull, lifeless hair",
+      "Excellent adjunct to PRP or GFC therapies"
+    ],
+    downtime: "None",
+    duration: "30 minutes",
+    sessions: "6 - 8 sessions, spaced 2 weeks apart",
+    technology: "Nutrient infusion via micro-needling or micro-injections",
+    preCare: [
+      "Ensure scalp is clean and dry."
+    ],
+    postCare: [
+      "Avoid intense exercise and sweating for 24 hours."
+    ]
+  },
 
   // --- ACNE SCAR ---
   {
@@ -195,6 +242,77 @@ export const treatments: Treatment[] = [
       "Do not pick, scratch, or peel off scabs prematurely.",
       "Apply ointment/vaseline to scabbed areas until they fall off.",
       "Avoid direct sunlight and apply SPF 50+ regularly."
+    ]
+  },
+  {
+    id: "punch-excision",
+    name: "Punch Excision of Scars",
+    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80",
+    category: "acne-scar",
+    description: "A minor surgical procedure where deep, narrow ice-pick or deep boxcar scars are completely removed using a small punch biopsy tool, and the skin is stitched together to heal as a flat, unnoticeable line.",
+    benefits: [
+      "Completely removes the scarred tissue",
+      "Replaces deep, pitted scars with a tiny, flat linear scar",
+      "Highly effective for deep ice-pick scars unresponsive to lasers"
+    ],
+    downtime: "5 - 7 days (sutures in place)",
+    duration: "30 minutes",
+    sessions: "Single session (sutures removed after a week)",
+    technology: "Sterile surgical punch tool",
+    preCare: [
+      "Stop blood-thinning supplements 5 days prior."
+    ],
+    postCare: [
+      "Keep the surgical site clean and dry.",
+      "Apply prescribed antibiotic ointment daily."
+    ]
+  },
+  {
+    id: "papular-scar",
+    name: "Papular Scar Treatment",
+    img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+    category: "acne-scar",
+    description: "Targeted therapy for elevated, bumpy papular scars (often found on the chin and nose) using light radiofrequency ablation or fractional CO2 laser to flatten the raised fibrous tissue.",
+    benefits: [
+      "Flattens bumpy, raised scars effectively",
+      "Smooths skin texture and restores facial contours",
+      "Safe and controlled tissue ablation"
+    ],
+    downtime: "3 - 5 days (mild scabbing)",
+    duration: "20 minutes",
+    sessions: "1 - 3 sessions",
+    technology: "Radiofrequency ablation / Fractional Laser",
+    preCare: [
+      "Avoid active acne breakouts in the treatment zone."
+    ],
+    postCare: [
+      "Do not scratch or prematurely remove scabs.",
+      "Strict sun protection to prevent hyperpigmentation."
+    ]
+  },
+  {
+    id: "biofillers",
+    name: "Biofillers for Scars",
+    img: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
+    category: "acne-scar",
+    description: "Using your body's own natural plasma gel (Biofiller) combined with subcision to instantly volumize and lift deep rolling and boxcar scars, providing immediate aesthetic improvement and long-term collagen stimulation.",
+    benefits: [
+      "100% natural filler derived from your own blood",
+      "Zero risk of allergic reactions",
+      "Instantly lifts tethered scars while subcision heals",
+      "Promotes sustained dermal thickening"
+    ],
+    downtime: "2 - 4 days (mild swelling and bruising)",
+    duration: "45 - 60 minutes",
+    sessions: "2 - 4 sessions, spaced 4-6 weeks apart",
+    technology: "Plasma gel bio-heating and subcision",
+    preCare: [
+      "Drink plenty of water before the blood draw.",
+      "Avoid NSAIDs for 5 days."
+    ],
+    postCare: [
+      "Avoid massaging the treated area for 48 hours.",
+      "Sleep with head slightly elevated to reduce swelling."
     ]
   },
 
@@ -276,6 +394,56 @@ export const treatments: Treatment[] = [
       "Avoid direct sun exposure completely during the peeling phase."
     ]
   },
+  {
+    id: "advanced-peels",
+    name: "Advanced Chemical Peels",
+    img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+    category: "pigmentation",
+    description: "Customized medical-grade chemical exfoliation blends (Salicylic, Glycolic, Lactic, TCA, and Yellow Peels) tailored to your skin type to lift away hyperpigmented epidermal layers and stimulate fresh, radiant skin.",
+    benefits: [
+      "Brightens dull, uneven skin tones",
+      "Reduces superficial pigmentation, freckles, and acne marks",
+      "Unclogs pores and refines skin texture",
+      "Customizable depth depending on downtime availability"
+    ],
+    downtime: "2 - 7 days (depending on peel depth)",
+    duration: "20 - 30 minutes",
+    sessions: "3 - 6 sessions, spaced 2-4 weeks apart",
+    technology: "Medical-grade topical chemical formulations",
+    preCare: [
+      "Stop using retinoids and exfoliating acids 3-5 days before.",
+      "Avoid waxing or threading the face."
+    ],
+    postCare: [
+      "Do not peel or pick at flaking skin.",
+      "Apply thick layers of gentle moisturizer.",
+      "Strict sun avoidance and SPF 50+ reapplication."
+    ]
+  },
+  {
+    id: "iv-glutathione",
+    name: "IV Glutathione",
+    img: "https://images.unsplash.com/photo-1584820927498-cafe8c1c9695?w=800&q=80",
+    category: "pigmentation",
+    description: "Intravenous infusion of Glutathione and Vitamin C, a powerful master antioxidant therapy that neutralizes free radicals, detoxifies the liver, and uniformly brightens the skin from the inside out.",
+    benefits: [
+      "Provides a systemic, full-body skin brightening effect",
+      "High absorption rate compared to oral supplements",
+      "Boosts immunity and cellular detoxification",
+      "Helps combat stubborn melasma and sun damage"
+    ],
+    downtime: "None",
+    duration: "45 minutes",
+    sessions: "8 - 12 sessions, weekly or bi-weekly",
+    technology: "Intravenous drip infusion",
+    preCare: [
+      "Eat a light meal and drink plenty of water before the drip."
+    ],
+    postCare: [
+      "Continue oral Vitamin C supplements if prescribed.",
+      "Maintain hydration."
+    ]
+  },
 
   // --- VITILIGO ---
   {
@@ -301,6 +469,53 @@ export const treatments: Treatment[] = [
     postCare: [
       "Apply calming moisturizers if mild warmth or irritation is felt.",
       "Keep the treated area protected from accidental heavy sun exposure."
+    ]
+  },
+  {
+    id: "mini-punch-grafting",
+    name: "Mini Punch Grafting",
+    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80",
+    category: "vitiligo",
+    description: "A highly specialized surgical technique for stable vitiligo where tiny punches of normally pigmented skin (usually from the thigh or behind the ear) are transplanted into depigmented patches to seed new melanocytes.",
+    benefits: [
+      "Permanent repigmentation for stable vitiligo patches",
+      "Excellent option for areas unresponsive to light therapy",
+      "High success rate in carefully selected patients"
+    ],
+    downtime: "7 - 10 days (dressings on donor and recipient sites)",
+    duration: "60 - 120 minutes (varies by area)",
+    sessions: "Single session per localized area",
+    technology: "Micro-surgical punch grafts",
+    preCare: [
+      "Ensure vitiligo has been stable (no new patches) for at least 1 year.",
+      "Stop blood thinners 1 week prior."
+    ],
+    postCare: [
+      "Keep surgical dressings perfectly dry and intact for 7 days.",
+      "Avoid stretching or heavy movement of the grafted areas."
+    ]
+  },
+  {
+    id: "5fu-microneedling",
+    name: "5FU Microneedling",
+    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    category: "vitiligo",
+    description: "A combination procedure using microneedling to create micro-channels in vitiligo patches, followed by the topical application of 5-Fluorouracil (5FU) to deeply stimulate local repigmentation pathways.",
+    benefits: [
+      "Effective adjunctive therapy for resistant vitiligo spots",
+      "Stimulates melanocyte migration from hair follicles",
+      "Synergistic when combined with Excimer or targeted phototherapy"
+    ],
+    downtime: "3 - 5 days (redness and mild scabbing)",
+    duration: "30 minutes",
+    sessions: "Multiple sessions required, customized per patient",
+    technology: "Medical microneedling + Topical chemotherapy agents",
+    preCare: [
+      "Avoid sun exposure to the patches immediately before treatment."
+    ],
+    postCare: [
+      "Protect treated areas from sun.",
+      "Apply prescribed soothing ointments."
     ]
   },
 
@@ -398,6 +613,80 @@ export const treatments: Treatment[] = [
       "Change dressings daily as instructed.",
       "Keep the biopsy site clean with soap and water after 24 hours.",
       "Avoid heavy stretching of the biopsy site area."
+    ]
+  },
+  {
+    id: "molluscum-needling",
+    name: "Molluscum Needling",
+    img: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&q=80",
+    category: "quick-procedures",
+    description: "A highly effective, straightforward procedure to clear Molluscum Contagiosum lesions. A sterile needle is used to carefully extract the viral core from each bump, halting the spread of the infection.",
+    benefits: [
+      "Rapidly stops the viral shedding and spread",
+      "Quick, in-office procedure with instant removal",
+      "Prevents auto-inoculation to other body parts"
+    ],
+    downtime: "1 - 3 days (pinpoint scabs)",
+    duration: "15 - 30 minutes",
+    sessions: "1 - 2 sessions depending on lesion count",
+    technology: "Sterile needle extraction",
+    preCare: [
+      "Do not shave or aggressively scrub the affected areas."
+    ],
+    postCare: [
+      "Apply prescribed antibiotic cream to prevent secondary infection.",
+      "Wash hands thoroughly after touching the skin.",
+      "Do not share towels or clothing."
+    ]
+  },
+  {
+    id: "ingrown-toenail",
+    name: "Ingrown Toenail Surgery",
+    img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
+    category: "quick-procedures",
+    description: "Surgical intervention for painful, infected ingrown toenails. The procedure involves partial nail avulsion (removing the ingrown edge) and chemical matrixectomy to prevent the nail from growing inward again.",
+    benefits: [
+      "Immediate relief from severe toe pain and pressure",
+      "Resolves chronic nail bed infections",
+      "Permanent solution with chemical matrix destruction",
+      "Performed completely painlessly under local ring block anesthesia"
+    ],
+    downtime: "1 - 2 weeks for complete healing",
+    duration: "30 - 45 minutes",
+    sessions: "Single surgical session",
+    technology: "Partial nail avulsion + Phenol matrixectomy",
+    preCare: [
+      "Wear open-toed footwear (sandals/flip-flops) to the appointment."
+    ],
+    postCare: [
+      "Keep the foot elevated for the first 24-48 hours.",
+      "Perform daily dressing changes with antiseptic solutions.",
+      "Wear wide, comfortable shoes until fully healed."
+    ]
+  },
+  {
+    id: "lump-excision",
+    name: "Excision of Lumps & Bumps",
+    img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80",
+    category: "quick-procedures",
+    description: "Minor surgical removal of benign subcutaneous lesions such as lipomas, epidermoid cysts, and dermatofibromas. The mass is carefully excised under local anesthesia and stitched for an aesthetic outcome.",
+    benefits: [
+      "Permanent removal of bothersome or growing lumps",
+      "Histopathological analysis performed for peace of mind",
+      "Clean, sterile clinical environment ensuring safety",
+      "Fine aesthetic suturing minimizes scarring"
+    ],
+    downtime: "7 - 14 days (depending on size and location)",
+    duration: "45 - 60 minutes",
+    sessions: "Single surgical procedure",
+    technology: "Minor dermatological surgery",
+    preCare: [
+      "Inform the doctor if you are on aspirin or blood thinners."
+    ],
+    postCare: [
+      "Keep the surgical wound dry for 48 hours.",
+      "Attend follow-up for suture removal (usually 7-14 days).",
+      "Avoid heavy lifting or stretching the area."
     ]
   }
 ]

@@ -20,7 +20,12 @@ export const services: Service[] = [
   },
   {
     id: "acne-scar",
-    icon: "◈",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+        <path d="M10.5 3l1.5 5.5L17.5 10l-5.5 1.5L10.5 17l-1.5-5.5L3.5 10l5.5-1.5z" />
+        <path d="M18 16l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" />
+      </svg>
+    ),
     title: "Acne Scar Revision",
     description: "Subcision, MNRF, TCA Cross & Biofillers",
   },
@@ -51,7 +56,14 @@ export const services: Service[] = [
   },
   {
     id: "quick-procedures",
-    icon: "✚",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+        <rect x="4" y="6" width="16" height="14" rx="2" />
+        <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+        <path d="M12 10v6" />
+        <path d="M9 13h6" />
+      </svg>
+    ),
     title: "Quick Procedures",
     description: "Minor clinical treatments performed with maximum safety and minimal recovery (Skin Tag, Milia, Ear Lobe Repair, Skin Biopsy).",
   },
