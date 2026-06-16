@@ -50,11 +50,11 @@ export default function RootLayout({
             right: '20px',
             width: '52px',
             height: '52px',
-            background: 'rgba(91, 31, 106, 0.25)',
+            background: 'rgba(90, 42, 93, 0.75)',
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
             border: '1px solid rgba(255, 255, 255, 0.3)',
-            boxShadow: '0 8px 32px rgba(91, 31, 106, 0.3)',
+            boxShadow: '0 8px 32px rgba(90, 42, 93, 0.4)',
           }}
           aria-label="Call Amethyst Skin Clinic"
         >
@@ -74,11 +74,11 @@ export default function RootLayout({
             right: '20px',
             width: '52px',
             height: '52px',
-            background: 'rgba(91, 31, 106, 0.25)',
+            background: 'rgba(90, 42, 93, 0.75)',
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
             border: '1px solid rgba(255, 255, 255, 0.3)',
-            boxShadow: '0 8px 32px rgba(91, 31, 106, 0.3)',
+            boxShadow: '0 8px 32px rgba(90, 42, 93, 0.4)',
           }}
           aria-label="Chat on WhatsApp"
         >
