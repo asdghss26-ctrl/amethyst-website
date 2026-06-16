@@ -86,7 +86,8 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                style={{ background: "#f3eaf8", borderRadius: "20px", padding: "24px 20px" }}
+                className="flex flex-col justify-center h-full"
+                style={{ background: "#f3eaf8", borderRadius: "20px", padding: "24px 20px md:px-8" }}
               >
                 <h2 style={{ color: "#5B1F6A", fontSize: "20px", fontWeight: 700, margin: "0 0 4px", fontFamily: "serif" }}>
                   Dr. Shruthi Pavana Janardhanan
@@ -107,6 +108,7 @@ export default function About() {
                     borderRadius: "20px",
                     padding: "6px 16px",
                     marginBottom: "16px",
+                    alignSelf: "flex-start",
                   }}
                 >
                   <span style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 600, letterSpacing: "0.5px" }}>
@@ -142,6 +144,19 @@ export default function About() {
                 <p style={{ color: "#666", fontSize: "13px", margin: 0, lineHeight: "1.7" }}>
                   Indian Association of Dermatologists, Venereologists &amp; Leprologists (IADVL) &nbsp;·&nbsp; Indian Association for the Study of Sexually Transmitted Diseases (IASTD) &nbsp;·&nbsp; National Academy of Medical Sciences (NAMS)
                 </p>
+
+                <div style={{ width: "100%", height: "1px", background: "#d4a8e8", margin: "20px 0" }} />
+
+                <p style={{ color: "#5B1F6A", fontSize: "11px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", margin: "0 0 10px" }}>
+                  Clinical Expertise
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Aesthetic Dermatology", "Injectables & Fillers", "Energy-Based Devices", "Clinical Dermatology", "Hair Loss Treatments", "Pigmentation Correction"].map((spec, i) => (
+                    <span key={i} className="px-3 py-1.5 bg-white text-[#6B6570] text-[11px] font-semibold rounded-full border border-[#e8d5f0] shadow-sm">
+                      {spec}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             </div>
           </div>
