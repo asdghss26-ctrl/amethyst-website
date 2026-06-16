@@ -8,7 +8,7 @@ export default function About() {
     <>
       {/* ─── CLINIC IMAGE + BULLETS ─── */}
       <section id="about" className="pt-4 pb-9 md:pb-10 bg-[#F5F0EB]">
-        <div className="max-w-[480px] mx-auto px-6">
+        <div className="max-w-[480px] md:max-w-5xl lg:max-w-6xl mx-auto px-6">
           <Reveal delay={0.1}>
             <div className="inline-flex items-center gap-2 border border-[#E4DFE8] rounded-full px-4 py-1.5 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#8E5C8F]" />
@@ -53,7 +53,7 @@ export default function About() {
 
       {/* ─── DOCTOR PROFILE ─── */}
       <section className="pt-4 pb-9 md:pb-10 bg-[#f3eaf8]">
-        <div className="max-w-[480px] mx-auto px-6">
+        <div className="max-w-[480px] md:max-w-4xl lg:max-w-6xl mx-auto px-6">
           <Reveal delay={0.1}>
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#5B1F6A]" />
@@ -137,7 +137,7 @@ export default function About() {
 
       {/* ─── STATS BAR ─── */}
       <div className="bg-[#5B1F6A] select-none">
-        <div className="max-w-[480px] mx-auto px-6 py-6">
+        <div className="max-w-[480px] md:max-w-5xl lg:max-w-6xl mx-auto px-6 py-6">
           <div className="grid grid-cols-4 gap-4">
             {[
               { end: 10, suffix: "+", label: "Years" },

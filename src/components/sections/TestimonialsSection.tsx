@@ -53,7 +53,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-9 md:py-10 bg-[#EFE7DF]">
-      <div className="max-w-[480px] mx-auto px-6">
+      <div className="max-w-[480px] md:max-w-5xl lg:max-w-6xl mx-auto px-6">
         <Reveal delay={0.1}>
           <div className="flex items-center justify-between mb-8">
             <div>

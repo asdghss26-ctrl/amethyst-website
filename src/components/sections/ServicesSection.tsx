@@ -6,16 +6,16 @@ import { Reveal } from "../ui/RevealAnimation";
 
 export default function Services() {
   return (
-    <section id="services" className="pt-9 pb-0 md:pt-10 md:pb-0 bg-[#F7F3EF]">
-      <div className="max-w-[480px] mx-auto px-6">
+    <section id="services" className="pt-9 pb-0 md:pt-16 md:pb-10 bg-[#F7F3EF]">
+      <div className="max-w-[480px] md:max-w-5xl lg:max-w-6xl mx-auto px-6">
         <Reveal delay={0.1}>
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 md:mb-12">
             <div className="inline-flex items-center gap-2 border border-[#E4DFE8] rounded-full px-4 py-1.5 mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#8E5C8F]"></span>
               <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8E5C8F]">Services</span>
             </div>
             <h2
-              className="text-3xl md:text-4xl text-[#2E2E2E]"
+              className="text-3xl md:text-5xl text-[#2E2E2E]"
               style={{ fontFamily: "var(--font-dm-serif), serif" }}
             >
               Our treatments
@@ -23,7 +23,7 @@ export default function Services() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-2 gap-[12px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-[12px] md:gap-6">
           {services.slice(0, 4).map((s, i) => (
             <motion.div
               key={s.id}
