@@ -231,10 +231,10 @@ export default function Footer() {
               marginRight: '-20px',
             }}
           >
-            <p style={{ fontSize: '11px', color: '#666666' }}>
+            <p style={{ fontSize: '11px', color: '#555555' }}>
               &copy; 2025 Amethyst Skin Clinic
             </p>
-            <p style={{ fontSize: '11px', color: '#666666' }}>
+            <p style={{ fontSize: '11px', color: '#555555' }}>
               Designed by VN Creation
             </p>
           </div>

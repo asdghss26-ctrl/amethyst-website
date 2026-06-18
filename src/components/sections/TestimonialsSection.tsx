@@ -106,12 +106,12 @@ export default function Testimonials() {
                     <StarIcon key={j} />
                   ))}
                 </div>
-                <p className="text-[#555] text-[13px] leading-relaxed mb-4 flex-1">
+                <p className="text-[#444] text-[13px] leading-relaxed mb-4 flex-1">
                   &ldquo;{review.text}&rdquo;
                 </p>
                 <div>
-                  <p className="font-semibold text-[#5B1F6A] text-sm">{review.name}{review.badge ? <span className="font-normal text-[#999] text-[11px] ml-1">· {review.badge}</span> : null}</p>
-                  <p className="text-[10px] text-[#aaa] mt-0.5">Google Review</p>
+                  <p className="font-semibold text-[#5B1F6A] text-sm">{review.name}{review.badge ? <span className="font-normal text-[#777] text-[11px] ml-1">· {review.badge}</span> : null}</p>
+                  <p className="text-[10px] text-[#777] mt-0.5">Google Review</p>
                 </div>
               </div>
             ))}

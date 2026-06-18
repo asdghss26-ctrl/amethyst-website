@@ -41,6 +41,8 @@ export default function Navbar() {
           <img
             src="/logo.svg"
             alt="AMETHYST logo"
+            width={42}
+            height={42}
             style={{
               height: "42px",
               width: "auto",
@@ -70,12 +72,13 @@ export default function Navbar() {
                 : "bg-[#5A2A5D] border border-[#5A2A5D] text-white hover:bg-[#4A1F4D] hover:border-[#4A1F4D]"
             }`}
           >
-            <img src="/logo-cream.svg" alt="" className="h-5 w-auto" />
+            <img src="/logo-cream.svg" alt="" width={20} height={20} className="h-5 w-auto" />
             Book Appointment
           </a>
         </div>
 
         <button
+          aria-label="Toggle Menu"
           className={`md:hidden ml-auto w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-105 ${
             showAlt ? "bg-white/20 text-white" : "bg-[#5A2A5D] text-white"
           }`}
@@ -102,7 +105,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" className="bg-[#5A2A5D] text-white text-xs font-medium uppercase tracking-[0.1em] px-5 py-3 rounded-full text-center hover:bg-[#4A1F4D] transition-all duration-300 flex items-center justify-center gap-2" onClick={() => setMenuOpen(false)}>
-            <img src="/logo-cream.svg" alt="" className="h-5 w-auto" />
+            <img src="/logo-cream.svg" alt="" width={20} height={20} className="h-5 w-auto" />
             Book Appointment
           </a>
         </div>
