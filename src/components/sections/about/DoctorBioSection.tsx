@@ -71,7 +71,7 @@ export default function DoctorBioSection() {
               <div className="absolute left-[-2px] top-0 w-[2px] h-12 bg-[#5B1F6A]" />
 
               <p>
-                <strong className="text-[#5B1F6A] font-semibold">Dr. Shruthi Pavana Janardhanan</strong> is a board-certified dermatologist with a strong academic background and versatile clinical experience. She completed her MD in Dermatology from the prestigious Madras Medical College, followed by a DNB from the National Board of Examinations and the MRCP SCE in Dermatology (UK).
+                <strong className="text-[#5B1F6A] font-semibold">Dr. Shruthi Pavana Janardhanan</strong> is a board-certified dermatologist with strong academic background and versatile clinical experience. She completed her MD in Dermatology from the prestigious Madras Medical College, followed by a DNB from the National Board of Examinations and the MRCP SCE in Dermatology (UK).
               </p>
               <p>
                 She has extensive experience in both clinical and aesthetic dermatology, with advanced training in injectables and energy-based devices. Her professional journey includes work at leading dermatology centers in Chennai and Mumbai.
