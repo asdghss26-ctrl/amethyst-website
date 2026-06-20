@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <nav className={`w-full fixed top-0 z-[100] transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
       <div className={`max-w-6xl mx-auto px-6 flex items-center justify-between transition-all duration-500 ${scrolled ? "bg-[#F7F3EF]/90 backdrop-blur-xl rounded-full shadow-sm px-8 py-3" : ""}`}>
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-5">
           {navItems.map((item) => (
             item.label === "Services" ? (
               <div
@@ -104,27 +104,28 @@ export default function Navbar() {
           ))}
         </div>
 
-        <Link href="/" onClick={(e) => { if (window.location.pathname === '/') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }} className="flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
+        <Link href="/" onClick={(e) => { if (window.location.pathname === '/') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }} className="flex items-center gap-1.5 md:gap-2 absolute left-1/2 -translate-x-1/2">
           <img
             src="/logo.svg"
             alt="AMETHYST logo"
             width={42}
             height={42}
             style={{
-              height: "42px",
+              height: "32px",
               width: "auto",
               ...(showAlt ? { filter: "brightness(0) invert(1)", WebkitFilter: "brightness(0) invert(1)" } : {}),
             }}
+            className="md:!h-[42px]"
           />
           <span
-            className="text-base md:text-xl tracking-wide"
+            className="text-[13px] md:text-lg tracking-wide whitespace-nowrap"
             style={{
               fontFamily: "var(--font-dm-serif), serif",
               fontWeight: 600,
               color: showAlt ? "white" : "#5A2A5D",
             }}
           >
-            AMETHYST <span className="hidden sm:inline">SKIN CLINIC</span>
+            AMETHYST SKIN CLINIC
           </span>
         </Link>
 
