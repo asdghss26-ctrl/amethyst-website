@@ -166,12 +166,11 @@ export default function About() {
       {/* ─── STATS BAR ─── */}
       <div className="bg-[#5B1F6A] select-none">
         <div className="max-w-[480px] md:max-w-5xl lg:max-w-6xl mx-auto px-6 py-6">
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             {[
               { end: 10, suffix: "+", label: "Years" },
               { end: 86, suffix: "+", label: "Reviews" },
-              { end: 4, suffix: "", label: "Specialties" },
-              { end: 100, suffix: "%", label: "Personalized" },
+              { end: 100, suffix: "%", label: "Ethical" },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <p

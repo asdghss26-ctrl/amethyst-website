@@ -1,12 +1,22 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { navItems } from "@/lib/data/navigation";
+
+const serviceDropdownItems = [
+  { label: "Hair Loss", href: "/services?category=hair-loss" },
+  { label: "Acne & Scars", href: "/services?category=acne-scar" },
+  { label: "Pigmentation", href: "/services?category=pigmentation" },
+  { label: "Vitiligo", href: "/services?category=vitiligo" },
+  { label: "Quick Procedures", href: "/services?category=quick-procedures" },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
   const isContact = pathname === "/contact";
 
@@ -18,22 +28,79 @@ export default function Navbar() {
 
   const showAlt = isContact && !scrolled;
 
+  const handleDropdownEnter = () => {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    setDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownTimeout.current = setTimeout(() => setDropdownOpen(false), 200);
+  };
+
   return (
     <nav className={`w-full fixed top-0 z-[100] transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
       <div className={`max-w-6xl mx-auto px-6 flex items-center justify-between transition-all duration-500 ${scrolled ? "bg-[#F7F3EF]/90 backdrop-blur-xl rounded-full shadow-sm px-8 py-3" : ""}`}>
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={`text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300 ${
-                showAlt
-                  ? "text-white hover:text-white/70"
-                  : "text-[#2E2E2E] hover:text-[#5A2A5D]"
-              }`}
-            >
-              {item.label}
-            </Link>
+            item.label === "Services" ? (
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={handleDropdownEnter}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <Link
+                  href={item.href}
+                  className={`text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300 ${
+                    showAlt
+                      ? "text-white hover:text-white/70"
+                      : "text-[#2E2E2E] hover:text-[#5A2A5D]"
+                  }`}
+                >
+                  {item.label}
+                  <svg className="inline-block w-3 h-3 ml-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </Link>
+
+                {/* ─── DROPDOWN ─── */}
+                {dropdownOpen && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+                    <div className="bg-white rounded-2xl shadow-xl border border-[#E4DFE8] py-2 min-w-[200px] animate-in fade-in slide-in-from-top-2 duration-200">
+                      {serviceDropdownItems.map((dropItem) => (
+                        <Link
+                          key={dropItem.label}
+                          href={dropItem.href}
+                          className="block px-5 py-2.5 text-xs font-medium tracking-wide text-[#2E2E2E] hover:bg-[#F5F0EB] hover:text-[#5A2A5D] transition-colors duration-200"
+                        >
+                          {dropItem.label}
+                        </Link>
+                      ))}
+                      <div className="border-t border-[#E4DFE8] mt-1 pt-1">
+                        <Link
+                          href="/services"
+                          className="block px-5 py-2.5 text-xs font-semibold tracking-wide text-[#5A2A5D] hover:bg-[#F5F0EB] transition-colors duration-200"
+                        >
+                          View All Services →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={`text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300 ${
+                  showAlt
+                    ? "text-white hover:text-white/70"
+                    : "text-[#2E2E2E] hover:text-[#5A2A5D]"
+                }`}
+              >
+                {item.label}
+              </Link>
+            )
           ))}
         </div>
 
@@ -50,14 +117,14 @@ export default function Navbar() {
             }}
           />
           <span
-            className="text-xl tracking-wide"
+            className="text-base md:text-xl tracking-wide"
             style={{
               fontFamily: "var(--font-dm-serif), serif",
               fontWeight: 600,
               color: showAlt ? "white" : "#5A2A5D",
             }}
           >
-            AMETHYST
+            AMETHYST <span className="hidden sm:inline">SKIN CLINIC</span>
           </span>
         </Link>
 
@@ -95,14 +162,38 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden mx-4 mt-2 bg-[#F7F3EF] rounded-3xl border border-[#E4DFE8] px-6 py-5 flex flex-col gap-4">
           {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="text-xs font-medium uppercase tracking-[0.12em] text-[#2E2E2E]"
-              onClick={() => setMenuOpen(false)}
-            >
-              {item.label}
-            </Link>
+            item.label === "Services" ? (
+              <div key={item.label} className="flex flex-col gap-2">
+                <Link
+                  href={item.href}
+                  className="text-xs font-medium uppercase tracking-[0.12em] text-[#2E2E2E]"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+                <div className="pl-4 flex flex-col gap-2 border-l-2 border-[#E4DFE8]">
+                  {serviceDropdownItems.map((dropItem) => (
+                    <Link
+                      key={dropItem.label}
+                      href={dropItem.href}
+                      className="text-[11px] font-medium tracking-wide text-[#6B6570] hover:text-[#5A2A5D] transition-colors"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {dropItem.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="text-xs font-medium uppercase tracking-[0.12em] text-[#2E2E2E]"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            )
           ))}
           <a href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" className="bg-[#5A2A5D] text-white text-xs font-medium uppercase tracking-[0.1em] px-5 py-3 rounded-full text-center hover:bg-[#4A1F4D] transition-all duration-300 flex items-center justify-center gap-2" onClick={() => setMenuOpen(false)}>
             <img src="/logo-cream.svg" alt="" width={20} height={20} className="h-5 w-auto" />

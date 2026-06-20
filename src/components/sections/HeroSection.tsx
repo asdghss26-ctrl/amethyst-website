@@ -222,7 +222,7 @@ export default function Hero() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logo.svg" alt="Amethyst Logo" width={48} height={48} className="w-7 md:w-10 lg:w-12 h-auto group-hover:scale-110 transition-transform duration-300" />
               <p className="text-[12px] md:text-base lg:text-lg font-semibold text-center text-[#2E2E2E] tracking-tight leading-tight">
-                Explore our<br className="md:hidden" />treatments
+                Explore our<br className="md:hidden" /> treatments
               </p>
             </Link>
           </div>
