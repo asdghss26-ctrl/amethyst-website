@@ -169,7 +169,7 @@ export default function About() {
           <div className="grid grid-cols-3 gap-4">
             {[
               { end: 10, suffix: "+", label: "Years" },
-              { end: 86, suffix: "+", label: "Reviews" },
+              { end: 28, suffix: "+", label: "Reviews" },
               { end: 100, suffix: "%", label: "Ethical" },
             ].map((stat, i) => (
               <div key={i} className="text-center">
