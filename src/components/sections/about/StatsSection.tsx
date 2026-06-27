@@ -68,7 +68,7 @@ export default function StatsSection() {
         <div className="absolute inset-0" style={{ background: '#5A2A5D', opacity: 0.75 }} />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 40%, rgba(42,15,45,0.7) 100%)' }} />
         <div className="absolute bottom-0 left-0 right-0 px-8 md:px-16 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat: Stat, i) => (
               <StatItem key={i} value={stat.value} label={stat.label} isVisible={isVisible} />
             ))}

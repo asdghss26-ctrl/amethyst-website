@@ -37,10 +37,6 @@ export const stats = [
     label: 'Patients Treated',
   },
   {
-    value: '95%',
-    label: 'Patient Satisfaction',
-  },
-  {
     value: '20+',
     label: 'Treatments Offered',
   },
