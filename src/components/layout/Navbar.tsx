@@ -10,6 +10,7 @@ const serviceDropdownItems = [
   { label: "Pigmentation", href: "/services?category=pigmentation" },
   { label: "Vitiligo", href: "/services?category=vitiligo" },
   { label: "Quick Procedures", href: "/services?category=quick-procedures" },
+  { label: "Medical Dermatology", href: "/services?category=medical-dermatology" },
 ];
 
 export default function Navbar() {

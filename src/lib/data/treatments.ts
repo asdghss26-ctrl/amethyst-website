@@ -2,7 +2,7 @@ export interface Treatment {
   id: string
   name: string
   img: string
-  category: 'hair-loss' | 'acne-scar' | 'pigmentation' | 'vitiligo' | 'quick-procedures'
+  category: 'hair-loss' | 'acne-scar' | 'pigmentation' | 'vitiligo' | 'quick-procedures' | 'medical-dermatology'
   description: string
   benefits: string[]
   downtime: string
@@ -688,5 +688,151 @@ export const treatments: Treatment[] = [
       "Attend follow-up for suture removal (usually 7-14 days).",
       "Avoid heavy lifting or stretching the area."
     ]
+  },
+
+  // --- MEDICAL DERMATOLOGY ---
+  {
+    id: "skin-hair-nail-consult",
+    name: "Skin, Hair & Nail Consultations",
+    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+    category: "medical-dermatology",
+    description: "Comprehensive clinical evaluation and personalized treatment plans for all conditions affecting the skin, hair, and nails — from common concerns to complex disorders.",
+    benefits: [
+      "Thorough clinical examination with dermatoscopy",
+      "Evidence-based diagnosis and treatment",
+      "Personalized care plans tailored to your condition",
+      "Follow-up monitoring and treatment adjustments"
+    ],
+    downtime: "None",
+    duration: "30 - 45 minutes",
+    sessions: "As needed"
+  },
+  {
+    id: "dermoscopy-trichoscopy",
+    name: "Dermoscopy, Trichoscopy & Onychoscopy",
+    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    category: "medical-dermatology",
+    description: "Advanced non-invasive diagnostic imaging techniques using specialized magnification to evaluate skin lesions, hair/scalp disorders, and nail conditions with precision.",
+    benefits: [
+      "Non-invasive, painless diagnostic tool",
+      "High-magnification imaging for accurate diagnosis",
+      "Early detection of skin abnormalities",
+      "Guides targeted treatment decisions"
+    ],
+    downtime: "None",
+    duration: "15 - 30 minutes",
+    sessions: "As needed"
+  },
+  {
+    id: "psoriasis",
+    name: "Psoriasis",
+    img: "https://images.unsplash.com/photo-1631549916768-4e9861544f17?w=800&q=80",
+    category: "medical-dermatology",
+    description: "Comprehensive management of psoriasis — a chronic autoimmune condition causing red, scaly patches on the skin. We offer topical, systemic, and biologic treatment options.",
+    benefits: [
+      "Customized treatment based on severity and type",
+      "Topical, systemic, and biologic therapy options",
+      "Long-term disease control and flare prevention",
+      "Holistic approach addressing triggers and lifestyle"
+    ],
+    downtime: "None",
+    duration: "30 minutes",
+    sessions: "Ongoing management"
+  },
+  {
+    id: "infections",
+    name: "Infections (Fungal, Viral, Parasitic)",
+    img: "https://images.unsplash.com/photo-1583912086096-8c60d75a53f9?w=800&q=80",
+    category: "medical-dermatology",
+    description: "Diagnosis and treatment of skin infections caused by fungi (ringworm, candidiasis), viruses (warts, herpes, molluscum), and parasites (scabies, lice).",
+    benefits: [
+      "Accurate clinical diagnosis and lab confirmation",
+      "Targeted antimicrobial and antifungal therapy",
+      "Prevention strategies to avoid recurrence",
+      "Family and contact screening when needed"
+    ],
+    downtime: "None",
+    duration: "20 - 30 minutes",
+    sessions: "As needed"
+  },
+  {
+    id: "immunobullous",
+    name: "Immunobullous Diseases",
+    img: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80",
+    category: "medical-dermatology",
+    description: "Specialized management of autoimmune blistering disorders such as pemphigus and bullous pemphigoid, requiring expert clinical evaluation and long-term immunosuppressive care.",
+    benefits: [
+      "Expert diagnosis with clinical and histopathological correlation",
+      "Immunosuppressive therapy with careful monitoring",
+      "Long-term disease control and relapse prevention",
+      "Multidisciplinary care coordination"
+    ],
+    downtime: "None",
+    duration: "30 - 45 minutes",
+    sessions: "Ongoing management"
+  },
+  {
+    id: "autoimmune-derm",
+    name: "Autoimmune Dermatology",
+    img: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80",
+    category: "medical-dermatology",
+    description: "Expert management of skin manifestations of autoimmune conditions including Systemic Lupus Erythematosus (SLE), Scleroderma, and Dermatomyositis.",
+    benefits: [
+      "Specialized evaluation of autoimmune skin signs",
+      "Coordinated care with rheumatology when needed",
+      "Immunomodulatory treatment protocols",
+      "Regular monitoring and flare management"
+    ],
+    downtime: "None",
+    duration: "30 - 45 minutes",
+    sessions: "Ongoing management"
+  },
+  {
+    id: "pediatric-derm",
+    name: "Pediatric Dermatology",
+    img: "https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=800&q=80",
+    category: "medical-dermatology",
+    description: "Gentle, specialized dermatological care for infants, children, and adolescents — covering eczema, birthmarks, rashes, infections, and all pediatric skin conditions.",
+    benefits: [
+      "Child-friendly consultation environment",
+      "Age-appropriate and safe treatment options",
+      "Expert management of childhood eczema and allergies",
+      "Guidance for parents on skincare routines"
+    ],
+    downtime: "None",
+    duration: "20 - 30 minutes",
+    sessions: "As needed"
+  },
+  {
+    id: "skin-allergy",
+    name: "Skin Allergy",
+    img: "https://images.unsplash.com/photo-1612776572997-76cc42e058c3?w=800&q=80",
+    category: "medical-dermatology",
+    description: "Diagnosis and management of allergic skin conditions including urticaria (hives), eczema, atopic dermatitis, and contact dermatitis — identifying triggers and providing lasting relief.",
+    benefits: [
+      "Comprehensive allergy evaluation and trigger identification",
+      "Patch testing and allergy workup when indicated",
+      "Customized anti-allergic treatment plans",
+      "Long-term management strategies for chronic conditions"
+    ],
+    downtime: "None",
+    duration: "20 - 30 minutes",
+    sessions: "As needed"
+  },
+  {
+    id: "hair-conditions",
+    name: "Hair Disorders",
+    img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+    category: "medical-dermatology",
+    description: "Clinical evaluation and treatment of hair loss, dandruff, scalp infections, and other hair and scalp disorders using evidence-based dermatological approaches.",
+    benefits: [
+      "Trichoscopic evaluation for precise diagnosis",
+      "Treatment for hair loss, dandruff, and scalp infections",
+      "Hormonal and nutritional assessment when needed",
+      "Personalized hair care regimen guidance"
+    ],
+    downtime: "None",
+    duration: "30 minutes",
+    sessions: "As needed"
   }
 ]

@@ -18,6 +18,7 @@ const CATEGORIES = [
   { id: "pigmentation", label: "Pigmentation", icon: <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 6a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1zM21 11h-2a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2zM6 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1zM6.22 5a1 1 0 0 0-1.39 1.47l1.44 1.39a1 1 0 0 0 .73.28 1 1 0 0 0 .72-.31 1 1 0 0 0 0-1.41zM17 8.14a1 1 0 0 0 .69-.28l1.44-1.39A1 1 0 0 0 17.78 5l-1.44 1.42a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.31zM12 18a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1zM17.73 16.14a1 1 0 0 0-1.39 1.44L17.78 19a1 1 0 0 0 .69.28 1 1 0 0 0 .72-.3 1 1 0 0 0 0-1.42zM6.27 16.14l-1.44 1.39a1 1 0 0 0 0 1.42 1 1 0 0 0 .72.3 1 1 0 0 0 .67-.25l1.44-1.39a1 1 0 0 0-1.39-1.44zM12 8a4 4 0 1 0 4 4 4 4 0 0 0-4-4z" /></svg> },
   { id: "vitiligo", label: "Vitiligo", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="16" height="16"><circle cx="12" cy="6" r="4" /><path d="M19 22v-3a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v3" /><path d="M6 16q1.5-1 2 0q0 1.5-2 1z" /><path d="M13.5 14q2-1 2.5 0q-1 2-2.5 1z" /><path d="M8 19q2-1 2.5 0.5q-1.5 1.5-2.5 0.5z" /><circle cx="15.5" cy="19.5" r="1" /></svg> },
   { id: "quick-procedures", label: "Quick Procedures", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="16" height="16"><rect x="4" y="6" width="16" height="14" rx="2" /><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /><path d="M12 10v6" /><path d="M9 13h6" /></svg> },
+  { id: "medical-dermatology", label: "Medical Dermatology", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="16" height="16"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4.8z" /><path d="M4 8h2v2H4z" /><path d="M3 12h4v2H3z" /><path d="M12 2a8 8 0 0 1 8 8c0 3.5-2 6-4.5 7.5L14 22h-4l-1.5-4.5C6 16 4 13.5 4 10" /><path d="M12 10v4" /><path d="M10 12h4" /></svg> },
 ];
 
 export default function ServicesClient({ initialCategory }: ServicesClientProps) {
@@ -64,7 +65,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
               className="text-4xl sm:text-5xl md:text-6xl text-[#2E2E2E] leading-[1.1]"
               style={{ fontFamily: "var(--font-dm-serif), serif" }}
             >
-              World-class dermatology & aesthetics
+              Precision Dermatology. Timeless Aesthetics.
             </h1>
           </Reveal>
           <Reveal delay={0.3}>
