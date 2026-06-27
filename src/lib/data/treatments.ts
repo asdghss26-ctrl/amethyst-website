@@ -33,7 +33,6 @@ export const treatments: Treatment[] = [
     technology: "Double-spin centrifugation for high platelet concentration",
     preCare: [
       "Wash hair thoroughly on the morning of the procedure.",
-      "Avoid blood thinners or anti-inflammatory drugs 3 days prior.",
       "Stay well hydrated before the blood draw."
     ],
     postCare: [
@@ -55,16 +54,17 @@ export const treatments: Treatment[] = [
       "Reduces hair fall within the first few sessions"
     ],
     downtime: "None (immediate return to normal activities)",
-    duration: "30 - 45 minutes",
-    sessions: "3 - 4 sessions, spaced 4-6 weeks apart",
+    duration: "1.5 hours",
+    sessions: "4 - 6 sessions, spaced 4-6 weeks apart",
     technology: "Acellular activated growth factor extraction system",
     preCare: [
-      "Avoid smoking or alcohol consumption 24 hours before.",
-      "Cleanse scalp prior to treatment."
+      "Wash hair thoroughly on the morning of the procedure.",
+      "Stay well hydrated before the blood draw."
     ],
     postCare: [
-      "Avoid hair styling tools, coloring, or harsh chemicals for 4 days.",
-      "Keep scalp clean and use prescribed anti-septic lotions if requested."
+      "Do not wash or apply products to your scalp for 24 hours.",
+      "Avoid vigorous exercise or heavy sweating for 48 hours.",
+      "Protect your scalp from direct sun exposure."
     ]
   },
   {
@@ -76,20 +76,20 @@ export const treatments: Treatment[] = [
     benefits: [
       "Slow, sustained release of growth factors for longer stimulation",
       "Rich in white blood cells and stem cells for tissue regeneration",
-      "100% natural, chemical-free formulation",
       "Ideal for advanced or stubborn thinning patterns"
     ],
     downtime: "None (mild redness resolves in a few hours)",
     duration: "45 minutes",
-    sessions: "4 sessions, spaced 4 weeks apart",
+    sessions: "4 - 6 sessions, spaced 4 weeks apart",
     technology: "Low-speed centrifugation protocol preserving fibrin matrix",
     preCare: [
-      "Avoid NSAIDs (ibuprofen, aspirin) for 1 week before treatment.",
-      "Drink plenty of water before your appointment."
+      "Wash hair thoroughly on the morning of the procedure.",
+      "Stay well hydrated before the blood draw."
     ],
     postCare: [
-      "Refrain from washing hair or hot showers for 24 hours.",
-      "Avoid swimming, steam rooms, or saunas for 3 days."
+      "Do not wash or apply products to your scalp for 24 hours.",
+      "Avoid vigorous exercise or heavy sweating for 48 hours.",
+      "Protect your scalp from direct sun exposure."
     ]
   },
   {
@@ -97,11 +97,11 @@ export const treatments: Treatment[] = [
     name: "Hair Threads",
     img: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80",
     category: "hair-loss",
-    description: "Polydioxanone (PDO) threads are ultra-fine, absorbable sutures placed into the scalp. They trigger a localized healing response, encouraging collagen synthesis and long-term hair follicle rejuvenation.",
+    description: "PDO (Polydioxanone) threads are ultra-fine, absorbable sutures placed into the scalp. They trigger a localized healing response, encouraging collagen synthesis and long-term hair follicle rejuvenation.",
     benefits: [
       "Provides structural support to thinning scalp regions",
       "Continuous micro-circulation stimulation over 6-8 months",
-      "Fully absorbable threads with high safety profile",
+      "Fully absorbable PDO threads with high safety profile",
       "Can be combined with GFC or PRP for compounded results"
     ],
     downtime: "Minimal (mild bruising or soreness for 2-3 days)",
@@ -109,12 +109,14 @@ export const treatments: Treatment[] = [
     sessions: "Single session, repeatable after 8-12 months",
     technology: "FDA-approved absorbable Polydioxanone (PDO) threads",
     preCare: [
-      "Refrain from taking blood-thinning supplements (Vitamin E, Fish Oil) for 5 days.",
-      "Clean scalp thoroughly."
+      "Wash hair thoroughly on the morning of the procedure.",
+      "Stay well hydrated before the blood draw."
     ],
     postCare: [
       "Avoid massaging or scratching the treated scalp areas for 1 week.",
-      "Do not perform strenuous head-down exercises for 3 days."
+      "Do not wash or apply products to your scalp for 24 hours.",
+      "Avoid vigorous exercise or heavy sweating for 48 hours.",
+      "Protect your scalp from direct sun exposure."
     ]
   },
   {
@@ -122,7 +124,7 @@ export const treatments: Treatment[] = [
     name: "Dutexome Mesotherapy",
     img: "https://images.unsplash.com/photo-1584820927498-cafe8c1c9695?w=800&q=80",
     category: "hair-loss",
-    description: "An advanced mesotherapy technique combining Dutasteride and Exosomes to highly target androgenetic alopecia. Exosomes deliver powerful cellular signals while Dutasteride blocks the DHT hormone responsible for hair thinning.",
+    description: "An advanced mesotherapy technique combining Dutasteride and Exosomes to target androgenetic alopecia. Exosomes deliver powerful cellular signals while Dutasteride blocks the DHT hormone responsible for hair thinning.",
     benefits: [
       "Targeted DHT blockade at the follicle level",
       "Massive boost in cellular regeneration via exosomes",
@@ -131,14 +133,16 @@ export const treatments: Treatment[] = [
     ],
     downtime: "None (mild scalp tenderness for 12 hours)",
     duration: "30 - 45 minutes",
-    sessions: "4 - 6 sessions, spaced 3-4 weeks apart",
+    sessions: "6 sessions, spaced 3-4 weeks apart",
     technology: "Micro-injections of Exosome + Dutasteride complex",
     preCare: [
-      "Wash hair thoroughly before the appointment."
+      "Wash hair thoroughly on the morning of the procedure.",
+      "Stay well hydrated before the blood draw."
     ],
     postCare: [
-      "Do not wash hair for 24 hours.",
-      "Avoid applying strong chemical hair products for 3 days."
+      "Do not wash or apply products to your scalp for 24 hours.",
+      "Avoid vigorous exercise or heavy sweating for 48 hours.",
+      "Protect your scalp from direct sun exposure."
     ]
   },
   {
@@ -150,6 +154,7 @@ export const treatments: Treatment[] = [
     benefits: [
       "Deeply nourishes the scalp and hair roots",
       "Combats nutritional deficiencies affecting hair growth",
+      "Best for telogen effluvium",
       "Revitalizes dull, lifeless hair",
       "Excellent adjunct to PRP or GFC therapies"
     ],
@@ -158,11 +163,30 @@ export const treatments: Treatment[] = [
     sessions: "6 - 8 sessions, spaced 2 weeks apart",
     technology: "Nutrient infusion via micro-needling or micro-injections",
     preCare: [
-      "Ensure scalp is clean and dry."
+      "Wash hair thoroughly on the morning of the procedure.",
+      "Stay well hydrated before the blood draw."
     ],
     postCare: [
-      "Avoid intense exercise and sweating for 24 hours."
+      "Do not wash or apply products to your scalp for 24 hours.",
+      "Avoid vigorous exercise or heavy sweating for 48 hours.",
+      "Protect your scalp from direct sun exposure."
     ]
+  },
+  {
+    id: "ils-alopecia",
+    name: "ILS – Intralesional Steroid",
+    img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    category: "hair-loss",
+    description: "Intralesional Steroid (ILS) injections deliver corticosteroids directly into the affected scalp patches to suppress the autoimmune response causing alopecia areata, promoting rapid hair regrowth.",
+    benefits: [
+      "Targeted treatment for alopecia areata patches",
+      "Rapid suppression of localized immune response",
+      "Promotes visible hair regrowth in treated areas",
+      "Quick in-clinic procedure with no downtime"
+    ],
+    downtime: "None",
+    duration: "20 minutes",
+    sessions: "1 - 3 sessions, as recommended"
   },
 
   // --- ACNE SCAR ---
