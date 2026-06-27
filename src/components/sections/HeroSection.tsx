@@ -76,14 +76,14 @@ export default function Hero() {
       </div>
 
       {/* ─── SPINNING WHEEL SECTION ─── */}
-      <div className="relative w-full overflow-hidden mt-6 md:mt-10" style={{ height: sectionHeight }}>
+      <div className="relative w-full overflow-hidden mt-6 md:mt-10 h-[500px] md:h-[680px]">
         {/* Full-bleed skin-toned background image */}
         <div
           className="absolute inset-0 rounded-[28px] md:rounded-[48px] mx-3 md:mx-4 overflow-hidden"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
             <Image 
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1400&q=80" 
+              src="/images/hero-bg.jpg" 
               alt="Skin treatment"
               fill
               priority
