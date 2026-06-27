@@ -1,23 +1,16 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { treatments } from "@/lib/data/treatments";
-import { Reveal } from "../ui/RevealAnimation";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const wheelRef = useRef<HTMLDivElement>(null);
 
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
     const wheel = wheelRef.current;
-    if (!wheel) return () => window.removeEventListener("resize", handleResize);
+    if (!wheel) return;
 
     // Pause CSS animation when off-screen to reduce lag
     let paused = false;
@@ -36,7 +29,6 @@ export default function Hero() {
     observer.observe(sectionRef.current!);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
       observer.disconnect();
     };
   }, []);
@@ -50,19 +42,13 @@ export default function Hero() {
     "skin-tag", "milia", "earlobe", "biopsy"
   ];
   const displayTreatments = treatments.filter(t => ORIGINAL_TREATMENT_IDS.includes(t.id));
-
-  // ─── RESPONSIVE VALUES ───
   const pillCount = displayTreatments.length;
-  const orbitRadius = isMobile ? 170 : 260;
-  const pillWidth = isMobile ? 160 : 220;
-  const pillHeight = isMobile ? 38 : 48;
-  const thumbSize = isMobile ? 30 : 40;
-  const sectionHeight = isMobile ? 500 : 680;
-  const domeWidth = isMobile ? 200 : 380;
-  const domeHeight = isMobile ? 100 : 170;
-  
-  // Lowers the spinning wheel further down behind the dome on desktop
-  const wheelOffset = isMobile ? 0 : 40;
+
+  // Use DESKTOP values for the server render. CSS will handle mobile sizing.
+  const orbitRadius = 260;
+  const pillWidth = 220;
+  const pillHeight = 48;
+  const thumbSize = 40;
 
   const wheelAnimation = "wheelSpin 50s linear infinite";
 
@@ -76,12 +62,11 @@ export default function Hero() {
       </div>
 
       {/* ─── SPINNING WHEEL SECTION ─── */}
-      <div className="relative w-full overflow-hidden mt-6 md:mt-10 h-[500px] md:h-[680px]">
+      <div className="hero-wheel-section relative w-full overflow-hidden mt-6 md:mt-10 h-[500px] md:h-[680px]">
         {/* Full-bleed skin-toned background image */}
         <div
           className="absolute inset-0 rounded-[28px] md:rounded-[48px] mx-3 md:mx-4 overflow-hidden"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
             <Image 
               src="/images/hero-bg.jpg" 
               alt="Skin treatment"
@@ -103,7 +88,6 @@ export default function Hero() {
         {/* ─── LOGO OVERLAY ON BACKGROUND IMAGE ─── */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-8 md:pt-20 pointer-events-none">
           <div className="flex flex-col items-center">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <Image src="/logo-cream.svg" alt="" width={64} height={64} className="h-10 md:h-16 w-auto mb-1 animate-icon-drop" style={{ filter: "brightness(0) invert(1)" }} />
             <h1
               className="text-[clamp(2.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
@@ -115,14 +99,14 @@ export default function Hero() {
               SKIN CLINIC
             </p>
             <p className="text-[10px] md:text-sm tracking-[0.15em] uppercase text-white mt-0.5 font-medium animate-letter-expand" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
-              MEDICAL & AESTHETIC DERMATOLOGY
+              MEDICAL &amp; AESTHETIC DERMATOLOGY
             </p>
           </div>
         </div>
 
         {/* ─── THE SPINNING WHEEL ─── */}
         <div
-          className="absolute left-1/2 z-10"
+          className="hero-orbit-container absolute left-1/2 z-10"
           style={{
             width: `${orbitRadius * 2}px`,
             height: `${orbitRadius * 2}px`,
@@ -148,6 +132,7 @@ export default function Hero() {
               return (
                 <div
                   key={i}
+                  className="hero-pill-wrapper"
                   style={{
                     position: "absolute",
                       left: `calc(50% + ${x}px)`,
@@ -156,6 +141,7 @@ export default function Hero() {
                   }}
                 >
                   <div
+                    className="hero-pill"
                     style={{
                       width: `${pillWidth}px`,
                       height: `${pillHeight}px`,
@@ -167,12 +153,13 @@ export default function Hero() {
                       display: "flex",
                       alignItems: "center",
                       paddingLeft: "4px",
-                      paddingRight: isMobile ? "10px" : "16px",
-                      gap: isMobile ? "6px" : "10px",
+                      paddingRight: "16px",
+                      gap: "10px",
                       boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                     }}
                   >
                     <div
+                      className="hero-thumb"
                       style={{
                         width: `${thumbSize}px`,
                         height: `${thumbSize}px`,
@@ -182,13 +169,13 @@ export default function Hero() {
                         border: "2px solid rgba(255,255,255,0.8)",
                       }}
                     >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <Image src={t.img} alt="" width={40} height={40} className="w-full h-full object-cover" />
                     </div>
                     <span
+                      className="hero-pill-text"
                       style={{
                         color: "rgba(255,255,255,0.95)",
-                        fontSize: isMobile ? "9px" : "11px",
+                        fontSize: "11px",
                         fontWeight: 500,
                         letterSpacing: "0.02em",
                         whiteSpace: "nowrap",
@@ -207,13 +194,13 @@ export default function Hero() {
 
         {/* ─── CENTER BADGE: "Explore our treatments" Dome Cutout ─── */}
         <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 overflow-hidden"
+          className="hero-dome absolute bottom-0 left-1/2 -translate-x-1/2 z-20 overflow-hidden"
           style={{
-            width: `${domeWidth}px`,
-            height: `${domeHeight}px`,
+            width: "380px",
+            height: "170px",
             background: "#F5F0EB",
-            borderTopLeftRadius: `${domeWidth / 2}px ${domeHeight}px`,
-            borderTopRightRadius: `${domeWidth / 2}px ${domeHeight}px`,
+            borderTopLeftRadius: "190px 170px",
+            borderTopRightRadius: "190px 170px",
           }}
         >
           <div className="absolute inset-0 flex flex-col items-center justify-end pb-2 md:pb-3">
@@ -221,7 +208,6 @@ export default function Hero() {
               href="/services"
               className="flex flex-col items-center gap-1 md:gap-1.5 group transition-all duration-500"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <Image src="/logo.svg" alt="Amethyst Logo" width={48} height={48} className="w-7 md:w-10 lg:w-12 h-auto group-hover:scale-110 transition-transform duration-300" />
               <p className="text-[12px] md:text-base lg:text-lg font-semibold text-center text-[#2E2E2E] tracking-tight leading-tight">
                 Explore our<br className="md:hidden" /> treatments
@@ -234,4 +220,3 @@ export default function Hero() {
     </section>
   );
 }
-

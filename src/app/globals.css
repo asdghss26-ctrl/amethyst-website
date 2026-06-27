@@ -339,3 +339,31 @@ body {
     display: none !important;
   }
 }
+
+/* ─── Hero Wheel Mobile Responsive (CSS-only, no JS hydration shift) ─── */
+@media (max-width: 767px) {
+  .hero-orbit-container {
+    width: 340px !important;
+    height: 340px !important;
+    bottom: -170px !important;
+  }
+  .hero-pill {
+    width: 160px !important;
+    height: 38px !important;
+    padding-right: 10px !important;
+    gap: 6px !important;
+  }
+  .hero-thumb {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .hero-pill-text {
+    font-size: 9px !important;
+  }
+  .hero-dome {
+    width: 200px !important;
+    height: 100px !important;
+    border-top-left-radius: 100px 100px !important;
+    border-top-right-radius: 100px 100px !important;
+  }
+}
