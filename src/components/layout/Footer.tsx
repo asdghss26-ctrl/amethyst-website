@@ -69,7 +69,7 @@ export default function Footer() {
                   className="text-white font-bold"
                   style={{ fontFamily: "var(--font-dm-serif), serif", fontSize: '18px' }}
                 >
-                  AMETHYST
+                  AMETHYST SKIN CLINIC
                 </span>
               </Link>
               <p
@@ -114,7 +114,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="mailto:hello@amethystskinclinic.com"
+                  href="mailto:amethystskinclinic@gmail.com"
                   className="flex items-center justify-center rounded-full transition-all duration-300 hover:bg-[#5B1F6A]"
                   style={{
                     width: '36px',
@@ -194,8 +194,8 @@ export default function Footer() {
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a855c8" strokeWidth={2} className="flex-shrink-0">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
-                  <a href="mailto:hello@amethystskinclinic.com" className="text-[#cccccc] hover:text-[#a855c8] transition-colors duration-300" style={{ fontSize: '13px' }}>
-                    hello@amethystskinclinic.com
+                  <a href="mailto:amethystskinclinic@gmail.com" className="text-[#cccccc] hover:text-[#a855c8] transition-colors duration-300" style={{ fontSize: '13px' }}>
+                    amethystskinclinic@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center gap-2.5">
@@ -203,8 +203,8 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                   </svg>
-                  <span className="text-[#cccccc]" style={{ fontSize: '13px' }}>
-                    Chennai, Tamil Nadu
+                  <span className="text-[#cccccc]" style={{ fontSize: '12px', lineHeight: '1.4' }}>
+                    Shop 3, 1st Floor, Block-1, Thalambur Rd, Truliv, Navallur, Chennai, Tamil Nadu 600130
                   </span>
                 </li>
                 <li className="flex items-center gap-2.5">

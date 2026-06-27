@@ -69,7 +69,7 @@ export default function FAQ() {
                     </svg>
                   </div>
                   <span className="text-sm text-[#2E2E2E] group-hover:text-[#5B1F6A] transition-colors duration-300">
-                    hello@amethystskinclinic.com
+                    amethystskinclinic@gmail.com
                   </span>
                 </a>
               </div>

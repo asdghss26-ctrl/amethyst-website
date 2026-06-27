@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/RevealAnimation";
 const faqItems = [
   {
     q: "What treatments do you offer?",
-    a: "We offer Hair Loss Treatments, Acne Scar Revision, Pigmentation Correction, Vitiligo Treatments, Quick Procedures and more. Visit our Services page for full details.",
+    a: "We offer Hair Loss Treatments, Acne Scar Revision, Pigmentation Correction, Vitiligo Treatments, Dermatosurgery, Anti-Ageing, Laser Hair Reduction, and more. Visit our Services page for full details.",
   },
   {
     q: "How do I book an appointment?",
@@ -213,8 +213,8 @@ export default function ContactPage() {
                 </svg>
               </div>
               <h3 className="text-sm font-bold text-[#5B1F6A] mb-1.5">Email Us</h3>
-              <a href="mailto:hello@amethystskinclinic.com" className="text-xs text-[#5B1F6A] font-medium hover:underline block mb-0.5">
-                hello@amethystskinclinic.com
+              <a href="mailto:amethystskinclinic@gmail.com" className="text-xs text-[#5B1F6A] font-medium hover:underline block mb-0.5">
+                amethystskinclinic@gmail.com
               </a>
               <p className="text-[11px] text-[#9A94A0]">We reply within 24 hours</p>
             </motion.div>
@@ -244,10 +244,10 @@ export default function ContactPage() {
                   Our Location
                 </h2>
                 <p className="text-sm text-[#6B6570] mb-5 leading-relaxed">
-                  Amethyst Skin Clinic, Chennai, Tamil Nadu
+                  Shop 3, 1st Floor, Block-1, Thalambur Rd, Truliv, Navallur, Chennai, Tamil Nadu 600130
                 </p>
                 <a
-                  href="https://maps.google.com/?q=Amethyst+Skin+Clinic+Chennai"
+                  href="https://www.google.com/maps/place/Amethyst+Skin+Clinic+by+Dr.+Shruthi+Janardhanan/@12.8480867,80.2144724,17z/data=!3m1!4b1!4m6!3m5!1s0x3a525be06d65e053:0xd4bf02961337a48b!8m2!3d12.8480867!4d80.2170473!16s%2Fg%2F11yht_3smd?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#5B1F6A] text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-[#8B4A9C] transition-all duration-300 hover:-translate-y-0.5"

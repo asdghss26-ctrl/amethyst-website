@@ -55,7 +55,31 @@ export const services: Service[] = [
     description: "Excimer Laser, Mini Punch Grafting & 5FU",
   },
   {
-    id: "quick-procedures",
+    id: "laser-hair",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+        <path d="M13.5 14q2-1 2.5 0q-1 2-2.5 1z" />
+        <path d="M8 19q2-1 2.5 0.5q-1.5 1.5-2.5 0.5z" />
+        <circle cx="15.5" cy="19.5" r="1" />
+      </svg>
+    ),
+    title: "Laser Hair Reduction",
+    description: "Advanced, virtually painless laser hair reduction tailored for all skin types, including Long Pulsed Nd:YAG and Quadruple Wavelength Diode.",
+  },
+  {
+    id: "anti-ageing",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+        <polyline points="3.29 7 12 12 20.71 7" />
+        <line x1="12" y1="22" x2="12" y2="12" />
+      </svg>
+    ),
+    title: "Anti-Ageing",
+    description: "Comprehensive non-surgical facial rejuvenation including Skin Boosters, Profhilo, Fillers, Botox, and advanced Exosome therapies.",
+  },
+  {
+    id: "dermatosurgery",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
         <rect x="4" y="6" width="16" height="14" rx="2" />
@@ -64,7 +88,7 @@ export const services: Service[] = [
         <path d="M9 13h6" />
       </svg>
     ),
-    title: "Quick Procedures",
+    title: "Dermatosurgery",
     description: "Minor clinical treatments performed with maximum safety and minimal recovery (Skin Tag, Milia, Ear Lobe Repair, Skin Biopsy).",
   },
 ]

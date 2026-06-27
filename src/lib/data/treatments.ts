@@ -2,7 +2,7 @@ export interface Treatment {
   id: string
   name: string
   img: string
-  category: 'hair-loss' | 'acne-scar' | 'pigmentation' | 'vitiligo' | 'quick-procedures' | 'medical-dermatology'
+  category: 'hair-loss' | 'acne-scar' | 'pigmentation' | 'vitiligo' | 'dermatosurgery' | 'medical-dermatology' | 'laser-hair' | 'anti-ageing'
   description: string
   benefits: string[]
   downtime: string
@@ -366,6 +366,57 @@ export const treatments: Treatment[] = [
     ]
   },
 
+  {
+    id: "co2-laser-acne",
+    name: "CO2 Laser for Acne Scars",
+    img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+    category: "acne-scar",
+    description: "Fractional CO2 laser helps in resurfacing superficial scars. Ablative CO2 helps in shouldering and smoothening out scar edges. A great multistep treatment for improving acne scars.",
+    benefits: [
+      "Highly effective multistep scar revision",
+      "Resurfaces superficial scars and texture",
+      "Smoothens sharp edges of boxcar or deep scars"
+    ],
+    downtime: "7 to 10 days",
+    duration: "45 - 60 minutes",
+    sessions: "3 to 5 sessions, spaced 4-6 weeks apart",
+    technology: "Fractional & Ablative CO2 Laser",
+    preCare: [
+      "Use regular prescribed skincare.",
+      "Stop actives and acne creams 3 days prior to the procedure."
+    ],
+    postCare: [
+      "Gentle skin care.",
+      "Avoid sun exposure.",
+      "Do not pick on scabs."
+    ]
+  },
+  {
+    id: "prp-acne",
+    name: "Platelet Rich Plasma for Acne Scars",
+    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    category: "acne-scar",
+    description: "Utilizes the healing power of your own blood platelets to accelerate tissue repair and boost collagen production. Frequently used in combination with other scar treatments.",
+    benefits: [
+      "Accelerates natural healing and reduces downtime",
+      "Boosts collagen synthesis for scar filling",
+      "Excellent when combined with lasers or subcision"
+    ],
+    downtime: "3 to 5 days",
+    duration: "45 mins",
+    sessions: "3 to 5 sessions, spaced 4 weeks apart",
+    technology: "Autologous Platelet Rich Plasma",
+    preCare: [
+      "Drink plenty of water before the blood draw.",
+      "Stop actives and acne creams 3 days prior."
+    ],
+    postCare: [
+      "Gentle skin care.",
+      "Avoid sun exposure.",
+      "Do not pick on scabs or marks."
+    ]
+  },
+
   // --- PIGMENTATION ---
   {
     id: "picolaser",
@@ -375,22 +426,20 @@ export const treatments: Treatment[] = [
     description: "Using ultra-short picosecond pulses of laser energy, this system shatters stubborn pigments into microscopic particles. Your immune system then clears these particles, resulting in a bright, even skin tone.",
     benefits: [
       "Targets sun spots, freckles, melasma, and tattoo ink",
-      "Extremely fast photo-mechanical action, avoiding heat damage",
+      "Uses photoacoustic energy instead of photomechanical",
       "Increases skin radiance and refines overall texture",
       "Minimal downtime compared to traditional Q-switched lasers"
     ],
     downtime: "Minimal (mild flush for 2-4 hours, rarely 1-2 days)",
-    duration: "30 minutes",
-    sessions: "4 - 6 sessions, spaced 3-4 weeks apart",
-    technology: "Picosecond Nd:YAG Laser (1064nm and 532nm wavelengths)",
+    duration: "30 mins",
+    sessions: "4 to 6",
+    technology: "Picosecond technology",
     preCare: [
-      "Avoid tanning, sunburn, or heavy sun exposure for 2 weeks prior.",
-      "Discontinue photosensitizing skin products 3 days before."
+      "Avoid strong exfoliation 3 days prior to procedure."
     ],
     postCare: [
-      "Keep skin hydrated using a lightweight moisturizer.",
-      "Apply mineral sunscreen every 3 hours.",
-      "Avoid scrubs, saunas, and swimming pools for 48 hours."
+      "Avoid steam, sauna, swimming, heavy exercise, facials, direct sun exposure, waxing, and threading face for next 3 to 5 days.",
+      "Keep routine simple with gentle cleanser, moisturiser, sunscreen and recovery cream if prescribed."
     ]
   },
   {
@@ -405,17 +454,17 @@ export const treatments: Treatment[] = [
       "Restores natural skin hydration and youthful glow",
       "Simultaneously refines pore size and fine lines"
     ],
-    downtime: "None (slight temporary redness for 1-2 hours)",
-    duration: "45 minutes",
-    sessions: "3 - 5 sessions, spaced 3 weeks apart",
+    downtime: "0 to 7 days",
+    duration: "45 mins",
+    sessions: "4 to 6 sessions",
     technology: "Fractional micro-lens picosecond laser + electroporation infusion",
     preCare: [
-      "Avoid waxing or chemical peels 1 week prior.",
-      "Inform the doctor if you have a history of cold sores."
+      "Avoid strong exfoliation 3 days prior to procedure."
     ],
     postCare: [
-      "Avoid applying make-up for 12 hours.",
-      "Use only gentle cleansers and barrier repair moisturizers."
+      "Avoid steam, sauna, swimming, heavy exercise, facials, direct sun exposure, waxing, and threading face for next 3 to 5 days.",
+      "Keep routine simple with gentle cleanser, moisturiser, sunscreen and recovery cream if prescribed.",
+      "Do not pick on dry skin, keep moisturising."
     ]
   },
   {
@@ -435,13 +484,13 @@ export const treatments: Treatment[] = [
     sessions: "Single in-clinic procedure + 6 months home maintenance",
     technology: "Tyrosinase-inhibiting chemical peel formulation",
     preCare: [
-      "Stop all active skincare/exfoliation 1 week before.",
-      "Do not combine with any other facial procedures for 2 weeks."
+      "Avoid strong exfoliation 3 days prior to procedure."
     ],
     postCare: [
-      "Follow the home-care guide strictly using Cosmelan 2, Hydra-Vital, and Melan Recovery.",
-      "Wash off mask at the exact time indicated by the dermatologist.",
-      "Avoid direct sun exposure completely during the peeling phase."
+      "Follow home care guide prescribed by doctor strictly.",
+      "Do not pick on skin in peeling phase.",
+      "Apply plenty of moisturiser.",
+      "Avoid steam, sauna, swimming, heavy exercise, facials, direct sun exposure, waxing threading face for next 7 days."
     ]
   },
   {
@@ -456,18 +505,18 @@ export const treatments: Treatment[] = [
       "Unclogs pores and refines skin texture",
       "Customizable depth depending on downtime availability"
     ],
-    downtime: "2 - 7 days (depending on peel depth)",
+    downtime: "0 to 7 days (depending on the peel)",
     duration: "20 - 30 minutes",
-    sessions: "3 - 6 sessions, spaced 2-4 weeks apart",
+    sessions: "4 to 6 sessions",
     technology: "Medical-grade topical chemical formulations",
     preCare: [
-      "Stop using retinoids and exfoliating acids 3-5 days before.",
-      "Avoid waxing or threading the face."
+      "Avoid strong exfoliation 3 days prior to procedure."
     ],
     postCare: [
-      "Do not peel or pick at flaking skin.",
-      "Apply thick layers of gentle moisturizer.",
-      "Strict sun avoidance and SPF 50+ reapplication."
+      "Avoid steam, sauna, swimming, heavy exercise, facials, direct sun exposure, waxing, and threading face for next 3 to 5 days.",
+      "Keep routine simple with gentle cleanser, moisturiser, sunscreen and recovery cream if prescribed.",
+      "Do not pick on flaking skin.",
+      "Apply plenty of moisturiser."
     ]
   },
   {
@@ -494,6 +543,30 @@ export const treatments: Treatment[] = [
       "Maintain hydration."
     ]
   },
+  {
+    id: "tattoo-removal",
+    name: "Tattoo Removal",
+    img: "https://images.unsplash.com/photo-1590246814883-578aeccbd186?w=800&q=80",
+    category: "pigmentation",
+    description: "Advanced picosecond laser technology safely and effectively breaks down tattoo ink particles in the skin, allowing the body's immune system to naturally clear them over time.",
+    benefits: [
+      "Effective for a wide range of ink colors",
+      "Fewer sessions required compared to older laser technologies",
+      "Lower risk of scarring and skin damage",
+      "Targets ink precisely while preserving surrounding tissue"
+    ],
+    downtime: "Minimal (mild redness and swelling)",
+    duration: "20 to 40 minutes",
+    sessions: "6 to 8 sessions",
+    technology: "Picosecond laser technology",
+    preCare: [
+      "Apply numbing cream as instructed."
+    ],
+    postCare: [
+      "Apply recovery cream twice a day for 7 days.",
+      "Keep area moisturised."
+    ]
+  },
 
   // --- VITILIGO ---
   {
@@ -508,9 +581,9 @@ export const treatments: Treatment[] = [
       "Pain-free, quick sessions with no systemic side effects",
       "Encourages high rate of pigment restoration"
     ],
-    downtime: "None (occasional mild pinkness for a few hours)",
+    downtime: "1 to 2 days",
     duration: "10 - 20 minutes",
-    sessions: "2 sessions per week, for 12-24 weeks",
+    sessions: "10 to 16 sessions",
     technology: "308nm Monochromatic Excimer Light System",
     preCare: [
       "Clean the skin thoroughly; do not apply lotions or sunscreen on target areas beforehand.",
@@ -556,9 +629,9 @@ export const treatments: Treatment[] = [
       "Stimulates melanocyte migration from hair follicles",
       "Synergistic when combined with Excimer or targeted phototherapy"
     ],
-    downtime: "3 - 5 days (redness and mild scabbing)",
+    downtime: "3 to 5 days",
     duration: "30 minutes",
-    sessions: "Multiple sessions required, customized per patient",
+    sessions: "3 to 5 sessions",
     technology: "Medical microneedling + Topical chemotherapy agents",
     preCare: [
       "Avoid sun exposure to the patches immediately before treatment."
@@ -569,23 +642,70 @@ export const treatments: Treatment[] = [
     ]
   },
 
-  // --- QUICK PROCEDURES ---
+  {
+    id: "nces",
+    name: "Non-Cultured Epidermal Suspension (NCES)",
+    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    category: "vitiligo",
+    description: "An advanced cellular grafting technique where a small donor skin sample is processed to separate melanocytes and keratinocytes, which are then transplanted as a suspension onto the dermabraded vitiligo patch. Ideal for treating larger areas.",
+    benefits: [
+      "Can treat much larger areas than punch grafting",
+      "Excellent color match and cosmetic outcome",
+      "High success rate for stable vitiligo"
+    ],
+    downtime: "7 to 10 days",
+    duration: "2 hours",
+    sessions: "Usually single session",
+    technology: "Cellular transplant surgery",
+    preCare: [
+      "Vitiligo must be stable for at least 1 year."
+    ],
+    postCare: [
+      "Strict immobilization of the treated area for 7 days.",
+      "Keep dressings completely dry."
+    ]
+  },
+  {
+    id: "blister-grafting",
+    name: "Blister Skin Grafting",
+    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80",
+    category: "vitiligo",
+    description: "A specialized surgical technique that uses suction to create a blister on normal pigmented skin (donor site). The roof of the blister, containing melanocytes, is carefully removed and transplanted to the vitiligo patch.",
+    benefits: [
+      "No scarring at the donor site",
+      "Excellent cosmetic color matching",
+      "Safe and highly effective for localized stable vitiligo"
+    ],
+    downtime: "7 to 10 days",
+    duration: "2 to 3 hours",
+    sessions: "Usually single session",
+    technology: "Suction blister epidermal grafting (SBEG)",
+    preCare: [
+      "Vitiligo must be stable for at least 1 year."
+    ],
+    postCare: [
+      "Keep dressings perfectly dry for 7 days.",
+      "Avoid friction on donor and recipient sites."
+    ]
+  },
+
+  // --- DERMATOSURGERY ---
   {
     id: "skin-tag",
     name: "Skin Tag Removal",
     img: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&q=80",
-    category: "quick-procedures",
-    description: "Quick, safe removal of benign skin tags and growths using radiofrequency electrocautery or cryotherapy under local numbing, resulting in clean, flat skin healing.",
+    category: "dermatosurgery",
+    description: "Quick, safe removal of benign skin tags and growths using radiofrequency electrocautery under local numbing, resulting in clean, flat skin healing.",
     benefits: [
       "Instant, single-session clearance of bothersome skin tags",
       "Minimal scarring with clean healing and cosmetic results",
       "Performed under local numbing cream for comfortable treatment",
       "Prevents tags from catching on clothing or jewelry"
     ],
-    downtime: "3 - 5 days (small, dry scabs that shed naturally)",
+    downtime: "7 days for scabs to fall off",
     duration: "15 - 30 minutes",
     sessions: "Single session (unless tags are widespread)",
-    technology: "Radiofrequency electrocautery or liquid nitrogen cryo-probe",
+    technology: "Radiofrequency electrocautery",
     preCare: [
       "Inform the doctor of any pacemakers or metal implants if using RF."
     ],
@@ -598,7 +718,7 @@ export const treatments: Treatment[] = [
     id: "milia",
     name: "Milia Extraction",
     img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
-    category: "quick-procedures",
+    category: "dermatosurgery",
     description: "Meticulous sterile extraction of deep, keratin-filled cysts (milia) using a fine micro-lance to restore a smooth skin surface.",
     benefits: [
       "Safely removes milia without damaging the skin",
@@ -614,62 +734,106 @@ export const treatments: Treatment[] = [
     ],
     postCare: [
       "Keep skin clean and dry.",
-      "Avoid heavy cosmetic products or make-up for 24 hours."
+      "Avoid heavy cosmetic products or make-up for 24 hours.",
+      "Apply antibiotic cream for 7 days."
     ]
   },
   {
     id: "earlobe",
-    name: "Ear Lobe Repair",
+    name: "Surgical Ear Lobe Repair",
     img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
-    category: "quick-procedures",
+    category: "dermatosurgery",
     description: "Surgical closure of split, torn, or stretched earlobes under local anesthesia to restore an aesthetic, unified shape suitable for re-piercing.",
     benefits: [
       "Restores structural integrity and aesthetics of the earlobe",
       "Performed in-office with local anesthesia (painless)",
       "Allows safe re-piercing after complete healing (approx. 8 weeks)"
     ],
-    downtime: "7 days (sutures are removed after 1 week)",
-    duration: "30 - 45 minutes",
+    downtime: "7 to 10 days",
+    duration: "1 hour",
     sessions: "Single procedure",
     technology: "Aseptic surgical reconstruction and micro-suturing",
     preCare: [
       "Avoid wearing heavy jewelry or earrings to the clinic."
     ],
     postCare: [
-      "Keep the dressing dry for the first 48 hours.",
-      "Return after 7 days for suture removal.",
-      "Do not re-pierce the earlobe for at least 8-12 weeks."
+      "Keep area dry till suture removal.",
+      "Suture removal after 7 to 10 days."
+    ]
+  },
+  {
+    id: "non-surgical-earlobe",
+    name: "Non-Surgical Ear Lobe Repair",
+    img: "https://images.unsplash.com/photo-1599839619722-39751411ea63?w=800&q=80",
+    category: "dermatosurgery",
+    description: "Meant for minor defects, this procedure uses TCA to seal the hole without surgery. It is performed in sterile conditions by an expert dermatologist.",
+    benefits: [
+      "No stitches or incisions required",
+      "Quick and relatively painless",
+      "Excellent cosmetic outcome for minor tears"
+    ],
+    downtime: "1 to 3 days",
+    duration: "15 - 30 minutes",
+    sessions: "1 to 3 sessions",
+    technology: "Trichloroacetic Acid (TCA) application",
+    preCare: [
+      "Ensure the earlobe is clean and free of makeup or creams."
+    ],
+    postCare: [
+      "Keep the covering tape on for 1 to 3 days."
+    ]
+  },
+  {
+    id: "ear-piercing",
+    name: "Ear Piercing",
+    img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&q=80",
+    category: "dermatosurgery",
+    description: "Safe, sterile ear piercing performed by a dermatologist using the advanced Inverness system. We offer a variety of earring options.",
+    benefits: [
+      "Medical-grade sterile environment",
+      "Precise placement by a medical professional",
+      "Gentle piercing action with the Inverness system"
+    ],
+    downtime: "0 days",
+    duration: "15 - 30 minutes",
+    sessions: "Single session",
+    technology: "Inverness piercing system",
+    preCare: [
+      "Ensure you are in good general health."
+    ],
+    postCare: [
+      "Keep rotating the ear piercing daily thrice.",
+      "Apply solution daily twice for 6 to 8 weeks."
     ]
   },
   {
     id: "biopsy",
     name: "Diagnostic Skin Biopsy",
     img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80",
-    category: "quick-procedures",
-    description: "A small, precise diagnostic sample of skin tissue is taken (punch or shave biopsy) under local anesthesia and sent for dermatopathological evaluation to determine the exact diagnosis of skin conditions.",
+    category: "dermatosurgery",
+    description: "A small, precise diagnostic sample of skin tissue is taken (excision biopsy and punch biopsy 4mm only) under local anesthesia and sent for dermatopathological evaluation to determine the exact diagnosis of skin conditions.",
     benefits: [
       "Provides definitive histopathological diagnosis",
       "Essential for confirming suspected skin lesions or rashes",
       "Safe, sterile in-office surgical procedure"
     ],
-    downtime: "5 - 7 days (heals with minor stitch or dressings)",
+    downtime: "5 to 10 days",
     duration: "20 - 30 minutes",
     sessions: "Single diagnostic procedure",
-    technology: "Sterile biopsy punches (2mm - 4mm) or shave excisions",
+    technology: "Sterile biopsy punches (4mm) or excision",
     preCare: [
       "Inform the doctor of any history of bleeding disorders or anticoagulants."
     ],
     postCare: [
-      "Change dressings daily as instructed.",
-      "Keep the biopsy site clean with soap and water after 24 hours.",
-      "Avoid heavy stretching of the biopsy site area."
+      "Keep biopsy site dry and clean.",
+      "Suture removal at 5 to 10 days based on site."
     ]
   },
   {
     id: "molluscum-needling",
     name: "Molluscum Needling",
     img: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&q=80",
-    category: "quick-procedures",
+    category: "dermatosurgery",
     description: "A highly effective, straightforward procedure to clear Molluscum Contagiosum lesions. A sterile needle is used to carefully extract the viral core from each bump, halting the spread of the infection.",
     benefits: [
       "Rapidly stops the viral shedding and spread",
@@ -693,7 +857,7 @@ export const treatments: Treatment[] = [
     id: "ingrown-toenail",
     name: "Ingrown Toenail Surgery",
     img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
-    category: "quick-procedures",
+    category: "dermatosurgery",
     description: "Surgical intervention for painful, infected ingrown toenails. The procedure involves partial nail avulsion (removing the ingrown edge) and chemical matrixectomy to prevent the nail from growing inward again.",
     benefits: [
       "Immediate relief from severe toe pain and pressure",
@@ -701,8 +865,8 @@ export const treatments: Treatment[] = [
       "Permanent solution with chemical matrix destruction",
       "Performed completely painlessly under local ring block anesthesia"
     ],
-    downtime: "1 - 2 weeks for complete healing",
-    duration: "30 - 45 minutes",
+    downtime: "1 - 2 weeks for complete healing (14 days)",
+    duration: "45 min to 1 hour",
     sessions: "Single surgical session",
     technology: "Partial nail avulsion + Phenol matrixectomy",
     preCare: [
@@ -718,7 +882,7 @@ export const treatments: Treatment[] = [
     id: "lump-excision",
     name: "Excision of Lumps & Bumps",
     img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80",
-    category: "quick-procedures",
+    category: "dermatosurgery",
     description: "Minor surgical removal of benign subcutaneous lesions such as lipomas, epidermoid cysts, and dermatofibromas. The mass is carefully excised under local anesthesia and stitched for an aesthetic outcome.",
     benefits: [
       "Permanent removal of bothersome or growing lumps",
@@ -737,6 +901,30 @@ export const treatments: Treatment[] = [
       "Keep the surgical wound dry for 48 hours.",
       "Attend follow-up for suture removal (usually 7-14 days).",
       "Avoid heavy lifting or stretching the area."
+    ]
+  },
+  {
+    id: "keloid-scar",
+    name: "Keloid & Hypertrophic Scar Treatment",
+    img: "https://images.unsplash.com/photo-1584820927498-cafe8c1c9695?w=800&q=80",
+    category: "dermatosurgery",
+    description: "A powerful combination treatment utilizing CO2 laser, intralesional steroids, and triple combination injections to significantly flatten and improve the appearance of keloids and hypertrophic scars.",
+    benefits: [
+      "Reduces scar thickness and redness",
+      "Alleviates itching and discomfort",
+      "Multi-modality approach for stubborn scars",
+      "Prevents further scar growth"
+    ],
+    downtime: "3 to 5 days",
+    duration: "30 - 45 minutes",
+    sessions: "Multiple sessions as advised by the doctor",
+    technology: "CO2 Laser & Intralesional Injections",
+    preCare: [
+      "Clean the area thoroughly before treatment."
+    ],
+    postCare: [
+      "Keep the treated area clean and protected from the sun.",
+      "Apply prescribed topical ointments as directed."
     ]
   },
 
@@ -884,5 +1072,237 @@ export const treatments: Treatment[] = [
     downtime: "None",
     duration: "30 minutes",
     sessions: "As needed"
+  },
+
+  // --- LASER HAIR REDUCTION ---
+  {
+    id: "ndyag-laser-hair",
+    name: "Long Pulsed Nd:YAG Laser",
+    img: "https://images.unsplash.com/photo-1590246814883-578aeccbd186?w=800&q=80",
+    category: "laser-hair",
+    description: "A highly effective laser hair reduction system specifically safe for darker skin types (Fitzpatrick IV-VI). It bypasses the epidermis to target the deep hair follicles.",
+    benefits: [
+      "Safest option for Indian skin tones",
+      "Effectively targets deep, coarse hair",
+      "Reduces ingrown hairs and shaving bumps"
+    ],
+    downtime: "None (mild redness for a few hours)",
+    duration: "30 - 60 minutes",
+    sessions: "6 to 8 sessions",
+    technology: "1064nm Long Pulsed Nd:YAG",
+    preCare: [
+      "Shave the area 24 hours before treatment.",
+      "Avoid waxing or plucking for 4 weeks."
+    ],
+    postCare: [
+      "Apply soothing aloe or prescribed cream.",
+      "Strict sun protection for the treated area."
+    ]
+  },
+  {
+    id: "diode-laser-hair",
+    name: "Quadruple Wavelength Diode Laser",
+    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    category: "laser-hair",
+    description: "An advanced, virtually painless laser system that combines four wavelengths simultaneously to target different depths of the hair follicle for maximum clearance.",
+    benefits: [
+      "Virtually painless treatment with built-in cooling",
+      "Fast procedure times for large areas",
+      "Effective on various hair colors and types"
+    ],
+    downtime: "None",
+    duration: "20 - 45 minutes",
+    sessions: "6 to 8 sessions",
+    technology: "Quadruple Wavelength Diode (755nm, 810nm, 940nm, 1064nm)",
+    preCare: [
+      "Shave the area 24 hours prior to the session.",
+      "Avoid tanning or sunburns."
+    ],
+    postCare: [
+      "Apply gentle moisturizer.",
+      "Avoid hot showers or saunas for 24 hours."
+    ]
+  },
+
+  // --- ANTI-AGEING ---
+  {
+    id: "skin-boosters",
+    name: "Skin Boosters (Restylane Vital, Juvederm Volite)",
+    img: "https://images.unsplash.com/photo-1613256086776-805c6d3bc0a6?w=800&q=80",
+    category: "anti-ageing",
+    description: "Deep skin hydration treatments involving micro-injections of hyaluronic acid to improve skin elasticity, hydration, and overall radiance from within.",
+    benefits: [
+      "Provides long-lasting deep hydration",
+      "Improves skin firmness and elasticity",
+      "Reduces fine lines and rough skin texture"
+    ],
+    downtime: "1 - 2 days (mild swelling or pinpoint bruising)",
+    duration: "30 - 45 minutes",
+    sessions: "3 sessions spaced 4 weeks apart, then maintenance",
+    technology: "Micro-injections of non-crosslinked Hyaluronic Acid",
+    preCare: ["Avoid alcohol and blood-thinning medication for 3 days."],
+    postCare: ["Avoid strenuous exercise and saunas for 24 hours."]
+  },
+  {
+    id: "profhilo",
+    name: "Profhilo",
+    img: "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?w=800&q=80",
+    category: "anti-ageing",
+    description: "A revolutionary bio-remodeling treatment utilizing one of the highest concentrations of hyaluronic acid to stimulate collagen and elastin, firming sagging skin.",
+    benefits: [
+      "Bio-remodels skin structure rather than just filling",
+      "Visibly tightens and lifts sagging tissue",
+      "Requires only 5 injection points per side of the face"
+    ],
+    downtime: "None to 1 day (small bumps at injection sites fade quickly)",
+    duration: "30 minutes",
+    sessions: "2 sessions spaced 4 weeks apart",
+    technology: "BAP (Bio Aesthetic Points) technique",
+    preCare: ["Avoid NSAIDs and alcohol for 3 days before."],
+    postCare: ["Do not massage the injection bumps; they will dissipate on their own."]
+  },
+  {
+    id: "nctf",
+    name: "NCTF",
+    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    category: "anti-ageing",
+    description: "New Cellular Treatment Factor (NCTF) is a unique anti-aging, poly-revitalizing complex comprising over 50 active ingredients (vitamins, amino acids, minerals) injected superficially.",
+    benefits: [
+      "Nourishes the skin with essential nutrients",
+      "Improves skin brightness and pore size",
+      "Excellent for face, neck, and décolletage"
+    ],
+    downtime: "1 day (mild redness)",
+    duration: "30 minutes",
+    sessions: "3 to 5 sessions, spaced 15 days apart",
+    technology: "Mesotherapy / Microneedling delivery",
+    preCare: ["Arrive with a clean face."],
+    postCare: ["Avoid makeup for 12 hours."]
+  },
+  {
+    id: "jalupro",
+    name: "Jalupro",
+    img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+    category: "anti-ageing",
+    description: "An injectable amino acid replacement therapy combined with hyaluronic acid. It acts as a bio-revitalizer to dramatically improve skin texture and minimize wrinkles.",
+    benefits: [
+      "Feeds fibroblasts with amino acids to produce collagen",
+      "Highly effective for under-eye dark circles and hollows",
+      "Restores volume and elasticity"
+    ],
+    downtime: "1 - 2 days",
+    duration: "30 minutes",
+    sessions: "3 - 4 sessions, spaced 1-2 weeks apart",
+    technology: "Amino Acid Bio-revitalization",
+    preCare: ["Avoid blood thinners 3 days prior."],
+    postCare: ["Avoid intense heat and direct sun for 48 hours."]
+  },
+  {
+    id: "pdrn-pn",
+    name: "PDRN/PN (Salmon DNA Therapy)",
+    img: "https://images.unsplash.com/photo-1590246814883-578aeccbd186?w=800&q=80",
+    category: "anti-ageing",
+    description: "Harnessing Polynucleotides (PN) and Polydeoxyribonucleotide (PDRN) derived from salmon DNA, this advanced treatment repairs damaged skin at a cellular level and intensely promotes tissue regeneration.",
+    benefits: [
+      "Accelerates wound healing and skin barrier repair",
+      "Highly anti-inflammatory (great for rosacea or sensitive skin)",
+      "Reverses signs of photo-aging and thinned skin"
+    ],
+    downtime: "1 - 3 days (small bumps or mild swelling)",
+    duration: "45 minutes",
+    sessions: "3 - 4 sessions, spaced 3-4 weeks apart",
+    technology: "Polynucleotide bio-stimulation",
+    preCare: ["Stop actives 3 days before."],
+    postCare: ["Do not touch or massage the face heavily for 24 hours."]
+  },
+  {
+    id: "exosome",
+    name: "Exosome Therapy",
+    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80",
+    category: "anti-ageing",
+    description: "The frontier of regenerative aesthetics. Billions of stem cell-derived exosomes are delivered into the skin to dramatically signal cellular repair, collagen production, and profound rejuvenation.",
+    benefits: [
+      "The most potent cellular signaling treatment available",
+      "Reduces inflammation and accelerates healing by 300%",
+      "Improves overall skin age and health at a molecular level"
+    ],
+    downtime: "None to 1 day",
+    duration: "45 minutes",
+    sessions: "3 sessions, spaced 4 weeks apart",
+    technology: "Topical application post-microneedling/laser",
+    preCare: ["Avoid anti-inflammatory medications for 3 days."],
+    postCare: ["Do not wash face for 12 hours to allow full absorption."]
+  },
+  {
+    id: "fillers",
+    name: "Fillers (Under Eye / Full Face Rejuvenation)",
+    img: "https://images.unsplash.com/photo-1613256086776-805c6d3bc0a6?w=800&q=80",
+    category: "anti-ageing",
+    description: "Strategic placement of cross-linked hyaluronic acid dermal fillers to restore lost facial volume, contour the jawline, enhance lips, and fill deep under-eye hollows (tear troughs).",
+    benefits: [
+      "Instant restoration of youthful facial contours",
+      "Erases under-eye tiredness and deep nasolabial folds",
+      "Sculpts and defines cheeks, chin, and jawline"
+    ],
+    downtime: "2 - 5 days (potential for mild swelling or bruising)",
+    duration: "45 - 60 minutes",
+    sessions: "Single session (results last 9-18 months)",
+    technology: "Advanced cannula/needle filler injection",
+    preCare: ["Strictly avoid blood thinners, fish oil, and alcohol for 5 days."],
+    postCare: ["Apply ice. Do not sleep on the face or massage the treated areas."]
+  },
+  {
+    id: "facial-threads",
+    name: "Facial Threads for Lifting",
+    img: "https://images.unsplash.com/photo-1599839619722-39751411ea63?w=800&q=80",
+    category: "anti-ageing",
+    description: "A minimally invasive alternative to a surgical facelift. Absorbable cogged threads are inserted beneath the skin to physically lift sagging tissue (jowls, cheeks) while stimulating localized collagen.",
+    benefits: [
+      "Immediate mechanical lift of sagging facial tissues",
+      "Long-term collagen stimulation along the thread paths",
+      "Defines jawline and lifts mid-face non-surgically"
+    ],
+    downtime: "3 - 7 days (swelling, mild bruising, and tightness)",
+    duration: "60 minutes",
+    sessions: "Single session (results last 1-2 years)",
+    technology: "PDO / PLLA Lifting Threads",
+    preCare: ["Avoid blood thinners for 1 week. Prepare for some downtime."],
+    postCare: ["Sleep on your back for 1 week. Avoid wide mouth opening or rigorous chewing."]
+  },
+  {
+    id: "hifu",
+    name: "HIFU (High-Intensity Focused Ultrasound)",
+    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+    category: "anti-ageing",
+    description: "A non-invasive skin tightening procedure that uses focused ultrasound energy to reach the SMAS layer (the same layer targeted in surgical facelifts), causing deep thermal coagulation and lifting.",
+    benefits: [
+      "Non-surgical lifting of the neck, chin, and brow",
+      "Stimulates deep foundational collagen",
+      "No needles and zero surface downtime"
+    ],
+    downtime: "None (mild tenderness along the jawline for a few days)",
+    duration: "45 - 60 minutes",
+    sessions: "1 - 2 sessions per year",
+    technology: "High-Intensity Focused Ultrasound",
+    preCare: ["Inform doctor of any facial implants or recent fillers."],
+    postCare: ["Resume normal activities immediately. Avoid extreme heat for 24 hours."]
+  },
+  {
+    id: "botulinum-toxin",
+    name: "Botulinum Toxin (Fine Lines & Wrinkles)",
+    img: "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?w=800&q=80",
+    category: "anti-ageing",
+    description: "Precise micro-injections of purified botulinum toxin to temporarily relax hyperactive facial muscles. This effectively smooths out dynamic wrinkles like crow's feet, frown lines, and forehead creases.",
+    benefits: [
+      "Gold-standard treatment for dynamic wrinkles",
+      "Prevents deeper static lines from forming",
+      "Creates a relaxed, refreshed, and youthful appearance"
+    ],
+    downtime: "None (tiny injection marks disappear in 20 minutes)",
+    duration: "15 minutes",
+    sessions: "Every 4 to 6 months",
+    technology: "Neuromodulator injection",
+    preCare: ["Avoid alcohol and blood thinners for 3 days."],
+    postCare: ["Do not lie down for 4 hours. Do not massage the treated areas."]
   }
 ]

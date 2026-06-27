@@ -7,10 +7,12 @@ import { navItems } from "@/lib/data/navigation";
 const serviceDropdownItems = [
   { label: "Hair Loss", href: "/services?category=hair-loss" },
   { label: "Acne & Scars", href: "/services?category=acne-scar" },
+  { label: "Laser Hair Reduction", href: "/services?category=laser-hair" },
   { label: "Pigmentation", href: "/services?category=pigmentation" },
   { label: "Vitiligo", href: "/services?category=vitiligo" },
-  { label: "Quick Procedures", href: "/services?category=quick-procedures" },
+  { label: "Dermatosurgery", href: "/services?category=dermatosurgery" },
   { label: "Medical Dermatology", href: "/services?category=medical-dermatology" },
+  { label: "Anti-Ageing", href: "/services?category=anti-ageing" },
 ];
 
 export default function Navbar() {
@@ -118,16 +120,27 @@ export default function Navbar() {
             }}
             className="md:!h-[42px]"
           />
-          <span
-            className="text-[13px] md:text-lg tracking-wide whitespace-nowrap"
-            style={{
-              fontFamily: "var(--font-dm-serif), serif",
-              fontWeight: 600,
-              color: showAlt ? "white" : "#5A2A5D",
-            }}
-          >
-            AMETHYST SKIN CLINIC
-          </span>
+          <div className="flex flex-col">
+            <span
+              className="text-[13px] md:text-lg tracking-wide whitespace-nowrap leading-tight"
+              style={{
+                fontFamily: "var(--font-dm-serif), serif",
+                fontWeight: 600,
+                color: showAlt ? "white" : "#5A2A5D",
+              }}
+            >
+              AMETHYST SKIN CLINIC
+            </span>
+            <span
+              className="text-[8px] md:text-[10px] tracking-[0.15em] uppercase opacity-80"
+              style={{
+                color: showAlt ? "white" : "#5A2A5D",
+                marginTop: "-1px"
+              }}
+            >
+              by Dr. Shruthi Janardhanan
+            </span>
+          </div>
         </Link>
 
         <div className="hidden md:block ml-auto">
