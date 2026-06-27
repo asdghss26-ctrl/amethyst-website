@@ -202,18 +202,17 @@ export const treatments: Treatment[] = [
       "Yields permanent improvement in skin contour",
       "Creates space for biofillers or PRP to optimize healing"
     ],
-    downtime: "3 - 5 days (mild swelling and localized bruising)",
-    duration: "30 - 45 minutes",
-    sessions: "2 - 3 sessions, depending on scar severity",
+    downtime: "4 - 5 days (mild swelling and localized bruising)",
+    duration: "40 minutes",
+    sessions: "3 - 4 sessions, as needed",
     technology: "Nokor needle or cannula-based subcision system",
     preCare: [
-      "Ensure there is no active inflammatory acne in the treatment area.",
-      "Avoid blood thinners for 5 days before the procedure."
+      "Use regular prescribed skincare.",
+      "Stop actives and acne creams 3 days prior to the procedure."
     ],
     postCare: [
-      "Apply ice packs to minimize swelling for the first 24 hours.",
-      "Keep the needle entry points clean and apply prescribed antibiotic ointment.",
-      "Wear broad-spectrum sunscreen daily."
+      "Avoid picking on scabs or marks.",
+      "Use gentle cleanser, moisturiser, and SPF 50 PA++++ sunscreen."
     ]
   },
   {
@@ -221,25 +220,25 @@ export const treatments: Treatment[] = [
     name: "MNRF Microneedling",
     img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
     category: "acne-scar",
-    description: "Microneedling Fractional Radiofrequency (MNRF) delivers controlled RF energy deep into the dermis through insulated micro-needles. This stimulates intense collagen and elastin production while sparing the epidermis.",
+    description: "Microneedling Radiofrequency (MNRF) delivers controlled RF energy deep into the dermis through insulated micro-needles. This stimulates intense collagen and elastin production while sparing the epidermis.",
     benefits: [
       "Improves deep acne scars, pores, and skin laxity",
       "Safe for all skin types, including darker skin tones",
       "Minimal risk of post-inflammatory hyperpigmentation (PIH)",
       "Reduces active oil production and sebum flow"
     ],
-    downtime: "2 - 3 days (mild redness and dry sand-like micro-crusts)",
-    duration: "45 minutes (plus 30 minutes for numbing cream)",
-    sessions: "3 - 5 sessions, spaced 4 weeks apart",
+    downtime: "4 - 7 days (mild redness and dry sand-like micro-crusts)",
+    duration: "1 hour (plus numbing cream time)",
+    sessions: "4 - 6 sessions, spaced 4 weeks apart",
     technology: "Fractional radiofrequency with insulated gold-plated microneedles",
     preCare: [
-      "Avoid retinol or active acids 3 days prior.",
-      "Ensure no active cold sores are present."
+      "Use regular prescribed skincare.",
+      "Stop actives and acne creams 3 days prior to the procedure."
     ],
     postCare: [
-      "Moisturize skin frequently with a gentle, non-comedogenic barrier cream.",
-      "Do not pick at the micro-crusts; let them shed naturally.",
-      "Strict sun protection is mandatory for at least 7 days."
+      "Apply antibiotic recovery creams as instructed by the doctor.",
+      "Avoid picking on scabs or marks.",
+      "Use gentle cleanser, moisturiser, and SPF 50 PA++++ sunscreen."
     ]
   },
   {
@@ -254,18 +253,16 @@ export const treatments: Treatment[] = [
       "Significant remodeling of deep scar tissue walls",
       "Permanent, cumulative improvements over time"
     ],
-    downtime: "5 - 7 days (frosting followed by dark scab formation)",
+    downtime: "5 days",
     duration: "20 - 30 minutes",
     sessions: "3 - 4 sessions, spaced 6 weeks apart",
     technology: "High-precision localized Trichloroacetic Acid application",
     preCare: [
-      "Stop active topical exfoliators (AHAs, BHAs, retinoids) 5 days before.",
-      "Prep skin with prescribed melanin inhibitors if advised."
+      "Stop actives 3 days before the procedure."
     ],
     postCare: [
-      "Do not pick, scratch, or peel off scabs prematurely.",
-      "Apply ointment/vaseline to scabbed areas until they fall off.",
-      "Avoid direct sunlight and apply SPF 50+ regularly."
+      "Avoid picking on scabs or marks.",
+      "Use gentle cleanser, moisturiser, and SPF 50 PA++++ sunscreen."
     ]
   },
   {
@@ -284,11 +281,12 @@ export const treatments: Treatment[] = [
     sessions: "Single session (sutures removed after a week)",
     technology: "Sterile surgical punch tool",
     preCare: [
-      "Stop blood-thinning supplements 5 days prior."
+      "Follow prescribed skincare.",
+      "Avoid actives and acne creams 3 days prior to the procedure."
     ],
     postCare: [
-      "Keep the surgical site clean and dry.",
-      "Apply prescribed antibiotic ointment daily."
+      "Avoid picking on scabs or marks.",
+      "Use gentle cleanser, moisturiser, and SPF 50 PA++++ sunscreen."
     ]
   },
   {
@@ -296,7 +294,7 @@ export const treatments: Treatment[] = [
     name: "Papular Scar Treatment",
     img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
     category: "acne-scar",
-    description: "Targeted therapy for elevated, bumpy papular scars (often found on the chin and nose) using light radiofrequency ablation or fractional CO2 laser to flatten the raised fibrous tissue.",
+    description: "Targeted therapy for elevated, bumpy papular scars (often found on the chin and nose) using ablative CO2 laser to flatten the raised fibrous tissue.",
     benefits: [
       "Flattens bumpy, raised scars effectively",
       "Smooths skin texture and restores facial contours",
@@ -304,14 +302,16 @@ export const treatments: Treatment[] = [
     ],
     downtime: "3 - 5 days (mild scabbing)",
     duration: "20 minutes",
-    sessions: "1 - 3 sessions",
-    technology: "Radiofrequency ablation / Fractional Laser",
+    sessions: "2 - 3 sessions",
+    technology: "Ablative CO2 Laser",
     preCare: [
-      "Avoid active acne breakouts in the treatment zone."
+      "Use regular prescribed skincare.",
+      "Stop actives and acne creams 3 days prior to the procedure."
     ],
     postCare: [
-      "Do not scratch or prematurely remove scabs.",
-      "Strict sun protection to prevent hyperpigmentation."
+      "Apply antibiotic recovery creams as instructed by the doctor.",
+      "Avoid picking on scabs or marks.",
+      "Use gentle cleanser, moisturiser, and SPF 50 PA++++ sunscreen."
     ]
   },
   {
@@ -326,17 +326,43 @@ export const treatments: Treatment[] = [
       "Instantly lifts tethered scars while subcision heals",
       "Promotes sustained dermal thickening"
     ],
-    downtime: "2 - 4 days (mild swelling and bruising)",
+    downtime: "4 - 5 days (mild swelling and bruising)",
     duration: "45 - 60 minutes",
-    sessions: "2 - 4 sessions, spaced 4-6 weeks apart",
+    sessions: "1 - 2 sessions, spaced 4-6 weeks apart",
     technology: "Plasma gel bio-heating and subcision",
     preCare: [
-      "Drink plenty of water before the blood draw.",
-      "Avoid NSAIDs for 5 days."
+      "Use regular prescribed skincare.",
+      "Stop actives and acne creams 3 days prior to the procedure."
     ],
     postCare: [
-      "Avoid massaging the treated area for 48 hours.",
-      "Sleep with head slightly elevated to reduce swelling."
+      "Avoid picking on scabs or marks.",
+      "Use gentle cleanser, moisturiser, and SPF 50 PA++++ sunscreen."
+    ]
+  },
+  {
+    id: "threads-acne-scars",
+    name: "Threads for Acne Scars",
+    img: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80",
+    category: "acne-scar",
+    description: "Absorbable PDO threads are strategically placed beneath acne scars to lift depressed tissue and stimulate collagen remodeling, providing gradual and natural scar improvement.",
+    benefits: [
+      "Lifts depressed scars from beneath the skin",
+      "Stimulates long-term collagen production",
+      "Fully absorbable threads with high safety profile",
+      "Can be combined with other scar treatments for enhanced results"
+    ],
+    downtime: "2 - 3 days (mild swelling)",
+    duration: "45 minutes",
+    sessions: "1 - 2 sessions per year",
+    technology: "Absorbable Polydioxanone (PDO) threads",
+    preCare: [
+      "Use regular prescribed skincare.",
+      "Stop actives and acne creams 3 days prior to the procedure."
+    ],
+    postCare: [
+      "Avoid massaging the face for 1 week.",
+      "Avoid picking on scabs or marks.",
+      "Use gentle cleanser, moisturiser, and SPF 50 PA++++ sunscreen."
     ]
   },
 
