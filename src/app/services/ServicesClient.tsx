@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -34,6 +35,11 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
 
   const [activeCategory, setActiveCategory] = useState<Treatment["category"]>(defaultCategory);
   const [selectedTreatment, setSelectedTreatment] = useState<Treatment | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Sync category state from initial prop if it changes
   useEffect(() => {
@@ -316,8 +322,9 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
       </section>
 
       {/* ─── CLINICAL DETAIL DRAWER ─── */}
-      <AnimatePresence>
-        {selectedTreatment && (
+      {mounted && createPortal(
+        <AnimatePresence>
+          {selectedTreatment && (
           <>
             {/* Backdrop Overlay */}
               <motion.div
@@ -505,7 +512,9 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
             </motion.div>
           </>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body
+      )}
     </div>
   );
 }

@@ -332,8 +332,10 @@ body {
   }
 }
 
-/* Hide floating buttons when service modal is open */
-body.modal-open .floating-cta,
-body.modal-open .glass-book-btn {
-  display: none !important;
+/* Hide floating buttons when service modal is open (Mobile only) */
+@media (max-width: 767px) {
+  body.modal-open .floating-cta,
+  body.modal-open .glass-book-btn {
+    display: none !important;
+  }
 }
