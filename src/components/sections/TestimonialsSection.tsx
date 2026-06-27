@@ -110,8 +110,8 @@ export default function Testimonials() {
                   &ldquo;{review.text}&rdquo;
                 </p>
                 <div>
-                  <p className="font-semibold text-[#5B1F6A] text-sm">{review.name}{review.badge ? <span className="font-normal text-[#777] text-[11px] ml-1">· {review.badge}</span> : null}</p>
-                  <p className="text-[10px] text-[#777] mt-0.5">Google Review</p>
+                  <p className="font-semibold text-[#5B1F6A] text-sm">{review.name}{review.badge ? <span className="font-normal text-[#6B6570] text-[11px] ml-1">· {review.badge}</span> : null}</p>
+                  <p className="text-[10px] text-[#6B6570] mt-0.5">Google Review</p>
                 </div>
               </div>
             ))}

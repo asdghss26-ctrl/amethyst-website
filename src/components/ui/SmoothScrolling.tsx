@@ -1,14 +1,9 @@
 "use client";
 
-import { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-}
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 
 interface SmoothScrollingProps {
   children: ReactNode;
@@ -16,37 +11,34 @@ interface SmoothScrollingProps {
 
 export default function SmoothScrolling({ children }: SmoothScrollingProps) {
   const pathname = usePathname();
-  const smootherRef = useRef<ScrollSmoother | null>(null);
 
   useEffect(() => {
-    smootherRef.current = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.5,
-      effects: true,
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
+      gestureOrientation: "vertical",
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
     });
 
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
     return () => {
-      if (smootherRef.current) {
-        smootherRef.current.kill();
-      }
+      lenis.destroy();
     };
   }, []);
 
   // Reset scroll position to top when navigating to a new page
   useEffect(() => {
-    if (smootherRef.current) {
-      smootherRef.current.scrollTop(0);
-    } else {
-      window.scrollTo(0, 0);
-    }
+    window.scrollTo(0, 0);
   }, [pathname]);
 
-  return (
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        {children}
-      </div>
-    </div>
-  );
+  return <>{children}</>;
 }

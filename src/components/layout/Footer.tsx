@@ -219,21 +219,11 @@ export default function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div
-            className="flex flex-col sm:flex-row justify-between items-center gap-2"
-            style={{
-              background: 'rgba(255,255,255,0.03)',
-              borderTop: '1px solid rgba(255,255,255,0.06)',
-              padding: '16px 20px',
-              marginTop: '32px',
-              marginLeft: '-20px',
-              marginRight: '-20px',
-            }}
-          >
-            <p style={{ fontSize: '11px', color: '#555555' }}>
-              &copy; 2025 Amethyst Skin Clinic
+          <div className="border-t border-white/10 pt-6 mt-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <p style={{ fontSize: '11px', color: '#888888' }}>
+              &copy; {new Date().getFullYear()} Amethyst Skin Clinic. All rights reserved.
             </p>
-            <p style={{ fontSize: '11px', color: '#555555' }}>
+            <p style={{ fontSize: '11px', color: '#888888' }}>
               Designed by VN Creation
             </p>
           </div>
