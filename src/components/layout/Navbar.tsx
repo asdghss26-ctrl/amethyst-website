@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { navItems } from "@/lib/data/navigation";
@@ -108,7 +109,7 @@ export default function Navbar() {
         </div>
 
         <Link href="/" onClick={(e) => { if (window.location.pathname === '/') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }} className="flex items-center gap-1.5 md:gap-2 absolute left-1/2 -translate-x-1/2">
-          <img
+          <Image
             src="/logo.svg"
             alt="AMETHYST logo"
             width={42}
@@ -154,7 +155,7 @@ export default function Navbar() {
                 : "bg-[#5A2A5D] border border-[#5A2A5D] text-white hover:bg-[#4A1F4D] hover:border-[#4A1F4D]"
             }`}
           >
-            <img src="/logo-cream.svg" alt="" width={20} height={20} className="h-5 w-auto" />
+            <Image src="/logo-cream.svg" alt="" width={20} height={20} className="h-5 w-auto" />
             Book Appointment
           </a>
         </div>
@@ -211,7 +212,7 @@ export default function Navbar() {
             )
           ))}
           <a href="https://u.tatvacare.in/r/mDN7hS" target="_blank" rel="noopener noreferrer" className="bg-[#5A2A5D] text-white text-xs font-medium uppercase tracking-[0.1em] px-5 py-3 rounded-full text-center hover:bg-[#4A1F4D] transition-all duration-300 flex items-center justify-center gap-2" onClick={() => setMenuOpen(false)}>
-            <img src="/logo-cream.svg" alt="" width={20} height={20} className="h-5 w-auto" />
+            <Image src="/logo-cream.svg" alt="" width={20} height={20} className="h-5 w-auto" />
             Book Appointment
           </a>
         </div>

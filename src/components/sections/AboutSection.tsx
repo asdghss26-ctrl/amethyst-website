@@ -2,6 +2,7 @@
 
 import { Reveal } from "../ui/RevealAnimation";
 import CountUp from "../ui/CountUp";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -21,11 +22,13 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <Reveal delay={0.3}>
-              <div className="rounded-[24px] overflow-hidden">
-                <img
+              <div className="relative rounded-[24px] overflow-hidden w-full h-[280px] md:h-[360px]">
+                <Image
                   src="/images/clinic/mosaic-1.jpg"
                   alt="Amethyst Skin Clinic interior"
-                  className="w-full h-[280px] md:h-[360px] object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
             </Reveal>
@@ -73,10 +76,12 @@ export default function About() {
                 transition={{ duration: 0.6 }}
                 className="h-[400px] md:h-full min-h-[500px] relative"
               >
-                <img
+                <Image
                   src="/images/doctor/dr-shruthi.jpg"
                   alt="Dr. Shruthi Pavana Janardhanan"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </motion.div>

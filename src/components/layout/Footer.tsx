@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const quickLinkItems = [
@@ -21,12 +22,11 @@ export default function Footer() {
           padding: '32px 24px',
         }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/logo-cream.svg"
           alt="Amethyst Logo"
-          width="32"
-          height="32"
+          width={32}
+          height={32}
           style={{ marginBottom: '12px', display: 'inline-block' }}
         />
         <h2
@@ -63,8 +63,7 @@ export default function Footer() {
             {/* Column 1 — Brand */}
             <div>
               <Link href="/" className="flex items-center gap-2 mb-2">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo-cream.svg" alt="Amethyst Logo" width="24" height="24" />
+                <Image src="/logo-cream.svg" alt="Amethyst Logo" width={24} height={24} />
                 <span
                   className="text-white font-bold"
                   style={{ fontFamily: "var(--font-dm-serif), serif", fontSize: '18px' }}

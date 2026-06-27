@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { treatments, Treatment } from "@/lib/data/treatments";
@@ -138,10 +139,12 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
               >
                 {/* Image */}
                 <div className="relative w-full h-[220px] overflow-hidden bg-[#FBF8F5] rounded-t-xl">
-                  <img
+                  <Image
                     src={t.img}
                     alt={t.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
 
@@ -315,7 +318,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-[#5A2A5D] px-8 py-3.5 rounded-full text-xs sm:text-sm font-semibold hover:bg-[#F8F6F9] transition-all duration-300 hover:-translate-y-0.5"
             >
-              <img src="/logo.svg" alt="" className="h-5 w-auto" /> Book Consultation
+              <Image src="/logo.svg" alt="" width={20} height={20} className="h-5 w-auto" /> Book Consultation
             </a>
           </div>
         </div>
@@ -378,10 +381,12 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
 
                 {/* Cover Image */}
                 <div className="relative h-[220px] md:h-[260px] w-full rounded-2xl overflow-hidden mb-8 border border-[#E4DFE8]">
-                  <img
+                  <Image
                     src={selectedTreatment.img}
                     alt={selectedTreatment.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    className="object-cover"
                   />
                 </div>
 
@@ -506,7 +511,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
                   onClick={() => setSelectedTreatment(null)}
                   className="w-full inline-flex items-center justify-center gap-2 bg-[#5A2A5D] text-white text-xs font-semibold uppercase tracking-[0.1em] py-4 rounded-xl hover:bg-[#4A1F4D] transition-colors"
                 >
-                  <img src="/logo-cream.svg" alt="" className="h-5 w-auto" /> Book Treatment Session
+                  <Image src="/logo-cream.svg" alt="" width={20} height={20} className="h-5 w-auto" /> Book Treatment Session
                 </a>
               </div>
             </motion.div>

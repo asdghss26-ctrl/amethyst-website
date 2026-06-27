@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { treatments } from "@/lib/data/treatments";
 import { Reveal } from "../ui/RevealAnimation";
 
@@ -81,12 +82,13 @@ export default function Hero() {
           className="absolute inset-0 rounded-[28px] md:rounded-[48px] mx-3 md:mx-4 overflow-hidden"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1400&q=80" 
               alt="Skin treatment"
-              width={1400}
-              height={933}
-              className="w-full h-full object-cover"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 1400px"
+              className="object-cover"
             />
           {/* Top gradient overlay for text readability */}
           <div
@@ -102,7 +104,7 @@ export default function Hero() {
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-8 md:pt-20 pointer-events-none">
           <div className="flex flex-col items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-cream.svg" alt="" width={64} height={64} className="h-10 md:h-16 w-auto mb-1 animate-icon-drop" style={{ filter: "brightness(0) invert(1)" }} />
+            <Image src="/logo-cream.svg" alt="" width={64} height={64} className="h-10 md:h-16 w-auto mb-1 animate-icon-drop" style={{ filter: "brightness(0) invert(1)" }} />
             <h1
               className="text-[clamp(2.5rem,12vw,7rem)] leading-[1.05] text-white animate-text-reveal"
               style={{ fontFamily: "var(--font-dm-serif), serif", fontWeight: 600, textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
@@ -181,7 +183,7 @@ export default function Hero() {
                       }}
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={t.img} alt="" width={40} height={40} className="w-full h-full object-cover" />
+                      <Image src={t.img} alt="" width={40} height={40} className="w-full h-full object-cover" />
                     </div>
                     <span
                       style={{
@@ -220,7 +222,7 @@ export default function Hero() {
               className="flex flex-col items-center gap-1 md:gap-1.5 group transition-all duration-500"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="Amethyst Logo" width={48} height={48} className="w-7 md:w-10 lg:w-12 h-auto group-hover:scale-110 transition-transform duration-300" />
+              <Image src="/logo.svg" alt="Amethyst Logo" width={48} height={48} className="w-7 md:w-10 lg:w-12 h-auto group-hover:scale-110 transition-transform duration-300" />
               <p className="text-[12px] md:text-base lg:text-lg font-semibold text-center text-[#2E2E2E] tracking-tight leading-tight">
                 Explore our<br className="md:hidden" /> treatments
               </p>
