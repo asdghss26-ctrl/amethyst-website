@@ -132,7 +132,7 @@ export default function Navbar() {
               AMETHYST SKIN CLINIC
             </span>
             <span
-              className="text-[8px] md:text-[10px] tracking-[0.15em] uppercase opacity-80"
+              className="text-[7.5px] sm:text-[8px] md:text-[10px] tracking-[0.15em] uppercase opacity-80 whitespace-nowrap"
               style={{
                 color: showAlt ? "white" : "#5A2A5D",
                 marginTop: "-1px"

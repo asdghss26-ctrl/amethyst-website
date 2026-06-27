@@ -331,3 +331,9 @@ body {
     height: 20px;
   }
 }
+
+/* Hide floating buttons when service modal is open */
+body.modal-open .floating-cta,
+body.modal-open .glass-book-btn {
+  display: none !important;
+}

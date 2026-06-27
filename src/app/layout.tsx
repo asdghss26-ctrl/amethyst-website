@@ -44,7 +44,7 @@ export default function RootLayout({
         {/* ─── FLOATING CALL BUTTON ─── */}
         <a
           href="tel:+918870445185"
-          className="fixed z-[999] flex items-center justify-center rounded-full text-white no-underline cursor-pointer transition-transform duration-300 hover:scale-110"
+          className="floating-cta fixed z-[999] flex items-center justify-center rounded-full text-white no-underline cursor-pointer transition-transform duration-300 hover:scale-110"
           style={{
             bottom: '80px',
             right: '20px',
@@ -68,7 +68,7 @@ export default function RootLayout({
           href="https://wa.me/918870445185"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed z-[999] flex items-center justify-center rounded-full text-white no-underline cursor-pointer transition-transform duration-300 hover:scale-110"
+          className="floating-cta fixed z-[999] flex items-center justify-center rounded-full text-white no-underline cursor-pointer transition-transform duration-300 hover:scale-110"
           style={{
             bottom: '20px',
             right: '20px',

@@ -42,6 +42,18 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
     }
   }, [initialCategory]);
 
+  // Toggle body class to hide floating CTAs when modal is open
+  useEffect(() => {
+    if (selectedTreatment) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+    return () => {
+      document.body.classList.remove('modal-open');
+    };
+  }, [selectedTreatment]);
+
   const handleCategoryChange = (category: Treatment["category"]) => {
     setActiveCategory(category);
     router.replace(`${pathname}?category=${category}`, { scroll: false });
@@ -308,30 +320,39 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
         {selectedTreatment && (
           <>
             {/* Backdrop Overlay */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedTreatment(null)}
-              className="fixed inset-0 bg-black z-50 cursor-pointer"
-            />
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.5 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setSelectedTreatment(null)}
+                className="fixed inset-0 bg-black z-[110] cursor-pointer"
+              />
 
             {/* Sliding Drawer */}
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 bottom-0 w-full sm:w-[500px] md:w-[600px] bg-white z-50 shadow-2xl border-l border-[#E4DFE8] flex flex-col overflow-hidden"
-            >
+              <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                className="fixed right-0 top-0 bottom-0 w-full sm:w-[500px] md:w-[600px] bg-white z-[110] shadow-2xl border-l border-[#E4DFE8] flex flex-col overflow-hidden"
+              >
               {/* Header */}
               <div className="flex items-center justify-between px-6 py-5 border-b border-[#E4DFE8]">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#8E5C8F] bg-[#F2EAF3] px-3 py-1 rounded-full">
-                  {activeCategory.replace("-", " ")}
-                </span>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => setSelectedTreatment(null)}
+                    className="md:hidden flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-[#5B1F6A] bg-[#F7F3EF] px-3 py-1.5 rounded-full"
+                  >
+                    <span>←</span> Back
+                  </button>
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#8E5C8F] bg-[#F2EAF3] px-3 py-1 rounded-full hidden md:inline-block">
+                    {activeCategory.replace("-", " ")}
+                  </span>
+                </div>
                 <button
                   onClick={() => setSelectedTreatment(null)}
                   className="w-10 h-10 rounded-full hover:bg-[#F7F3EF] flex items-center justify-center text-[#6B6570] transition-colors"
+                  aria-label="Close"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
