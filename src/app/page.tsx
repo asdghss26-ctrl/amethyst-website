@@ -11,7 +11,7 @@ export default function HomePage() {
       <HeroSection />
       <div style={{ textAlign: 'center', padding: '20px', background: '#F5F0EB' }}>
         <a
-          href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+          href="https://u.tatvacare.in/r/mDN7hS"
           style={{
             display: 'inline-block',
             background: '#5B1F6A',

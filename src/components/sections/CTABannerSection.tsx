@@ -31,7 +31,7 @@ export default function CTABanner() {
               <Reveal delay={0.4}>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                    href="https://u.tatvacare.in/r/mDN7hS"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-white text-[#5B1F6A] px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#F8F6F9] transition-all duration-300 hover:-translate-y-0.5"

@@ -39,7 +39,7 @@ export default function Footer() {
           Consult Dr. Shruthi Pavana Janardhanan today
         </p>
         <a
-          href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+          href="https://u.tatvacare.in/r/mDN7hS"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-white text-[#5B1F6A] font-bold hover:bg-white/90 transition-all duration-300 hover:-translate-y-0.5"
