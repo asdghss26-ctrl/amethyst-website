@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     "Advanced dermatology and aesthetic treatments for clear, healthy skin. Book a consultation with Amethyst's board-certified skin specialists today.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

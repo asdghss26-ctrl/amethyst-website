@@ -68,12 +68,13 @@ export default function Hero() {
           className="absolute inset-0 rounded-[28px] md:rounded-[48px] mx-3 md:mx-4 overflow-hidden"
         >
             <Image 
-              src="/images/hero-bg.jpg" 
+              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1400&q=75" 
               alt="Skin treatment"
               fill
               priority
-              sizes="(max-width: 768px) 100vw, 1400px"
+              sizes="(max-width: 768px) 95vw, 1400px"
               className="object-cover"
+              quality={75}
             />
           {/* Top gradient overlay for text readability */}
           <div
