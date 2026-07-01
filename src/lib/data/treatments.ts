@@ -1127,39 +1127,58 @@ export const treatments: Treatment[] = [
   // --- ANTI-AGEING ---
   {
     id: "skin-boosters",
-    name: "Skin Boosters (Restylane Vital, Juvederm Volite)",
+    name: "Skin Boosters",
     img: "https://images.unsplash.com/photo-1613256086776-805c6d3bc0a6?w=800&q=80",
     category: "anti-ageing",
-    description: "Deep skin hydration treatments involving micro-injections of hyaluronic acid to improve skin elasticity, hydration, and overall radiance from within.",
+    description: "Skin boosters are microinjections of hyaluronic acid that deeply hydrate the skin, improve elasticity, and enhance overall skin quality.",
     benefits: [
-      "Provides long-lasting deep hydration",
-      "Improves skin firmness and elasticity",
-      "Reduces fine lines and rough skin texture"
+      "Deeply hydrates the skin",
+      "Improves elasticity",
+      "Enhances overall skin quality"
     ],
-    downtime: "1 - 2 days (mild swelling or pinpoint bruising)",
-    duration: "30 - 45 minutes",
-    sessions: "3 sessions spaced 4 weeks apart, then maintenance",
-    technology: "Micro-injections of non-crosslinked Hyaluronic Acid",
-    preCare: ["Avoid alcohol and blood-thinning medication for 3 days."],
-    postCare: ["Avoid strenuous exercise and saunas for 24 hours."]
+    downtime: "Minimal",
+    duration: "Procedure: 20–30 minutes",
+    sessions: "2–3 sessions, 4 weeks apart | Maintenance: Every 6–9 months",
+    technology: "Micro-injections of Hyaluronic Acid",
+    preCare: [
+      "Avoid alcohol for 24 hours.",
+      "Avoid blood-thinning medications if medically appropriate."
+    ],
+    postCare: [
+      "Avoid makeup for 12 hours.",
+      "Avoid strenuous exercise for 24 hours.",
+      "Apply sunscreen daily."
+    ]
   },
   {
     id: "profhilo",
     name: "Profhilo",
     img: "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?w=800&q=80",
     category: "anti-ageing",
-    description: "A revolutionary bio-remodeling treatment utilizing one of the highest concentrations of hyaluronic acid to stimulate collagen and elastin, firming sagging skin.",
+    description: "Profhilo is an injectable bio-remodeling treatment of pure hyaluronic acid that stimulates collagen and elastin production while deeply hydrating the skin.",
     benefits: [
-      "Bio-remodels skin structure rather than just filling",
-      "Visibly tightens and lifts sagging tissue",
-      "Requires only 5 injection points per side of the face"
+      "Improves skin hydration and enhances elasticity",
+      "Reduces skin laxity",
+      "Smoothens fine lines and improves skin texture",
+      "Natural skin rejuvenation"
     ],
-    downtime: "None to 1 day (small bumps at injection sites fade quickly)",
-    duration: "30 minutes",
-    sessions: "2 sessions spaced 4 weeks apart",
-    technology: "BAP (Bio Aesthetic Points) technique",
-    preCare: ["Avoid NSAIDs and alcohol for 3 days before."],
-    postCare: ["Do not massage the injection bumps; they will dissipate on their own."]
+    downtime: "Minimal",
+    duration: "Consultation: 15–20 minutes | Procedure: 20–30 minutes",
+    sessions: "Two sessions, four weeks apart | Maintenance every six months",
+    technology: "Bio Aesthetic Point (BAP) injection with High-purity stabilized hyaluronic acid",
+    preCare: [
+      "Avoid alcohol for 24 hours.",
+      "Avoid blood-thinning medications if medically appropriate.",
+      "Inform your dermatologist of any active skin infections.",
+      "Arrive with clean skin."
+    ],
+    postCare: [
+      "Avoid touching injection sites for 24 hours.",
+      "Avoid strenuous exercise for 24 hours.",
+      "Avoid excessive heat for 48 hours.",
+      "Use sunscreen daily.",
+      "Continue a gentle skincare routine."
+    ]
   },
   {
     id: "nctf",
@@ -1235,21 +1254,35 @@ export const treatments: Treatment[] = [
   },
   {
     id: "fillers",
-    name: "Fillers (Under Eye / Full Face Rejuvenation)",
+    name: "Dermal Fillers",
     img: "https://images.unsplash.com/photo-1613256086776-805c6d3bc0a6?w=800&q=80",
     category: "anti-ageing",
-    description: "Strategic placement of cross-linked hyaluronic acid dermal fillers to restore lost facial volume, contour the jawline, enhance lips, and fill deep under-eye hollows (tear troughs).",
+    description: "Hyaluronic acid-based injectable gels that restore facial volume, improve contour, and soften static wrinkles that are tailored to enhance facial balance while maintaining natural proportions.",
     benefits: [
-      "Instant restoration of youthful facial contours",
-      "Erases under-eye tiredness and deep nasolabial folds",
-      "Sculpts and defines cheeks, chin, and jawline"
+      "Restores facial volume and improves facial harmony",
+      "Defines cheeks, chin, and jawline",
+      "Softens nasolabial folds and marionette lines",
+      "Enhances lips naturally for immediate rejuvenation"
     ],
-    downtime: "2 - 5 days (potential for mild swelling or bruising)",
-    duration: "45 - 60 minutes",
-    sessions: "Single session (results last 9-18 months)",
-    technology: "Advanced cannula/needle filler injection",
-    preCare: ["Strictly avoid blood thinners, fish oil, and alcohol for 5 days."],
-    postCare: ["Apply ice. Do not sleep on the face or massage the treated areas."]
+    downtime: "Minimal (mild swelling/bruising possible)",
+    duration: "Consultation: 20–30 minutes | Procedure: 30–60 minutes",
+    sessions: "Immediate improvement | Final results: 1–2 weeks | Longevity: 9–18 months",
+    technology: "Ultra-fine needles with Premium cross-linked hyaluronic acid",
+    preCare: [
+      "Avoid alcohol for 24 hours.",
+      "Avoid blood-thinning medications or supplements when medically appropriate.",
+      "Inform your dermatologist about previous fillers, allergies, or autoimmune conditions.",
+      "Avoid dental procedures for two weeks before treatment when possible."
+    ],
+    postCare: [
+      "Avoid touching treated areas for 24 hours.",
+      "Avoid intake of hot or luke warm food for 1 week.",
+      "Avoid hot water bath.",
+      "Apply cold compresses if swelling occurs.",
+      "Avoid strenuous exercise for 24–48 hours.",
+      "Avoid facial massages for two weeks.",
+      "Sleep on your back for the first night if advised."
+    ]
   },
   {
     id: "facial-threads",
@@ -1274,35 +1307,54 @@ export const treatments: Treatment[] = [
     name: "HIFU (High-Intensity Focused Ultrasound)",
     img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
     category: "anti-ageing",
-    description: "A non-invasive skin tightening procedure that uses focused ultrasound energy to reach the SMAS layer (the same layer targeted in surgical facelifts), causing deep thermal coagulation and lifting.",
+    description: "HIFU is a non-surgical skin-tightening treatment that delivers focused ultrasound energy to deeper skin layers, stimulating collagen remodeling for gradual lifting and firming.",
     benefits: [
       "Non-surgical lifting of the neck, chin, and brow",
       "Stimulates deep foundational collagen",
-      "No needles and zero surface downtime"
+      "Gradual lifting and firming"
     ],
-    downtime: "None (mild tenderness along the jawline for a few days)",
-    duration: "45 - 60 minutes",
-    sessions: "1 - 2 sessions per year",
+    downtime: "None (Mild tenderness may last a few days)",
+    duration: "Procedure: 45–90 minutes",
+    sessions: "Results begin: 6–8 weeks | Maximum improvement: 3–6 months | Lasts: 12–18 months",
     technology: "High-Intensity Focused Ultrasound",
-    preCare: ["Inform doctor of any facial implants or recent fillers."],
-    postCare: ["Resume normal activities immediately. Avoid extreme heat for 24 hours."]
+    preCare: [
+      "Clean skin on the day of treatment.",
+      "Avoid active infections or open wounds."
+    ],
+    postCare: [
+      "Resume normal skincare the next day.",
+      "Use sunscreen.",
+      "Avoid excessive heat for 24 hours."
+    ]
   },
   {
     id: "botulinum-toxin",
-    name: "Botulinum Toxin (Fine Lines & Wrinkles)",
+    name: "Botulinum Toxin (Botox)",
     img: "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?w=800&q=80",
     category: "anti-ageing",
-    description: "Precise micro-injections of purified botulinum toxin to temporarily relax hyperactive facial muscles. This effectively smooths out dynamic wrinkles like crow's feet, frown lines, and forehead creases.",
+    description: "Botulinum toxin is a purified neuroprotein that temporarily relaxes targeted facial muscles responsible for dynamic wrinkles and also softens expression lines while maintaining natural facial movement.",
     benefits: [
-      "Gold-standard treatment for dynamic wrinkles",
-      "Prevents deeper static lines from forming",
-      "Creates a relaxed, refreshed, and youthful appearance"
+      "Softens dynamic wrinkles",
+      "Prevents formation of deeper expression lines",
+      "Natural-looking facial rejuvenation",
+      "Improved facial symmetry"
     ],
-    downtime: "None (tiny injection marks disappear in 20 minutes)",
-    duration: "15 minutes",
-    sessions: "Every 4 to 6 months",
-    technology: "Neuromodulator injection",
-    preCare: ["Avoid alcohol and blood thinners for 3 days."],
-    postCare: ["Do not lie down for 4 hours. Do not massage the treated areas."]
+    downtime: "Minimal",
+    duration: "Consultation: 15–20 minutes | Procedure: 10–20 minutes",
+    sessions: "Visible results: 3–7 days | Full effect: 10–14 days | Longevity: 3–5 months",
+    technology: "Micro-injections using ultra-fine needles for facial muscle",
+    preCare: [
+      "Avoid alcohol for 24 hours.",
+      "Use regular prescribed skincare.",
+      "Avoid blood-thinning medications or supplements (only after physician approval).",
+      "Inform your dermatologist about pregnancy, breastfeeding, neuromuscular disorders, or previous reactions."
+    ],
+    postCare: [
+      "Do not rub or massage treated areas for 24 hours.",
+      "Stay upright for at least 4 hours.",
+      "Avoid strenuous exercise for 24 hours.",
+      "Avoid saunas, steam rooms, and excessive heat for 24–48 hours.",
+      "Use gentle cleanser, moisturiser, and SPF 50 PA++++ sunscreen."
+    ]
   }
 ]
