@@ -108,7 +108,6 @@ export default function Hero() {
         {/* ─── THE SPINNING WHEEL ─── */}
         <div
           className="hero-orbit-container absolute left-1/2 z-10"
-          style={{ transform: "translateX(-50%)" }}
         >
           <div
             ref={wheelRef}

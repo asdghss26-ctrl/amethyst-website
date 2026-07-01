@@ -347,6 +347,8 @@ body {
   width: 520px;
   height: 520px;
   bottom: -260px;
+  transform: translateX(-50%);
+  transform-origin: center bottom;
 }
 
 .hero-pill {
@@ -395,22 +397,9 @@ body {
 /* Mobile overrides — must come after desktop so they win */
 @media (max-width: 767px) {
   .hero-orbit-container {
-    width: 340px;
-    height: 340px;
-    bottom: -170px;
-  }
-  .hero-pill {
-    width: 160px;
-    height: 38px;
-    padding-right: 10px;
-    gap: 6px;
-  }
-  .hero-thumb {
-    width: 30px;
-    height: 30px;
-  }
-  .hero-pill-text {
-    font-size: 9px;
+    /* Scale the whole wheel down proportionally — pills stay in correct positions */
+    transform: translateX(-50%) scale(0.654);
+    transform-origin: center bottom;
   }
   .hero-dome {
     width: 200px;
