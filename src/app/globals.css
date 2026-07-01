@@ -397,7 +397,9 @@ body {
 /* Mobile overrides — must come after desktop so they win */
 @media (max-width: 767px) {
   .hero-orbit-container {
-    /* Scale the whole wheel down proportionally — pills stay in correct positions */
+    /* Keep DOM size 520px so JS pill positions stay correct.
+       Scale down visually by 0.654 (= 340/520).
+       bottom: -260px * 0.654 = ~-170px visual offset from hero bottom */
     transform: translateX(-50%) scale(0.654);
     transform-origin: center bottom;
   }
