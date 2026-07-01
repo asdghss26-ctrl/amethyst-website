@@ -108,12 +108,7 @@ export default function Hero() {
         {/* ─── THE SPINNING WHEEL ─── */}
         <div
           className="hero-orbit-container absolute left-1/2 z-10"
-          style={{
-            width: `${orbitRadius * 2}px`,
-            height: `${orbitRadius * 2}px`,
-            bottom: `-${orbitRadius}px`,
-            transform: "translateX(-50%)",
-          }}
+          style={{ transform: "translateX(-50%)" }}
         >
           <div
             ref={wheelRef}
@@ -127,6 +122,7 @@ export default function Hero() {
               const angleStep = 360 / pillCount;
               const pillAngle = i * angleStep;
               const rad = (pillAngle * Math.PI) / 180;
+              // Use desktop orbit radius for pill positioning — CSS scales the container
               const x = Math.round(Math.sin(rad) * orbitRadius * 1000) / 1000;
               const y = Math.round(-Math.cos(rad) * orbitRadius * 1000) / 1000;
 
@@ -136,54 +132,16 @@ export default function Hero() {
                   className="hero-pill-wrapper"
                   style={{
                     position: "absolute",
-                      left: `calc(50% + ${x}px)`,
-                      top: `calc(50% + ${y}px)`,
-                      transform: `translate(-50%, -50%) rotate(${Math.round(pillAngle + 90)}deg)`,
+                    left: `calc(50% + ${x}px)`,
+                    top: `calc(50% + ${y}px)`,
+                    transform: `translate(-50%, -50%) rotate(${Math.round(pillAngle + 90)}deg)`,
                   }}
                 >
-                  <div
-                    className="hero-pill"
-                    style={{
-                      width: `${pillWidth}px`,
-                      height: `${pillHeight}px`,
-                      borderRadius: "999px",
-                      background: "rgba(255,255,255,0.15)",
-                      backdropFilter: "blur(12px)",
-                      WebkitBackdropFilter: "blur(12px)",
-                      border: "1px solid rgba(255,255,255,0.4)",
-                      display: "flex",
-                      alignItems: "center",
-                      paddingLeft: "4px",
-                      paddingRight: "16px",
-                      gap: "10px",
-                      boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
-                    }}
-                  >
-                    <div
-                      className="hero-thumb"
-                      style={{
-                        width: `${thumbSize}px`,
-                        height: `${thumbSize}px`,
-                        borderRadius: "50%",
-                        flexShrink: 0,
-                        overflow: "hidden",
-                        border: "2px solid rgba(255,255,255,0.8)",
-                      }}
-                    >
+                  <div className="hero-pill">
+                    <div className="hero-thumb">
                       <Image src={t.img} alt="" width={40} height={40} className="w-full h-full object-cover" />
                     </div>
-                    <span
-                      className="hero-pill-text"
-                      style={{
-                        color: "rgba(255,255,255,0.95)",
-                        fontSize: "11px",
-                        fontWeight: 500,
-                        letterSpacing: "0.02em",
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                      }}
-                    >
+                    <span className="hero-pill-text">
                       {t.name}
                     </span>
                   </div>
@@ -194,16 +152,7 @@ export default function Hero() {
         </div>
 
         {/* ─── CENTER BADGE: "Explore our treatments" Dome Cutout ─── */}
-        <div
-          className="hero-dome absolute bottom-0 left-1/2 -translate-x-1/2 z-20 overflow-hidden"
-          style={{
-            width: "380px",
-            height: "170px",
-            background: "#F5F0EB",
-            borderTopLeftRadius: "190px 170px",
-            borderTopRightRadius: "190px 170px",
-          }}
-        >
+        <div className="hero-dome absolute bottom-0 left-1/2 -translate-x-1/2 z-20 overflow-hidden">
           <div className="absolute inset-0 flex flex-col items-center justify-end pb-2 md:pb-3">
             <Link
               href="/services"
