@@ -77,13 +77,13 @@ export default function Hero() {
           className="absolute inset-0 rounded-[28px] md:rounded-[48px] mx-3 md:mx-4 overflow-hidden"
         >
           <Image
-            src="/images/hero/front page.jpg"
-            alt="Skin treatment"
+            src="/images/clinic/clinic entrance.jpg"
+            alt="Amethyst Skin Clinic"
             fill
             priority
             sizes="(max-width: 768px) 95vw, 1400px"
             className="object-cover"
-            quality={75}
+            quality={100}
           />
           {/* Top gradient overlay for text readability */}
           <div
