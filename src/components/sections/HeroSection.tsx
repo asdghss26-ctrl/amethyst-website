@@ -77,7 +77,7 @@ export default function Hero() {
           className="absolute inset-0 rounded-[28px] md:rounded-[48px] mx-3 md:mx-4 overflow-hidden"
         >
           <Image
-            src="/images/hero/front page.jpg"
+            src="/images/hero/front_page_enhanced.png"
             alt="Amethyst Skin Clinic"
             fill
             priority
