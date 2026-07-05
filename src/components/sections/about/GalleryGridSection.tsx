@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { galleryBadge, galleryHeading } from '@/lib/data/about'
 
 const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80', alt: 'Clinic Lobby' },
-  { src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80', alt: 'Equipped Treatment Room' },
-  { src: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80', alt: 'Consultation Room' },
-  { src: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80', alt: 'Clinic Entrance' },
-  { src: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80', alt: 'Waiting Area' },
-  { src: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80', alt: 'Reception Desk' },
+  { src: '/images/clinic/reception area.jpg', alt: 'Reception Area' },
+  { src: '/images/clinic/consultation.jpg', alt: 'Consultation Room' },
+  { src: '/images/clinic/consultation (2).jpg', alt: 'Patient Consultation' },
+  { src: '/images/clinic/clinic entrance.jpg', alt: 'Clinic Entrance' },
+  { src: '/images/clinic/waiting area.jpg', alt: 'Waiting Area' },
+  { src: '/images/clinic/clinic corridor.JPG', alt: 'Clinic Corridor' },
 ]
 
 export default function GalleryGridSection() {

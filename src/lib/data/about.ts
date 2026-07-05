@@ -9,7 +9,7 @@ export const doctorData = {
     'She has extensive experience in both clinical and aesthetic dermatology, with advanced training in injectables and energy-based devices. Her professional journey includes work at leading dermatology centers in Chennai and Mumbai.',
     'Dr. Shruthi has authored three published research articles and is an active member of the Indian Association of Dermatologists, Venereologists and Leprologists (IADVL), the Indian Association for the Study of Sexually Transmitted Diseases (IASTD), and the National Academy of Medical Sciences (NAMS).',
   ],
-  image: '/images/doctor/dr-shruthi.jpg',
+  image: '/images/clinic/doctor image.jpg',
 }
 
 export const credentials = [

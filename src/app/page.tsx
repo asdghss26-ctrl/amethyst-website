@@ -12,6 +12,8 @@ export default function HomePage() {
       <div style={{ textAlign: 'center', padding: '20px', background: '#F5F0EB' }}>
         <a
           href="https://u.tatvacare.in/r/mDN7hS"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display: 'inline-block',
             background: '#5B1F6A',

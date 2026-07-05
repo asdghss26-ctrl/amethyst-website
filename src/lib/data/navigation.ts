@@ -3,7 +3,7 @@ export interface NavItem {
   href: string
 }
 
-export const WHATSAPP_URL = "https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+export const WHATSAPP_URL = "https://u.tatvacare.in/r/mDN7hS"
 
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },

@@ -79,14 +79,13 @@ export default function BeforeAfterSlider({
 
       {/* Before Image (Overlayed on top) */}
       <div
-        className="absolute inset-0 overflow-hidden"
-        style={{ width: `${sliderPosition}%` }}
+        className="absolute inset-0"
+        style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
         <img
           src={beforeImage}
           alt="Before treatment"
-          className="absolute inset-0 w-full h-full object-cover max-w-none pointer-events-none"
-          style={{ width: containerRef.current ? containerRef.current.offsetWidth : "100%" }}
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         />
         <div className="absolute left-4 top-4 bg-white text-[#2E2E2E] border border-[#E4DFE8] text-[10px] font-semibold uppercase tracking-[0.1em] px-3 py-1 rounded-full z-10 opacity-90 backdrop-blur-sm">
           {beforeLabel}

@@ -7,18 +7,15 @@ export const metadata: Metadata = {
 };
 
 const galleryItems = [
-  { src: "/images/clinic/mosaic-1.jpg", alt: "Clinic Reception Area" },
-  { src: "/images/clinic/mosaic-2.jpg", alt: "Treatment Room" },
-  { src: "/images/clinic/mosaic-3.jpg", alt: "Consultation Room" },
-  { src: "/images/clinic/mosaic-4.jpg", alt: "Clinic Corridor" },
-  { src: "/images/clinic/strip-1.jpg", alt: "Aesthetic Treatment Suite" },
-  { src: "/images/clinic/strip-2.jpg", alt: "Sterilization Station" },
-  { src: "/images/clinic/strip-3.jpg", alt: "Laser Treatment Room" },
-  { src: "/images/clinic/strip-4.jpg", alt: "Patient Consultation Area" },
-  { src: "/images/results/acne-before.jpg", alt: "Acne Treatment - Before" },
-  { src: "/images/results/acne-after.jpg", alt: "Acne Treatment - After" },
-  { src: "/images/results/pigment-before.jpg", alt: "Pigmentation Treatment - Before" },
-  { src: "/images/results/pigment-after.jpg", alt: "Pigmentation Treatment - After" },
+  { src: "/images/clinic/clinic entrance.jpg", alt: "Clinic Entrance" },
+  { src: "/images/clinic/reception area.jpg", alt: "Reception Area" },
+  { src: "/images/clinic/waiting area.jpg", alt: "Waiting Area" },
+  { src: "/images/clinic/clinic corridor.JPG", alt: "Clinic Corridor" },
+  { src: "/images/clinic/consultation.jpg", alt: "Consultation Room" },
+  { src: "/images/clinic/consultation (2).jpg", alt: "Patient Consultation" },
+  { src: "/images/clinic/doctor image.jpg", alt: "Dr. Shruthi Pavana Janardhanan" },
+  { src: "/images/treatments/Picofusion Treatment.jpg", alt: "Picofusion Treatment" },
+  { src: "/images/treatments/20260625_165811.jpg", alt: "Treatment in Progress" },
 ];
 
 export default function GalleryPage() {

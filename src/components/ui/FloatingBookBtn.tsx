@@ -16,7 +16,7 @@ export default function FloatingBookBtn() {
 
   return (
     <a
-      href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+      href="https://u.tatvacare.in/r/mDN7hS"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Book Appointment"

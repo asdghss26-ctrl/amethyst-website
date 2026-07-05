@@ -18,7 +18,7 @@ export const treatments: Treatment[] = [
   {
     id: "prp-hair",
     name: "PRP Hair Therapy",
-    img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+    img: "/images/treatments/hair prp.webp",
     category: "hair-loss",
     description: "Platelet-Rich Plasma (PRP) therapy uses your own blood platelets to stimulate dormant hair follicles, accelerate cellular regeneration, and reverse hair thinning.",
     benefits: [
@@ -44,7 +44,7 @@ export const treatments: Treatment[] = [
   {
     id: "gfc-hair",
     name: "GFC Hair Therapy",
-    img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&q=80",
+    img: "/images/treatments/gfc.jpg",
     category: "hair-loss",
     description: "Growth Factor Concentrate (GFC) is an advanced, highly purified therapy derived from your platelets. It delivers specific activated growth factors directly to the root for superior, consistent hair restoration.",
     benefits: [
@@ -70,7 +70,7 @@ export const treatments: Treatment[] = [
   {
     id: "iprf-scalp",
     name: "iPRF Scalp Care",
-    img: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=800&q=80",
+    img: "/images/treatments/iprf.jpeg",
     category: "hair-loss",
     description: "injectable Platelet-Rich Fibrin (iPRF) is a secondary generation platelet concentrate. Formulated without anticoagulants, it forms a fibrin matrix that slowly releases growth factors over an extended period.",
     benefits: [
@@ -95,7 +95,7 @@ export const treatments: Treatment[] = [
   {
     id: "hair-threads",
     name: "Hair Threads",
-    img: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80",
+    img: "/images/treatments/hair threads.webp",
     category: "hair-loss",
     description: "PDO (Polydioxanone) threads are ultra-fine, absorbable sutures placed into the scalp. They trigger a localized healing response, encouraging collagen synthesis and long-term hair follicle rejuvenation.",
     benefits: [
@@ -122,7 +122,7 @@ export const treatments: Treatment[] = [
   {
     id: "dutexome-mesotherapy",
     name: "Dutexome Mesotherapy",
-    img: "https://images.unsplash.com/photo-1584820927498-cafe8c1c9695?w=800&q=80",
+    img: "/images/treatments/mesotherapy.png",
     category: "hair-loss",
     description: "An advanced mesotherapy technique combining Dutasteride and Exosomes to target androgenetic alopecia. Exosomes deliver powerful cellular signals while Dutasteride blocks the DHT hormone responsible for hair thinning.",
     benefits: [
@@ -148,7 +148,7 @@ export const treatments: Treatment[] = [
   {
     id: "hair-mesotherapy",
     name: "Hair Strengthening Mesotherapy",
-    img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+    img: "/images/treatments/mesotherapy.png",
     category: "hair-loss",
     description: "A cocktail of essential vitamins, minerals, amino acids, and peptides injected directly into the scalp to nourish hair follicles and improve scalp microcirculation.",
     benefits: [
@@ -175,7 +175,7 @@ export const treatments: Treatment[] = [
   {
     id: "ils-alopecia",
     name: "ILS – Intralesional Steroid",
-    img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    img: "/images/treatments/keloid-ils.jpg",
     category: "hair-loss",
     description: "Intralesional Steroid (ILS) injections deliver corticosteroids directly into the affected scalp patches to suppress the autoimmune response causing alopecia areata, promoting rapid hair regrowth.",
     benefits: [
@@ -193,7 +193,7 @@ export const treatments: Treatment[] = [
   {
     id: "subcision",
     name: "Acne Subcision",
-    img: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
+    img: "/images/treatments/acneSubcision.webp",
     category: "acne-scar",
     description: "A specialized surgical procedure that releases tethered fibrotic bands binding deep acne scars to underlying tissue. This lifts depressed scars and promotes natural collagen remodeling.",
     benefits: [
@@ -218,7 +218,7 @@ export const treatments: Treatment[] = [
   {
     id: "mnrf",
     name: "MNRF Microneedling",
-    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    img: "/images/treatments/mnrf.webp",
     category: "acne-scar",
     description: "Microneedling Radiofrequency (MNRF) delivers controlled RF energy deep into the dermis through insulated micro-needles. This stimulates intense collagen and elastin production while sparing the epidermis.",
     benefits: [
@@ -244,7 +244,7 @@ export const treatments: Treatment[] = [
   {
     id: "tca-cross",
     name: "TCA Cross Scar Care",
-    img: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80",
+    img: "/images/treatments/tca cross.jpg",
     category: "acne-scar",
     description: "Chemical Reconstruction of Skin Scars (CROSS) using high-concentration Trichloroacetic Acid (TCA) applied precisely to individual ice-pick and narrow boxcar scars to trigger localized necrosis and skin rebuilding.",
     benefits: [
@@ -268,7 +268,7 @@ export const treatments: Treatment[] = [
   {
     id: "punch-excision",
     name: "Punch Excision of Scars",
-    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80",
+    img: "/images/treatments/Punch-Excision acne scar.png",
     category: "acne-scar",
     description: "A minor surgical procedure where deep, narrow ice-pick or deep boxcar scars are completely removed using a small punch biopsy tool, and the skin is stitched together to heal as a flat, unnoticeable line.",
     benefits: [
@@ -292,7 +292,7 @@ export const treatments: Treatment[] = [
   {
     id: "papular-scar",
     name: "Papular Scar Treatment",
-    img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+    img: "/images/treatments/Papular scar.jpg",
     category: "acne-scar",
     description: "Targeted therapy for elevated, bumpy papular scars (often found on the chin and nose) using ablative CO2 laser to flatten the raised fibrous tissue.",
     benefits: [
@@ -317,7 +317,7 @@ export const treatments: Treatment[] = [
   {
     id: "biofillers",
     name: "Biofillers for Scars",
-    img: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
+    img: "/images/treatments/Biofillers for Scars.jpg",
     category: "acne-scar",
     description: "Using your body's own natural plasma gel (Biofiller) combined with subcision to instantly volumize and lift deep rolling and boxcar scars, providing immediate aesthetic improvement and long-term collagen stimulation.",
     benefits: [
@@ -342,7 +342,7 @@ export const treatments: Treatment[] = [
   {
     id: "threads-acne-scars",
     name: "Threads for Acne Scars",
-    img: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80",
+    img: "/images/treatments/threads for acne scar.jpg",
     category: "acne-scar",
     description: "Absorbable PDO threads are strategically placed beneath acne scars to lift depressed tissue and stimulate collagen remodeling, providing gradual and natural scar improvement.",
     benefits: [
@@ -369,7 +369,7 @@ export const treatments: Treatment[] = [
   {
     id: "co2-laser-acne",
     name: "CO2 Laser for Acne Scars",
-    img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+    img: "/images/treatments/co2 laser.jpg",
     category: "acne-scar",
     description: "Fractional CO2 laser helps in resurfacing superficial scars. Ablative CO2 helps in shouldering and smoothening out scar edges. A great multistep treatment for improving acne scars.",
     benefits: [
@@ -394,7 +394,7 @@ export const treatments: Treatment[] = [
   {
     id: "prp-acne",
     name: "Platelet Rich Plasma for Acne Scars",
-    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    img: "/images/treatments/hair prp.webp",
     category: "acne-scar",
     description: "Utilizes the healing power of your own blood platelets to accelerate tissue repair and boost collagen production. Frequently used in combination with other scar treatments.",
     benefits: [
@@ -421,7 +421,7 @@ export const treatments: Treatment[] = [
   {
     id: "picolaser",
     name: "Picofacial Toning",
-    img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
+    img: "/images/treatments/pico-laser-toning.webp",
     category: "pigmentation",
     description: "Using ultra-short picosecond pulses of laser energy, this system shatters stubborn pigments into microscopic particles. Your immune system then clears these particles, resulting in a bright, even skin tone.",
     benefits: [
@@ -445,7 +445,7 @@ export const treatments: Treatment[] = [
   {
     id: "picofusion",
     name: "Picofusion Treatment",
-    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+    img: "/images/treatments/Picofusion Treatment.jpg",
     category: "pigmentation",
     description: "An advanced combination protocol linking picosecond laser toning with the transdermal delivery of potent brightening antioxidants like Glutathione and Vitamin C, targeting multiple pigment pathways.",
     benefits: [
@@ -470,7 +470,7 @@ export const treatments: Treatment[] = [
   {
     id: "cosmelan",
     name: "Cosmelan Peel",
-    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80",
+    img: "/images/treatments/cosmelan.jpg",
     category: "pigmentation",
     description: "The gold standard global depigmentation method. A two-stage professional treatment (in-clinic mask followed by a strict home-care routine) that highly regulates melanin synthesis and clears deep-seated pigment.",
     benefits: [
@@ -496,7 +496,7 @@ export const treatments: Treatment[] = [
   {
     id: "advanced-peels",
     name: "Advanced Chemical Peels",
-    img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+    img: "/images/treatments/chemical peel.jpg",
     category: "pigmentation",
     description: "Customized medical-grade chemical exfoliation blends (Salicylic, Glycolic, Lactic, TCA, and Yellow Peels) tailored to your skin type to lift away hyperpigmented epidermal layers and stimulate fresh, radiant skin.",
     benefits: [
@@ -522,7 +522,7 @@ export const treatments: Treatment[] = [
   {
     id: "iv-glutathione",
     name: "IV Glutathione",
-    img: "https://images.unsplash.com/photo-1584820927498-cafe8c1c9695?w=800&q=80",
+    img: "/images/treatments/IV Glutathione.jpg",
     category: "pigmentation",
     description: "Intravenous infusion of Glutathione and Vitamin C, a powerful master antioxidant therapy that neutralizes free radicals, detoxifies the liver, and uniformly brightens the skin from the inside out.",
     benefits: [
@@ -546,7 +546,7 @@ export const treatments: Treatment[] = [
   {
     id: "tattoo-removal",
     name: "Tattoo Removal",
-    img: "https://images.unsplash.com/photo-1590246814883-578aeccbd186?w=800&q=80",
+    img: "/images/treatments/tattoo removal.jpg",
     category: "pigmentation",
     description: "Advanced picosecond laser technology safely and effectively breaks down tattoo ink particles in the skin, allowing the body's immune system to naturally clear them over time.",
     benefits: [
@@ -572,7 +572,7 @@ export const treatments: Treatment[] = [
   {
     id: "excimer",
     name: "Excimer Laser Therapy",
-    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+    img: "/images/treatments/Excimer Laser Therapy.webp",
     category: "vitiligo",
     description: "A highly targeted monochromatic UVB light therapy delivering 308nm wavelength to patch areas. It stimulates dormant melanocytes in hair follicles to migrate and repigment vitiligo patches without affecting healthy skin.",
     benefits: [
@@ -597,7 +597,7 @@ export const treatments: Treatment[] = [
   {
     id: "mini-punch-grafting",
     name: "Mini Punch Grafting",
-    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80",
+    img: "/images/treatments/Mini Punch Grafting.jpg",
     category: "vitiligo",
     description: "A highly specialized surgical technique for stable vitiligo where tiny punches of normally pigmented skin (usually from the thigh or behind the ear) are transplanted into depigmented patches to seed new melanocytes.",
     benefits: [
@@ -621,7 +621,7 @@ export const treatments: Treatment[] = [
   {
     id: "5fu-microneedling",
     name: "5FU Microneedling",
-    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    img: "/images/treatments/5FU Microneedling.jpeg",
     category: "vitiligo",
     description: "A combination procedure using microneedling to create micro-channels in vitiligo patches, followed by the topical application of 5-Fluorouracil (5FU) to deeply stimulate local repigmentation pathways.",
     benefits: [
@@ -645,7 +645,7 @@ export const treatments: Treatment[] = [
   {
     id: "nces",
     name: "Non-Cultured Epidermal Suspension (NCES)",
-    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    img: "/images/treatments/nces vitiligo.jpg",
     category: "vitiligo",
     description: "An advanced cellular grafting technique where a small donor skin sample is processed to separate melanocytes and keratinocytes, which are then transplanted as a suspension onto the dermabraded vitiligo patch. Ideal for treating larger areas.",
     benefits: [
@@ -668,7 +668,7 @@ export const treatments: Treatment[] = [
   {
     id: "blister-grafting",
     name: "Blister Skin Grafting",
-    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80",
+    img: "/images/treatments/nces vitiligo.jpg",
     category: "vitiligo",
     description: "A specialized surgical technique that uses suction to create a blister on normal pigmented skin (donor site). The roof of the blister, containing melanocytes, is carefully removed and transplanted to the vitiligo patch.",
     benefits: [
@@ -693,7 +693,7 @@ export const treatments: Treatment[] = [
   {
     id: "skin-tag",
     name: "Skin Tag Removal",
-    img: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&q=80",
+    img: "/images/treatments/Skin Tag Removal.webp",
     category: "dermatosurgery",
     description: "Quick, safe removal of benign skin tags and growths using radiofrequency electrocautery under local numbing, resulting in clean, flat skin healing.",
     benefits: [
@@ -717,7 +717,7 @@ export const treatments: Treatment[] = [
   {
     id: "milia",
     name: "Milia Extraction",
-    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
+    img: "/images/treatments/Milia Extraction.png",
     category: "dermatosurgery",
     description: "Meticulous sterile extraction of deep, keratin-filled cysts (milia) using a fine micro-lance to restore a smooth skin surface.",
     benefits: [
@@ -741,7 +741,7 @@ export const treatments: Treatment[] = [
   {
     id: "earlobe",
     name: "Surgical Ear Lobe Repair",
-    img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
+    img: "/images/treatments/ear lobe 1.png",
     category: "dermatosurgery",
     description: "Surgical closure of split, torn, or stretched earlobes under local anesthesia to restore an aesthetic, unified shape suitable for re-piercing.",
     benefits: [
@@ -764,7 +764,7 @@ export const treatments: Treatment[] = [
   {
     id: "non-surgical-earlobe",
     name: "Non-Surgical Ear Lobe Repair",
-    img: "https://images.unsplash.com/photo-1599839619722-39751411ea63?w=800&q=80",
+    img: "/images/treatments/Non-Surgical Ear Lobe Repair.jpeg",
     category: "dermatosurgery",
     description: "Meant for minor defects, this procedure uses TCA to seal the hole without surgery. It is performed in sterile conditions by an expert dermatologist.",
     benefits: [
@@ -786,7 +786,7 @@ export const treatments: Treatment[] = [
   {
     id: "ear-piercing",
     name: "Ear Piercing",
-    img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&q=80",
+    img: "/images/treatments/ear lobe 1.png",
     category: "dermatosurgery",
     description: "Safe, sterile ear piercing performed by a dermatologist using the advanced Inverness system. We offer a variety of earring options.",
     benefits: [
@@ -809,7 +809,7 @@ export const treatments: Treatment[] = [
   {
     id: "biopsy",
     name: "Diagnostic Skin Biopsy",
-    img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80",
+    img: "/images/treatments/Skin Biopsy.jpg",
     category: "dermatosurgery",
     description: "A small, precise diagnostic sample of skin tissue is taken (excision biopsy and punch biopsy 4mm only) under local anesthesia and sent for dermatopathological evaluation to determine the exact diagnosis of skin conditions.",
     benefits: [
@@ -832,7 +832,7 @@ export const treatments: Treatment[] = [
   {
     id: "molluscum-needling",
     name: "Molluscum Needling",
-    img: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&q=80",
+    img: "/images/treatments/Molluscum Needling.jpg",
     category: "dermatosurgery",
     description: "A highly effective, straightforward procedure to clear Molluscum Contagiosum lesions. A sterile needle is used to carefully extract the viral core from each bump, halting the spread of the infection.",
     benefits: [
@@ -856,7 +856,7 @@ export const treatments: Treatment[] = [
   {
     id: "ingrown-toenail",
     name: "Ingrown Toenail Surgery",
-    img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
+    img: "/images/treatments/Ingrown Toenail Surgery.jpg",
     category: "dermatosurgery",
     description: "Surgical intervention for painful, infected ingrown toenails. The procedure involves partial nail avulsion (removing the ingrown edge) and chemical matrixectomy to prevent the nail from growing inward again.",
     benefits: [
@@ -881,7 +881,7 @@ export const treatments: Treatment[] = [
   {
     id: "lump-excision",
     name: "Excision of Lumps & Bumps",
-    img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80",
+    img: "/images/treatments/Excision of Lumps & Bumps.jpg",
     category: "dermatosurgery",
     description: "Minor surgical removal of benign subcutaneous lesions such as lipomas, epidermoid cysts, and dermatofibromas. The mass is carefully excised under local anesthesia and stitched for an aesthetic outcome.",
     benefits: [
@@ -906,7 +906,7 @@ export const treatments: Treatment[] = [
   {
     id: "keloid-scar",
     name: "Keloid & Hypertrophic Scar Treatment",
-    img: "https://images.unsplash.com/photo-1584820927498-cafe8c1c9695?w=800&q=80",
+    img: "/images/treatments/keloid-ils.jpg",
     category: "dermatosurgery",
     description: "A powerful combination treatment utilizing CO2 laser, intralesional steroids, and triple combination injections to significantly flatten and improve the appearance of keloids and hypertrophic scars.",
     benefits: [
@@ -932,7 +932,7 @@ export const treatments: Treatment[] = [
   {
     id: "skin-hair-nail-consult",
     name: "Skin, Hair & Nail Consultations",
-    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+    img: "/images/clinic/consultation.jpg",
     category: "medical-dermatology",
     description: "Comprehensive clinical evaluation and personalized treatment plans for all conditions affecting the skin, hair, and nails — from common concerns to complex disorders.",
     benefits: [
@@ -948,7 +948,7 @@ export const treatments: Treatment[] = [
   {
     id: "dermoscopy-trichoscopy",
     name: "Dermoscopy, Trichoscopy & Onychoscopy",
-    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    img: "/images/clinic/consultation (2).jpg",
     category: "medical-dermatology",
     description: "Advanced non-invasive diagnostic imaging techniques using specialized magnification to evaluate skin lesions, hair/scalp disorders, and nail conditions with precision.",
     benefits: [
@@ -964,7 +964,7 @@ export const treatments: Treatment[] = [
   {
     id: "psoriasis",
     name: "Psoriasis",
-    img: "https://images.unsplash.com/photo-1631549916768-4e9861544f17?w=800&q=80",
+    img: "/images/medical/psoriasis.jpg",
     category: "medical-dermatology",
     description: "Comprehensive management of psoriasis — a chronic autoimmune condition causing red, scaly patches on the skin. We offer topical, systemic, and biologic treatment options.",
     benefits: [
@@ -980,7 +980,7 @@ export const treatments: Treatment[] = [
   {
     id: "infections",
     name: "Infections (Fungal, Viral, Parasitic)",
-    img: "https://images.unsplash.com/photo-1583912086096-8c60d75a53f9?w=800&q=80",
+    img: "/images/medical/tinea.jpg",
     category: "medical-dermatology",
     description: "Diagnosis and treatment of skin infections caused by fungi (ringworm, candidiasis), viruses (warts, herpes, molluscum), and parasites (scabies, lice).",
     benefits: [
@@ -996,7 +996,7 @@ export const treatments: Treatment[] = [
   {
     id: "immunobullous",
     name: "Immunobullous Diseases",
-    img: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80",
+    img: "/images/medical/bullus pemphigoid.jpg",
     category: "medical-dermatology",
     description: "Specialized management of autoimmune blistering disorders such as pemphigus and bullous pemphigoid, requiring expert clinical evaluation and long-term immunosuppressive care.",
     benefits: [
@@ -1012,7 +1012,7 @@ export const treatments: Treatment[] = [
   {
     id: "autoimmune-derm",
     name: "Autoimmune Dermatology",
-    img: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80",
+    img: "/images/medical/skin allergy.png",
     category: "medical-dermatology",
     description: "Expert management of skin manifestations of autoimmune conditions including Systemic Lupus Erythematosus (SLE), Scleroderma, and Dermatomyositis.",
     benefits: [
@@ -1028,7 +1028,7 @@ export const treatments: Treatment[] = [
   {
     id: "pediatric-derm",
     name: "Pediatric Dermatology",
-    img: "https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=800&q=80",
+    img: "/images/medical/impetigo.png",
     category: "medical-dermatology",
     description: "Gentle, specialized dermatological care for infants, children, and adolescents — covering eczema, birthmarks, rashes, infections, and all pediatric skin conditions.",
     benefits: [
@@ -1044,7 +1044,7 @@ export const treatments: Treatment[] = [
   {
     id: "skin-allergy",
     name: "Skin Allergy",
-    img: "https://images.unsplash.com/photo-1612776572997-76cc42e058c3?w=800&q=80",
+    img: "/images/medical/skin allergy.png",
     category: "medical-dermatology",
     description: "Diagnosis and management of allergic skin conditions including urticaria (hives), eczema, atopic dermatitis, and contact dermatitis — identifying triggers and providing lasting relief.",
     benefits: [
@@ -1060,7 +1060,7 @@ export const treatments: Treatment[] = [
   {
     id: "hair-conditions",
     name: "Hair Disorders",
-    img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+    img: "/images/medical/Hair Disorders.webp",
     category: "medical-dermatology",
     description: "Clinical evaluation and treatment of hair loss, dandruff, scalp infections, and other hair and scalp disorders using evidence-based dermatological approaches.",
     benefits: [
@@ -1078,7 +1078,7 @@ export const treatments: Treatment[] = [
   {
     id: "ndyag-laser-hair",
     name: "Long Pulsed Nd:YAG Laser",
-    img: "https://images.unsplash.com/photo-1590246814883-578aeccbd186?w=800&q=80",
+    img: "/images/treatments/pico-laser-toning.webp",
     category: "laser-hair",
     description: "A highly effective laser hair reduction system specifically safe for darker skin types (Fitzpatrick IV-VI). It bypasses the epidermis to target the deep hair follicles.",
     benefits: [
@@ -1102,7 +1102,7 @@ export const treatments: Treatment[] = [
   {
     id: "diode-laser-hair",
     name: "Quadruple Wavelength Diode Laser",
-    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    img: "/images/treatments/mnrf.webp",
     category: "laser-hair",
     description: "An advanced, virtually painless laser system that combines four wavelengths simultaneously to target different depths of the hair follicle for maximum clearance.",
     benefits: [
@@ -1128,7 +1128,7 @@ export const treatments: Treatment[] = [
   {
     id: "skin-boosters",
     name: "Skin Boosters",
-    img: "https://images.unsplash.com/photo-1613256086776-805c6d3bc0a6?w=800&q=80",
+    img: "/images/treatments/Skin Boosters (Restylane Vital, Juvederm Volite).jpg",
     category: "anti-ageing",
     description: "Skin boosters are microinjections of hyaluronic acid that deeply hydrate the skin, improve elasticity, and enhance overall skin quality.",
     benefits: [
@@ -1153,7 +1153,7 @@ export const treatments: Treatment[] = [
   {
     id: "profhilo",
     name: "Profhilo",
-    img: "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?w=800&q=80",
+    img: "/images/treatments/Profhilo.webp",
     category: "anti-ageing",
     description: "Profhilo is an injectable bio-remodeling treatment of pure hyaluronic acid that stimulates collagen and elastin production while deeply hydrating the skin.",
     benefits: [
@@ -1183,7 +1183,7 @@ export const treatments: Treatment[] = [
   {
     id: "nctf",
     name: "NCTF",
-    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    img: "/images/treatments/nctf.jpg",
     category: "anti-ageing",
     description: "New Cellular Treatment Factor (NCTF) is a unique anti-aging, poly-revitalizing complex comprising over 50 active ingredients (vitamins, amino acids, minerals) injected superficially.",
     benefits: [
@@ -1201,7 +1201,7 @@ export const treatments: Treatment[] = [
   {
     id: "jalupro",
     name: "Jalupro",
-    img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+    img: "/images/treatments/jalupro.jpg",
     category: "anti-ageing",
     description: "An injectable amino acid replacement therapy combined with hyaluronic acid. It acts as a bio-revitalizer to dramatically improve skin texture and minimize wrinkles.",
     benefits: [
@@ -1219,7 +1219,7 @@ export const treatments: Treatment[] = [
   {
     id: "pdrn-pn",
     name: "PDRN/PN (Salmon DNA Therapy)",
-    img: "https://images.unsplash.com/photo-1590246814883-578aeccbd186?w=800&q=80",
+    img: "/images/treatments/pdrm.jpg",
     category: "anti-ageing",
     description: "Harnessing Polynucleotides (PN) and Polydeoxyribonucleotide (PDRN) derived from salmon DNA, this advanced treatment repairs damaged skin at a cellular level and intensely promotes tissue regeneration.",
     benefits: [
@@ -1237,7 +1237,7 @@ export const treatments: Treatment[] = [
   {
     id: "exosome",
     name: "Exosome Therapy",
-    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80",
+    img: "/images/treatments/Exosome Therapy.jpg",
     category: "anti-ageing",
     description: "The frontier of regenerative aesthetics. Billions of stem cell-derived exosomes are delivered into the skin to dramatically signal cellular repair, collagen production, and profound rejuvenation.",
     benefits: [
@@ -1255,7 +1255,7 @@ export const treatments: Treatment[] = [
   {
     id: "fillers",
     name: "Dermal Fillers",
-    img: "https://images.unsplash.com/photo-1613256086776-805c6d3bc0a6?w=800&q=80",
+    img: "/images/treatments/fillers.jpg",
     category: "anti-ageing",
     description: "Hyaluronic acid-based injectable gels that restore facial volume, improve contour, and soften static wrinkles that are tailored to enhance facial balance while maintaining natural proportions.",
     benefits: [
@@ -1287,7 +1287,7 @@ export const treatments: Treatment[] = [
   {
     id: "facial-threads",
     name: "Facial Threads for Lifting",
-    img: "https://images.unsplash.com/photo-1599839619722-39751411ea63?w=800&q=80",
+    img: "/images/treatments/Thread-Lifting-Procedure-.webp",
     category: "anti-ageing",
     description: "A minimally invasive alternative to a surgical facelift. Absorbable cogged threads are inserted beneath the skin to physically lift sagging tissue (jowls, cheeks) while stimulating localized collagen.",
     benefits: [
@@ -1305,7 +1305,7 @@ export const treatments: Treatment[] = [
   {
     id: "hifu",
     name: "HIFU (High-Intensity Focused Ultrasound)",
-    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+    img: "/images/treatments/hifu.avif",
     category: "anti-ageing",
     description: "HIFU is a non-surgical skin-tightening treatment that delivers focused ultrasound energy to deeper skin layers, stimulating collagen remodeling for gradual lifting and firming.",
     benefits: [
@@ -1330,7 +1330,7 @@ export const treatments: Treatment[] = [
   {
     id: "botulinum-toxin",
     name: "Botulinum Toxin (Botox)",
-    img: "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?w=800&q=80",
+    img: "/images/treatments/botox.jpg",
     category: "anti-ageing",
     description: "Botulinum toxin is a purified neuroprotein that temporarily relaxes targeted facial muscles responsible for dynamic wrinkles and also softens expression lines while maintaining natural facial movement.",
     benefits: [

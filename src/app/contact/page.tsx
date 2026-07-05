@@ -171,7 +171,7 @@ export default function ContactPage() {
               <h3 className="text-sm font-bold text-[#5B1F6A] mb-1.5">WhatsApp</h3>
               <p className="text-xs text-[#6B6570] mb-3">Chat with us instantly</p>
               <a
-                href="https://wa.me/918870445185?text=Hi%20Amethyst%20Skin%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                href="https://u.tatvacare.in/r/mDN7hS"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:opacity-90 transition-opacity duration-300"

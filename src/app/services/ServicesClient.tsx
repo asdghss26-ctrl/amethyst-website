@@ -39,13 +39,13 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    setTimeout(() => setMounted(true), 0);
   }, []);
 
   // Sync category state from initial prop if it changes
   useEffect(() => {
     if (initialCategory && CATEGORIES.some((c) => c.id === initialCategory)) {
-      setActiveCategory(initialCategory as Treatment["category"]);
+      setTimeout(() => setActiveCategory(initialCategory as Treatment["category"]), 0);
     }
   }, [initialCategory]);
 
