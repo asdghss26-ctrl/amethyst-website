@@ -22,9 +22,10 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Amethyst - Advanced Dermatology & Aesthetics",
+  title: "Amethyst Skin Clinic | Best Dermatologist in Navalur, Chennai",
   description:
-    "Advanced dermatology and aesthetic treatments for clear, healthy skin. Book a consultation with Amethyst's board-certified skin specialists today.",
+    "Looking for the best dermatologist in Navalur, Chennai? Amethyst Skin Clinic offers advanced dermatology and aesthetic treatments for clear, healthy skin.",
+  keywords: ["Navalur Dermatologist", "Skin Clinic Navalur", "Best Dermatologist in Navalur", "Skin Doctor Navalur", "Chennai Dermatologist"],
 };
 
 export const viewport = {

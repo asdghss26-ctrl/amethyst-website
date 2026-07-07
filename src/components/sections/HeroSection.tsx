@@ -109,8 +109,8 @@ export default function Hero() {
             <p className="text-sm md:text-xl tracking-[0.25em] font-medium text-white mt-0 animate-slide-up-fade" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
               SKIN CLINIC
             </p>
-            <p className="text-[10px] md:text-sm tracking-[0.15em] uppercase text-white mt-0.5 font-medium animate-letter-expand" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
-              MEDICAL &amp; AESTHETIC DERMATOLOGY
+            <p className="text-[10px] md:text-sm tracking-[0.15em] uppercase text-white mt-0.5 font-medium animate-letter-expand text-center" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
+              MEDICAL &amp; AESTHETIC DERMATOLOGY <br className="md:hidden" /> IN NAVALUR, CHENNAI
             </p>
           </div>
         </div>
