@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     date: "January 28, 2026",
     title: "How to choose the right skincare products for your skin type",
     featured: true,
-    image: "/images/clinic/consultation.jpg",
+    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
     introduction: "Navigating the skincare aisle can feel overwhelming. With thousands of products claiming to transform your skin, the secret to success starts with one fundamental step: understanding your specific skin type. Using products incompatible with your skin can disrupt its natural barrier, leading to breakouts, irritation, or dryness.",
     sections: [
       {
@@ -50,7 +50,7 @@ export const blogPosts: BlogPost[] = [
     date: "January 28, 2026",
     title: "When to start using anti-aging products",
     featured: false,
-    image: "/images/treatments/anti aging image.jpg",
+    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80",
     introduction: "In dermatology, prevention is infinitely easier than correction. One of the most frequent questions patients ask is: 'At what age should I start using anti-aging products?' While there is no single magical birthday, the optimal window to initiate a preventative skincare routine begins in your mid-20s.",
     sections: [
       {
@@ -78,7 +78,7 @@ export const blogPosts: BlogPost[] = [
     date: "January 28, 2026",
     title: "How stress affects your skin health",
     featured: false,
-    image: "/images/medical/skin allergy.png",
+    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80",
     introduction: "Have you ever noticed a stubborn breakout appearing right before a major presentation or exam? It's not a coincidence. Your skin and brain are intricately connected through a complex network of nerves, hormones, and chemical messengers. In dermatology, this relationship is studied under the field of psychodermatology.",
     sections: [
       {
@@ -106,7 +106,7 @@ export const blogPosts: BlogPost[] = [
     date: "January 26, 2026",
     title: "Chemical peels: what to expect before and after",
     featured: false,
-    image: "/images/treatments/chemical peel.jpg",
+    image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80",
     introduction: "Chemical peels are highly effective clinical skin-resurfacing treatments that use controlled dermatological acids (such as glycolic, lactic, or salicylic acids) to deeply exfoliate the skin. By removing damaged outer layers, peels stimulate cellular regeneration to address acne, hyperpigmentation, uneven texture, and fine lines.",
     sections: [
       {

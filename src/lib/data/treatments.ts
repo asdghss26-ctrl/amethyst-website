@@ -175,7 +175,7 @@ export const treatments: Treatment[] = [
   {
     id: "ils-alopecia",
     name: "ILS – Intralesional Steroid",
-    img: "/images/treatments/mesotherapy.png",
+    img: "/images/treatments/keloid-ils.jpg",
     category: "hair-loss",
     description: "Intralesional Steroid (ILS) injections deliver corticosteroids directly into the affected scalp patches to suppress the autoimmune response causing alopecia areata, promoting rapid hair regrowth.",
     benefits: [
@@ -394,7 +394,7 @@ export const treatments: Treatment[] = [
   {
     id: "prp-acne",
     name: "Platelet Rich Plasma for Acne Scars",
-    img: "/images/treatments/prp-acne-scars.png",
+    img: "/images/treatments/hair prp.webp",
     category: "acne-scar",
     description: "Utilizes the healing power of your own blood platelets to accelerate tissue repair and boost collagen production. Frequently used in combination with other scar treatments.",
     benefits: [
@@ -1078,7 +1078,7 @@ export const treatments: Treatment[] = [
   {
     id: "ndyag-laser-hair",
     name: "Long Pulsed Nd:YAG Laser",
-    img: "/images/treatments/ndyag-laser-hair.png",
+    img: "/images/treatments/pico-laser-toning.webp",
     category: "laser-hair",
     description: "A highly effective laser hair reduction system specifically safe for darker skin types (Fitzpatrick IV-VI). It bypasses the epidermis to target the deep hair follicles.",
     benefits: [
@@ -1102,7 +1102,7 @@ export const treatments: Treatment[] = [
   {
     id: "diode-laser-hair",
     name: "Quadruple Wavelength Diode Laser",
-    img: "/images/treatments/diode-laser-hair.png",
+    img: "/images/treatments/mnrf.webp",
     category: "laser-hair",
     description: "An advanced, virtually painless laser system that combines four wavelengths simultaneously to target different depths of the hair follicle for maximum clearance.",
     benefits: [
