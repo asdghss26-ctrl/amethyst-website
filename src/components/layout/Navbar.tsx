@@ -55,15 +55,15 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className={`text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300 ${
+                  className={`flex items-center gap-1 text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300 ${
                     showAlt
                       ? "text-white hover:text-white/70"
                       : "text-[#2E2E2E] hover:text-[#5A2A5D]"
                   }`}
                 >
                   {item.label}
-                  <svg className="inline-block w-3 h-3 ml-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </Link>
 
