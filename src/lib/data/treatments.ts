@@ -764,7 +764,7 @@ export const treatments: Treatment[] = [
   {
     id: "non-surgical-earlobe",
     name: "Non-Surgical Ear Lobe Repair",
-    img: "/images/treatments/Non-Surgical Ear Lobe Repair.jpeg",
+    img: "/images/treatments/ear lobe 1.png",
     category: "dermatosurgery",
     description: "Meant for minor defects, this procedure uses TCA to seal the hole without surgery. It is performed in sterile conditions by an expert dermatologist.",
     benefits: [
