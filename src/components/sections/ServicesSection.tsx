@@ -24,7 +24,7 @@ export default function Services() {
         </Reveal>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-[12px] md:gap-6">
-          {services.slice(0, 4).map((s, i) => (
+          {services.map((s, i) => (
             <Link key={s.id} href={`/services?category=${s.id}`}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
