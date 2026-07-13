@@ -99,14 +99,14 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
 
       {/* ─── CATEGORY TABS ─── */}
       <section className="max-w-5xl mx-auto px-6 mb-12">
-        <div className="flex overflow-x-auto pb-4 scrollbar-none gap-2.5 border-b border-[#E4DFE8] -mx-6 px-6 md:mx-0 md:px-0">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-3 pb-6 border-b border-[#E4DFE8]">
           {CATEGORIES.map((cat, idx) => {
             const isActive = activeCategory === cat.id;
             return (
               <button
                 key={cat.id}
                 onClick={() => handleCategoryChange(cat.id as Treatment["category"])}
-                className={`flex-shrink-0 flex items-center gap-2 text-xs md:text-sm font-semibold uppercase tracking-[0.1em] px-6 py-3.5 rounded-full transition-all duration-300 ${
+                className={`flex items-center justify-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-2 sm:px-4 py-3 sm:py-3.5 rounded-xl sm:rounded-full transition-all duration-300 ${
                   isActive
                     ? "bg-[#5A2A5D] text-white shadow-md shadow-[#5A2A5D]/10"
                     : "bg-white text-[#2E2E2E] border border-[#E4DFE8] hover:border-[#8E5C8F]"
