@@ -175,7 +175,7 @@ export const treatments: Treatment[] = [
   {
     id: "ils-alopecia",
     name: "ILS – Intralesional Steroid",
-    img: "/images/treatments/keloid-ils.jpg",
+    img: "/images/treatments/ILS.jpeg",
     category: "hair-loss",
     description: "Intralesional Steroid (ILS) injections deliver corticosteroids directly into the affected scalp patches to suppress the autoimmune response causing alopecia areata, promoting rapid hair regrowth.",
     benefits: [
@@ -394,7 +394,7 @@ export const treatments: Treatment[] = [
   {
     id: "prp-acne",
     name: "Platelet Rich Plasma for Acne Scars",
-    img: "/images/treatments/hair prp.webp",
+    img: "/images/treatments/Platelet Rich Plasma.jpeg",
     category: "acne-scar",
     description: "Utilizes the healing power of your own blood platelets to accelerate tissue repair and boost collagen production. Frequently used in combination with other scar treatments.",
     benefits: [
@@ -645,7 +645,7 @@ export const treatments: Treatment[] = [
   {
     id: "nces",
     name: "Non-Cultured Epidermal Suspension (NCES)",
-    img: "/images/treatments/nces vitiligo.jpg",
+    img: "/images/treatments/NCES.jpeg",
     category: "vitiligo",
     description: "An advanced cellular grafting technique where a small donor skin sample is processed to separate melanocytes and keratinocytes, which are then transplanted as a suspension onto the dermabraded vitiligo patch. Ideal for treating larger areas.",
     benefits: [
@@ -668,7 +668,7 @@ export const treatments: Treatment[] = [
   {
     id: "blister-grafting",
     name: "Blister Skin Grafting",
-    img: "/images/treatments/nces vitiligo.jpg",
+    img: "/images/treatments/Blister skin graft.jpeg",
     category: "vitiligo",
     description: "A specialized surgical technique that uses suction to create a blister on normal pigmented skin (donor site). The roof of the blister, containing melanocytes, is carefully removed and transplanted to the vitiligo patch.",
     benefits: [
@@ -741,7 +741,7 @@ export const treatments: Treatment[] = [
   {
     id: "earlobe",
     name: "Surgical Ear Lobe Repair",
-    img: "/images/treatments/ear lobe 1.png",
+    img: "/images/treatments/surgical ear lobe repair.jpeg",
     category: "dermatosurgery",
     description: "Surgical closure of split, torn, or stretched earlobes under local anesthesia to restore an aesthetic, unified shape suitable for re-piercing.",
     benefits: [
@@ -786,7 +786,7 @@ export const treatments: Treatment[] = [
   {
     id: "ear-piercing",
     name: "Ear Piercing",
-    img: "/images/treatments/ear lobe 1.png",
+    img: "/images/treatments/ear piercing.jpg",
     category: "dermatosurgery",
     description: "Safe, sterile ear piercing performed by a dermatologist using the advanced Inverness system. We offer a variety of earring options.",
     benefits: [
@@ -1012,7 +1012,7 @@ export const treatments: Treatment[] = [
   {
     id: "autoimmune-derm",
     name: "Autoimmune Dermatology",
-    img: "/images/medical/skin allergy.png",
+    img: "/images/medical/Autoimmune Dermatology.png",
     category: "medical-dermatology",
     description: "Expert management of skin manifestations of autoimmune conditions including Systemic Lupus Erythematosus (SLE), Scleroderma, and Dermatomyositis.",
     benefits: [
@@ -1078,7 +1078,7 @@ export const treatments: Treatment[] = [
   {
     id: "ndyag-laser-hair",
     name: "Long Pulsed Nd:YAG Laser",
-    img: "/images/treatments/pico-laser-toning.webp",
+    img: "/images/treatments/Long Pulsed NdYAG Laser.jpg",
     category: "laser-hair",
     description: "A highly effective laser hair reduction system specifically safe for darker skin types (Fitzpatrick IV-VI). It bypasses the epidermis to target the deep hair follicles.",
     benefits: [
@@ -1102,7 +1102,7 @@ export const treatments: Treatment[] = [
   {
     id: "diode-laser-hair",
     name: "Quadruple Wavelength Diode Laser",
-    img: "/images/treatments/mnrf.webp",
+    img: "/images/treatments/Quadruple Wavelength Diode Laser.webp",
     category: "laser-hair",
     description: "An advanced, virtually painless laser system that combines four wavelengths simultaneously to target different depths of the hair follicle for maximum clearance.",
     benefits: [
@@ -1153,7 +1153,7 @@ export const treatments: Treatment[] = [
   {
     id: "profhilo",
     name: "Profhilo",
-    img: "/images/treatments/Profhilo.webp",
+    img: "/images/treatments/Profhilo.jpg",
     category: "anti-ageing",
     description: "Profhilo is an injectable bio-remodeling treatment of pure hyaluronic acid that stimulates collagen and elastin production while deeply hydrating the skin.",
     benefits: [

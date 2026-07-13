@@ -24,7 +24,7 @@ export default function About() {
             <Reveal delay={0.3}>
               <div className="relative rounded-[24px] overflow-hidden w-full h-[280px] md:h-[360px]">
                 <Image
-                  src="/images/clinic/mosaic-1.jpg"
+                  src="/images/clinic/about-clinic-home.jpg"
                   alt="Amethyst Skin Clinic interior"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
