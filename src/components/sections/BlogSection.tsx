@@ -31,7 +31,7 @@ export default function Blog() {
               href={`/blog/${featured.id}`}
               className="card-hover bg-white border border-[#E4DFE8] rounded-[40px] overflow-hidden hover:shadow-lg transition-all duration-300 group block"
             >
-              <div className="relative w-full h-52 overflow-hidden">
+              <div className="relative w-full h-52 md:h-80 lg:h-96 overflow-hidden bg-[#FBF8F5]">
                 <Image src={featured.image} alt="" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-300 group-hover:scale-105" />
               </div>
               <div className="p-8">
