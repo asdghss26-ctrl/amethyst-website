@@ -6,7 +6,7 @@ import { galleryBadge, galleryHeading } from '@/lib/data/about'
 
 const galleryImages = [
   { src: '/images/clinic/reception area.jpg', alt: 'Reception Area' },
-  { src: '/images/clinic/consultation.jpg', alt: 'Consultation Room' },
+  { src: '/images/clinic/about-clinic-home.jpg', alt: 'Procedure Room' },
   { src: '/images/clinic/consultation (2).jpg', alt: 'Patient Consultation' },
   { src: '/images/clinic/clinic entrance.jpg', alt: 'Clinic Entrance' },
   { src: '/images/clinic/waiting area.jpg', alt: 'Waiting Area' },
