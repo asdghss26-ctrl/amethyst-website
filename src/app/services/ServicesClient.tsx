@@ -144,7 +144,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
                     alt={t.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`object-cover transition-transform duration-700 group-hover:scale-105 ${t.id === 'picofusion' ? 'object-bottom' : ''}`}
                   />
                 </div>
 
@@ -386,7 +386,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
                     alt={selectedTreatment.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 600px"
-                    className="object-cover"
+                    className={`object-cover ${selectedTreatment.id === 'picofusion' ? 'object-bottom' : ''}`}
                   />
                 </div>
 
