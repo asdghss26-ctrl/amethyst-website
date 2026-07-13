@@ -144,7 +144,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
                     alt={t.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className={`${t.id === 'dermoscopy-trichoscopy' ? 'object-contain bg-white' : 'object-cover'} transition-transform duration-700 group-hover:scale-105 ${['picofusion', 'earlobe'].includes(t.id) ? 'object-bottom' : ''}`}
+                    className={`object-cover transition-transform duration-700 group-hover:scale-105 ${['picofusion', 'earlobe'].includes(t.id) ? 'object-bottom' : ''}`}
                   />
                 </div>
 
@@ -386,7 +386,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
                     alt={selectedTreatment.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 600px"
-                    className={`${selectedTreatment.id === 'dermoscopy-trichoscopy' ? 'object-contain bg-white' : 'object-cover'} ${['picofusion', 'earlobe'].includes(selectedTreatment.id) ? 'object-bottom' : ''}`}
+                    className={`object-cover ${['picofusion', 'earlobe'].includes(selectedTreatment.id) ? 'object-bottom' : ''}`}
                   />
                 </div>
 
