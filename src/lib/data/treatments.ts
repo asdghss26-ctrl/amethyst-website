@@ -1153,7 +1153,7 @@ export const treatments: Treatment[] = [
   {
     id: "profhilo",
     name: "Profhilo",
-    img: "/images/treatments/Profhilo.jpg",
+    img: "/images/treatments/profhilo_dark_skin.png",
     category: "anti-ageing",
     description: "Profhilo is an injectable bio-remodeling treatment of pure hyaluronic acid that stimulates collagen and elastin production while deeply hydrating the skin.",
     benefits: [
