@@ -948,7 +948,7 @@ export const treatments: Treatment[] = [
   {
     id: "dermoscopy-trichoscopy",
     name: "Dermoscopy, Trichoscopy & Onychoscopy",
-    img: "/images/clinic/consultation (2).jpg",
+    img: "/images/treatments/Dermoscopy, Trichoscopy.jpg",
     category: "medical-dermatology",
     description: "Advanced non-invasive diagnostic imaging techniques using specialized magnification to evaluate skin lesions, hair/scalp disorders, and nail conditions with precision.",
     benefits: [
