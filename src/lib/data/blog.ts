@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     date: "January 28, 2026",
     title: "How to choose the right skincare products for your skin type",
     featured: true,
-    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+    image: "/images/blog/How to choose the right skincare products for your skin type.webp",
     introduction: "Navigating the skincare aisle can feel overwhelming. With thousands of products claiming to transform your skin, the secret to success starts with one fundamental step: understanding your specific skin type. Using products incompatible with your skin can disrupt its natural barrier, leading to breakouts, irritation, or dryness.",
     sections: [
       {
