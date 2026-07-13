@@ -124,7 +124,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
       <section className="max-w-5xl mx-auto px-6 mb-24">
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8"
         >
           <AnimatePresence mode="popLayout">
             {filteredTreatments.map((t, idx) => (
@@ -138,7 +138,7 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
                 className="group bg-white rounded-[32px] border border-[#E4DFE8] overflow-hidden flex flex-col hover:border-[#8E5C8F] hover:shadow-xl transition-all duration-500"
               >
                 {/* Image */}
-                <div className="relative w-full h-[220px] overflow-hidden bg-[#FBF8F5] rounded-t-xl">
+                <div className="relative w-full h-[140px] md:h-[220px] overflow-hidden bg-[#FBF8F5] rounded-t-xl">
                   <Image
                     src={t.img}
                     alt={t.name}
@@ -149,20 +149,20 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
                 </div>
 
                 {/* Details */}
-                <div className="p-6 flex-grow flex flex-col justify-between">
+                <div className="p-3 md:p-6 flex-grow flex flex-col justify-between">
                   <div>
                     <h3
-                      className="text-xl md:text-2xl text-[#2E2E2E] mb-3 group-hover:text-[#5A2A5D] transition-colors"
+                      className="text-[15px] md:text-2xl text-[#2E2E2E] mb-2 md:mb-3 group-hover:text-[#5A2A5D] transition-colors leading-tight"
                       style={{ fontFamily: "var(--font-dm-serif), serif" }}
                     >
                       {t.name}
                     </h3>
-                    <p className="text-[13px] text-[#6B6570] leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-[11px] md:text-[13px] text-[#6B6570] leading-relaxed mb-4 md:mb-6 line-clamp-3">
                       {t.description}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#F5F0E8]">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-auto pt-3 md:pt-4 border-t border-[#F5F0E8] gap-2 sm:gap-0">
                     <span className="text-[11px] font-medium text-[#9A94A0]">
                       Downtime: <span className="text-[#2E2E2E]">{t.downtime.split(" ")[0]}</span>
                     </span>
