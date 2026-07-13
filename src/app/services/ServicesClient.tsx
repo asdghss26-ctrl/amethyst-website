@@ -106,14 +106,14 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
               <button
                 key={cat.id}
                 onClick={() => handleCategoryChange(cat.id as Treatment["category"])}
-                className={`flex items-center justify-start gap-2 text-left text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl sm:rounded-full transition-all duration-300 ${
+                className={`flex items-center justify-start gap-2 text-left text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-3 sm:px-4 h-14 sm:h-[60px] w-full rounded-xl sm:rounded-full transition-all duration-300 ${
                   isActive
                     ? "bg-[#5A2A5D] text-white shadow-md shadow-[#5A2A5D]/10"
                     : "bg-white text-[#2E2E2E] border border-[#E4DFE8] hover:border-[#8E5C8F]"
                 }`}
               >
-                <span className={isActive ? "text-white" : "text-[#8E5C8F]"}>{cat.icon}</span>
-                {cat.label}
+                <span className={`flex-shrink-0 ${isActive ? "text-white" : "text-[#8E5C8F]"}`}>{cat.icon}</span>
+                <span className="leading-tight line-clamp-2">{cat.label}</span>
               </button>
             );
           })}
