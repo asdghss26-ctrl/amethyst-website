@@ -7,11 +7,12 @@ export const metadata: Metadata = {
 };
 
 const galleryItems = [
+  { src: "/images/clinic/clinic entrance.jpg", alt: "Clinic Entrance" },
   { src: "/images/clinic/reception area.jpg", alt: "Reception Area" },
   { src: "/images/clinic/waiting area.jpg", alt: "Waiting Area" },
+  { src: "/images/clinic/clinic corridor.JPG", alt: "Clinic Corridor" },
   { src: "/images/clinic/consultation.jpg", alt: "Consultation Room" },
   { src: "/images/clinic/consultation (2).jpg", alt: "Patient Consultation" },
-  { src: "/images/clinic/doctor image.jpg", alt: "Dr. Shruthi Pavana Janardhanan" },
   { src: "/images/treatments/Picofusion Treatment.jpg", alt: "Picofusion Treatment" },
   { src: "/images/treatments/20260625_165811.jpg", alt: "Treatment in Progress" },
 ];
