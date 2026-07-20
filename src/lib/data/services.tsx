@@ -70,9 +70,9 @@ export const services: Service[] = [
     id: "laser-hair",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
-        <path d="M13.5 14q2-1 2.5 0q-1 2-2.5 1z" />
-        <path d="M8 19q2-1 2.5 0.5q-1.5 1.5-2.5 0.5z" />
-        <circle cx="15.5" cy="19.5" r="1" />
+        <path d="M13.5 2H10.5C9.1 2 8 3.1 8 4.5v3.2c0 .5-.2.9-.6 1.3L4 12v7c0 1.7 1.3 3 3 3h10c1.7 0 3-1.3 3-3v-7l-3.4-3c-.4-.4-.6-.8-.6-1.3V4.5C16 3.1 14.9 2 13.5 2z" />
+        <path d="M12 12v7" />
+        <path d="M9 16h6" />
       </svg>
     ),
     title: "Laser Hair Reduction",
