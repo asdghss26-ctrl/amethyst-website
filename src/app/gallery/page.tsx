@@ -7,10 +7,8 @@ export const metadata: Metadata = {
 };
 
 const galleryItems = [
-  { src: "/images/clinic/clinic entrance.jpg", alt: "Clinic Entrance" },
   { src: "/images/clinic/reception area.jpg", alt: "Reception Area" },
   { src: "/images/clinic/waiting area.jpg", alt: "Waiting Area" },
-  { src: "/images/doctor/dr-shruthi.jpg", alt: "Dr. Shruthi Pavana Janardhanan" },
   { src: "/images/clinic/consultation.jpg", alt: "Consultation Room" },
   { src: "/images/clinic/consultation (2).jpg", alt: "Patient Consultation" },
   { src: "/images/clinic/doctor image.jpg", alt: "Dr. Shruthi Pavana Janardhanan" },
@@ -46,7 +44,7 @@ export default function GalleryPage() {
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${item.src.includes('dr-shruthi') ? 'object-top' : ''}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-4">
