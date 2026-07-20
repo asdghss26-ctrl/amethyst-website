@@ -102,7 +102,7 @@ export default function About() {
                 </p>
 
                 <p style={{ color: "#6B6570", fontSize: "13px", lineHeight: "1.6", marginBottom: "16px" }}>
-                  A board-certified dermatologist with extensive experience in clinical and aesthetic dermatology. With an MD from Madras Medical College and advanced training in injectables and energy-based devices, she brings expert, personalized care from leading centers in Chennai and Mumbai.
+                  A board-certified dermatologist with extensive experience in clinical and aesthetic dermatology in Navalur, Chennai. With an MD from Madras Medical College and advanced training in injectables and energy-based devices, she brings expert, personalized care.
                 </p>
 
                 <div

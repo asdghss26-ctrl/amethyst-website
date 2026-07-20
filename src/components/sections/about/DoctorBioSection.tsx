@@ -74,7 +74,7 @@ export default function DoctorBioSection() {
                 <strong className="text-[#5B1F6A] font-semibold">Dr. Shruthi Pavana Janardhanan</strong> is a board-certified dermatologist with strong academic background and versatile clinical experience. She completed her MD in Dermatology from the prestigious Madras Medical College, followed by a DNB from the National Board of Examinations and the MRCP SCE in Dermatology (UK).
               </p>
               <p>
-                She has extensive experience in both clinical and aesthetic dermatology, with advanced training in injectables and energy-based devices. Her professional journey includes work at leading dermatology centers in Chennai and Mumbai.
+                She has extensive experience in both clinical and aesthetic dermatology, with advanced training in injectables and energy-based devices. She practises at Amethyst Skin Clinic in Navalur, Chennai.
               </p>
               <p>
                 Dr. Shruthi has authored three published research articles and is an active member of the Indian Association of Dermatologists, Venereologists and Leprologists (IADVL), the Indian Association for the Study of Sexually Transmitted Diseases (IASTD), and the National Academy of Medical Sciences (NAMS).
