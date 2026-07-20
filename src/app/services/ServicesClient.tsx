@@ -183,66 +183,8 @@ export default function ServicesClient({ initialCategory }: ServicesClientProps)
         </motion.div>
       </section>
 
-      {/* ─── BEFORE & AFTER RESULTS SECTION ─── */}
-      <section className="bg-white border-y border-[#E4DFE8] py-24 mb-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 border border-[#E4DFE8] rounded-full px-4 py-1.5 mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#8E5C8F]"></span>
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8E5C8F]">
-                Clinical Efficacy
-              </span>
-            </div>
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl text-[#2E2E2E] mb-4"
-              style={{ fontFamily: "var(--font-dm-serif), serif" }}
-            >
-              Proven, authentic outcomes
-            </h2>
-            <p className="text-sm text-[#6B6570] leading-relaxed">
-              We stand by our results. Drag the sliders below to explore the real dermatological transformations achieved under our customized clinical protocols.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-            {/* Case 1 */}
-            <div className="flex flex-col gap-5">
-              <BeforeAfterSlider
-                beforeImage="/images/results/acne-before.jpg"
-                afterImage="/images/results/acne-after.jpg"
-                beforeLabel="Before Treatment"
-                afterLabel="After 3 Sessions"
-              />
-              <div>
-                <h4 className="text-lg font-bold text-[#2E2E2E]" style={{ fontFamily: "var(--font-dm-serif), serif" }}>
-                  Case Study: Acne Scar Revision
-                </h4>
-                <p className="text-xs text-[#6B6570] mt-1 leading-relaxed">
-                  Treatment: Micro-needling Fractional Radiofrequency (MNRF) combined with targeted subcision for rolling and boxcar scars. Note the significant reduction in scar depth and refinement in skin texture.
-                </p>
-              </div>
-            </div>
 
-            {/* Case 2 */}
-            <div className="flex flex-col gap-5">
-              <BeforeAfterSlider
-                beforeImage="/images/results/pigment-before.jpg"
-                afterImage="/images/results/pigment-after.jpg"
-                beforeLabel="Before Treatment"
-                afterLabel="After 4 Sessions"
-              />
-              <div>
-                <h4 className="text-lg font-bold text-[#2E2E2E]" style={{ fontFamily: "var(--font-dm-serif), serif" }}>
-                  Case Study: Pigmentation Correction
-                </h4>
-                <p className="text-xs text-[#6B6570] mt-1 leading-relaxed">
-                  Treatment: Picosecond Laser Toning combined with active Tyrosinase-inhibiting medical peels. Realizes clear elimination of dermal sun spots, freckles, and general epidermal melasma.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ─── SERVICE FAQS ─── */}
       <section className="max-w-3xl mx-auto px-6 mb-24">

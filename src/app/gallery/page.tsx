@@ -31,7 +31,7 @@ export default function GalleryPage() {
               Our Gallery
             </h1>
             <p className="text-[#8B7355] text-sm md:text-base mt-4 max-w-lg mx-auto">
-              A look inside our clinic and real results from our treatments.
+              A look inside our clinic and our treatments.
             </p>
           </div>
 
